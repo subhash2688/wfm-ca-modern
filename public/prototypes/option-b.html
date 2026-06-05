@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Option B — Full-Bleed Cinematic</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['DM Sans', 'sans-serif'], heading: ['Playfair Display', 'serif'] },
+      colors: {
+        navy: '#1A3D5C', gold: '#D4A853', cream: '#F5F0EB', warm: '#FAFAF8', ink: '#1A1A1A', mid: '#4B5563', light: '#6B7280', edge: '#E5E2DD', deep: '#0F1A24'
+      }
+    }
+  }
+}
+</script>
+</head>
+<body class="bg-warm font-sans text-ink antialiased">
+
+<!-- OPTION B: "Full-Bleed Cinematic"
+     Massive full-screen hero with minimal text. Sections alternate between
+     full-width images and clean text blocks. Think documentary / film feel.
+     Heavy on imagery, light on clutter. -->
+
+<!-- Nav — Transparent on hero -->
+<header class="fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-8 py-5">
+    <a href="/">
+      <img src="/images/logos/wfm-logo.webp" alt="WFM" class="h-10 w-auto brightness-0 invert">
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/70">
+      <a href="#" class="hover:text-white transition">About</a>
+      <a href="#" class="hover:text-white transition">Programs</a>
+      <a href="#" class="hover:text-white transition">Stories</a>
+      <a href="#" class="hover:text-white transition">Get Involved</a>
+    </nav>
+    <a href="#" class="bg-gold text-navy font-bold text-sm px-6 py-2.5 rounded-full hover:bg-gold/90 transition">
+      Donate
+    </a>
+  </div>
+</header>
+
+<!-- Hero — Full-screen cinematic -->
+<section class="relative h-screen flex items-end">
+  <img src="/images/banners/hero-1.webp" class="absolute inset-0 w-full h-full object-cover" alt="">
+  <div class="absolute inset-0 bg-gradient-to-t from-deep via-deep/40 to-transparent"></div>
+  <div class="relative w-full max-w-7xl mx-auto px-8 pb-20 md:pb-28">
+    <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05]">
+      Fund 47 meals<br>
+      <span class="italic text-gold">today.</span>
+    </h1>
+    <p class="mt-4 text-lg text-white/60 max-w-lg">
+      36% of college students skip meals because they can't afford food. $5 changes a student's entire day.
+    </p>
+    <div class="mt-8 flex items-center gap-6">
+      <a href="#" class="bg-gold text-navy font-bold px-10 py-4 rounded-full hover:bg-gold/90 transition">
+        Give now
+      </a>
+      <span class="text-sm text-white/40">100% of donations fund meals</span>
+    </div>
+  </div>
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+    <div class="w-px h-12 bg-gradient-to-b from-transparent to-white/30"></div>
+  </div>
+</section>
+
+<!-- Impact Numbers — Horizontal strip, full width -->
+<section class="bg-navy">
+  <div class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="text-center">
+      <div class="font-heading text-4xl font-bold text-gold">2.3M+</div>
+      <div class="text-sm text-white/40 mt-1">meals served</div>
+    </div>
+    <div class="text-center">
+      <div class="font-heading text-4xl font-bold text-gold">52</div>
+      <div class="text-sm text-white/40 mt-1">partner campuses</div>
+    </div>
+    <div class="text-center">
+      <div class="font-heading text-4xl font-bold text-gold">1,200+</div>
+      <div class="text-sm text-white/40 mt-1">active volunteers</div>
+    </div>
+    <div class="text-center">
+      <div class="font-heading text-4xl font-bold text-gold">18</div>
+      <div class="text-sm text-white/40 mt-1">states reached</div>
+    </div>
+  </div>
+</section>
+
+<!-- The Crisis — Text-only, centered, powerful -->
+<section class="py-28 md:py-36">
+  <div class="max-w-3xl mx-auto px-8 text-center">
+    <span class="text-xs font-semibold tracking-[0.2em] uppercase text-gold">The crisis</span>
+    <h2 class="font-heading text-4xl md:text-6xl font-bold mt-6 leading-tight text-ink">
+      3.3 million students<br>go hungry every day.
+    </h2>
+    <p class="mt-8 text-xl text-mid leading-relaxed">
+      They sit in lecture halls with empty stomachs. They choose between textbooks and meals.
+      They drop out — not because they can't handle the work, but because they can't afford to eat.
+    </p>
+  </div>
+</section>
+
+<!-- Full-bleed image break -->
+<section class="relative h-[60vh]">
+  <img src="/images/resources/food-distribution-4.jpg" class="absolute inset-0 w-full h-full object-cover" alt="">
+</section>
+
+<!-- How it Works — Clean three-column -->
+<section class="py-28 md:py-36 bg-white">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="text-center">
+      <span class="text-xs font-semibold tracking-[0.2em] uppercase text-gold">How it works</span>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold mt-4 text-ink">Three simple steps</h2>
+    </div>
+    <div class="mt-20 grid lg:grid-cols-3 gap-16">
+      <div class="text-center">
+        <div class="w-16 h-16 rounded-full bg-navy text-white flex items-center justify-center mx-auto font-heading text-2xl font-bold">1</div>
+        <h3 class="text-xl font-bold mt-6 text-ink">Students sign up</h3>
+        <p class="mt-3 text-mid leading-relaxed">Register in under 2 minutes at any partner campus. Pick your times and location. No paperwork, no stigma.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-16 h-16 rounded-full bg-navy text-white flex items-center justify-center mx-auto font-heading text-2xl font-bold">2</div>
+        <h3 class="text-xl font-bold mt-6 text-ink">Kitchens prepare</h3>
+        <p class="mt-3 text-mid leading-relaxed">Fresh, nutritious Sattvic meals every morning. Each costs just $5 — funded entirely by generous donors.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-16 h-16 rounded-full bg-navy text-white flex items-center justify-center mx-auto font-heading text-2xl font-bold">3</div>
+        <h3 class="text-xl font-bold mt-6 text-ink">Volunteers deliver</h3>
+        <p class="mt-3 text-mid leading-relaxed">Student volunteers deliver meals. Scan a QR code, grab your meal, get back to learning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story — Full-bleed with text overlay -->
+<section class="relative py-32 md:py-44">
+  <img src="/images/resources/mission-vision-side-img.webp" class="absolute inset-0 w-full h-full object-cover" alt="">
+  <div class="absolute inset-0 bg-navy/90"></div>
+  <div class="relative max-w-4xl mx-auto px-8 text-center">
+    <div class="text-6xl text-gold/30 font-heading">"</div>
+    <blockquote class="font-heading text-3xl md:text-5xl font-bold text-white leading-snug -mt-4">
+      I was choosing between eating and dropping out.
+      <span class="text-gold">WFM changed everything.</span>
+    </blockquote>
+    <div class="mt-10 flex items-center justify-center gap-4">
+      <img src="/images/testimonials/testimonial0.jpg" class="w-14 h-14 rounded-full object-cover border-2 border-gold/30" alt="">
+      <div class="text-left">
+        <div class="font-semibold text-white">Raj Kumar</div>
+        <div class="text-sm text-white/40">Engineering Graduate, Class of 2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The $5 Promise -->
+<section class="py-28 md:py-36">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="bg-navy rounded-3xl overflow-hidden">
+      <div class="grid lg:grid-cols-2">
+        <div class="p-12 md:p-16 flex flex-col justify-center">
+          <span class="text-xs font-semibold tracking-[0.2em] uppercase text-gold">The 100% model</span>
+          <h2 class="font-heading text-4xl md:text-5xl font-bold mt-4 text-white leading-tight">
+            Every dollar<br>feeds a student.
+          </h2>
+          <p class="mt-6 text-white/50 leading-relaxed max-w-md">
+            Our operational costs are covered by founding donors. 100% of your gift goes to meals. Not overhead. Not salaries. Meals.
+          </p>
+          <div class="mt-10 grid grid-cols-3 gap-4">
+            <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="font-heading text-2xl font-bold text-gold">$5</div>
+              <div class="text-xs text-white/40 mt-1">1 day</div>
+            </div>
+            <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="font-heading text-2xl font-bold text-gold">$35</div>
+              <div class="text-xs text-white/40 mt-1">1 week</div>
+            </div>
+            <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="font-heading text-2xl font-bold text-gold">$150</div>
+              <div class="text-xs text-white/40 mt-1">1 month</div>
+            </div>
+          </div>
+          <a href="#" class="inline-block mt-10 bg-gold text-navy font-bold px-10 py-4 rounded-full hover:bg-gold/90 transition w-fit">
+            Fund meals today
+          </a>
+        </div>
+        <div class="relative hidden lg:block min-h-[500px]">
+          <img src="/images/resources/food-distribution-2.jpg" class="absolute inset-0 w-full h-full object-cover" alt="">
+          <div class="absolute inset-0 bg-gradient-to-r from-navy to-transparent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Photo Strip -->
+<section class="flex gap-1 overflow-hidden">
+  <div class="flex-1 h-72 relative"><img src="/images/resources/food-distribution-3.jpg" class="absolute inset-0 w-full h-full object-cover" alt=""></div>
+  <div class="flex-1 h-72 relative"><img src="/images/resources/food-distribution-5.jpg" class="absolute inset-0 w-full h-full object-cover" alt=""></div>
+  <div class="flex-1 h-72 relative"><img src="/images/resources/how-it-works-home2.webp" class="absolute inset-0 w-full h-full object-cover" alt=""></div>
+  <div class="flex-1 h-72 relative"><img src="/images/resources/food-distribution-1.jpg" class="absolute inset-0 w-full h-full object-cover" alt=""></div>
+</section>
+
+<!-- Get Involved — Large tiles -->
+<section class="py-28 md:py-36 bg-cream">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="text-center mb-16">
+      <span class="text-xs font-semibold tracking-[0.2em] uppercase text-gold">Get involved</span>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold mt-4 text-ink">Make a difference</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <a href="#" class="group bg-white rounded-3xl p-10 border border-edge hover:border-gold/30 hover:shadow-xl transition">
+        <h3 class="font-heading text-3xl font-bold text-ink">Give Monthly</h3>
+        <p class="mt-3 text-mid leading-relaxed">$20/month feeds 4 students every single day for an entire year. Be the reason a student stays in school.</p>
+        <span class="inline-block mt-6 text-gold font-semibold text-sm group-hover:translate-x-2 transition-transform">Start giving →</span>
+      </a>
+      <a href="#" class="group bg-white rounded-3xl p-10 border border-edge hover:border-gold/30 hover:shadow-xl transition">
+        <h3 class="font-heading text-3xl font-bold text-ink">Volunteer</h3>
+        <p class="mt-3 text-mid leading-relaxed">Join 1,200+ student volunteers delivering meals on campuses across 18 states. 2 hours a week changes lives.</p>
+        <span class="inline-block mt-6 text-gold font-semibold text-sm group-hover:translate-x-2 transition-transform">Sign up →</span>
+      </a>
+      <a href="#" class="group bg-white rounded-3xl p-10 border border-edge hover:border-gold/30 hover:shadow-xl transition">
+        <h3 class="font-heading text-3xl font-bold text-ink">Start a Fundraiser</h3>
+        <p class="mt-3 text-mid leading-relaxed">Rally your friends, your campus, your community. Pick a goal and watch your impact grow meal by meal.</p>
+        <span class="inline-block mt-6 text-gold font-semibold text-sm group-hover:translate-x-2 transition-transform">Get started →</span>
+      </a>
+      <a href="#" class="group bg-white rounded-3xl p-10 border border-edge hover:border-gold/30 hover:shadow-xl transition">
+        <h3 class="font-heading text-3xl font-bold text-ink">Campus Partnership</h3>
+        <p class="mt-3 text-mid leading-relaxed">Bring the World Food Movement to your university. We handle logistics — you provide the campus.</p>
+        <span class="inline-block mt-6 text-gold font-semibold text-sm group-hover:translate-x-2 transition-transform">Learn more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="relative py-36 md:py-44">
+  <img src="/images/banners/hero-2.webp" class="absolute inset-0 w-full h-full object-cover" alt="">
+  <div class="absolute inset-0 bg-deep/80"></div>
+  <div class="relative max-w-3xl mx-auto px-8 text-center">
+    <h2 class="font-heading text-5xl md:text-7xl font-bold text-white leading-tight">
+      Every meal<br>keeps a student<br><span class="italic text-gold">in school.</span>
+    </h2>
+    <a href="#" class="inline-block mt-10 bg-gold text-navy font-bold px-12 py-5 rounded-full text-lg hover:bg-gold/90 transition">
+      Fund meals today
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-deep pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="grid md:grid-cols-4 gap-12">
+      <div>
+        <img src="/images/logos/wfm-logo.webp" class="h-10 w-auto brightness-0 invert" alt="WFM">
+        <p class="mt-4 text-sm text-white/30 leading-relaxed">World Food Movement for College and University Students of America. A 501(c)(3) nonprofit.</p>
+      </div>
+      <div>
+        <h4 class="text-xs font-semibold tracking-[0.2em] uppercase text-white/40">About</h4>
+        <ul class="mt-4 space-y-3 text-sm text-white/30">
+          <li><a href="#" class="hover:text-gold transition">Our Mission</a></li>
+          <li><a href="#" class="hover:text-gold transition">Programs</a></li>
+          <li><a href="#" class="hover:text-gold transition">Team</a></li>
+          <li><a href="#" class="hover:text-gold transition">Financial Reports</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-semibold tracking-[0.2em] uppercase text-white/40">Take Action</h4>
+        <ul class="mt-4 space-y-3 text-sm text-white/30">
+          <li><a href="#" class="hover:text-gold transition">Donate</a></li>
+          <li><a href="#" class="hover:text-gold transition">Volunteer</a></li>
+          <li><a href="#" class="hover:text-gold transition">Fundraise</a></li>
+          <li><a href="#" class="hover:text-gold transition">Sign Up for Meals</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-semibold tracking-[0.2em] uppercase text-white/40">Connect</h4>
+        <ul class="mt-4 space-y-3 text-sm text-white/30">
+          <li><a href="#" class="hover:text-gold transition">News</a></li>
+          <li><a href="#" class="hover:text-gold transition">Stories</a></li>
+          <li><a href="#" class="hover:text-gold transition">Events</a></li>
+          <li><a href="#" class="hover:text-gold transition">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/20">
+      <p>© 2024 World Food Movement. All rights reserved.</p>
+      <p>501(c)(3) · EIN: 33-1400027 · 100% of donations fund meals</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
