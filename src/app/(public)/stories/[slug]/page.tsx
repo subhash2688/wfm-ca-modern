@@ -61,7 +61,7 @@ export default async function StoryDetailPage({ params }: StoryDetailProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A24]/90 via-[#1A3D5C]/40 to-transparent" />
           <div className="absolute inset-0 flex items-end">
             <div className="mx-auto w-full max-w-3xl px-6 pb-12">
-              <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+              <p className="text-sm font-semibold text-[#D4A853]">
                 {publishedDate}
               </p>
               <h1 className="font-heading mt-3 text-3xl font-bold text-white md:text-5xl">
@@ -82,7 +82,7 @@ export default async function StoryDetailPage({ params }: StoryDetailProps) {
             style={{ backgroundImage: "radial-gradient(circle at 70% 50%, #D4A853 0%, transparent 60%)" }}
           />
           <div className="relative mx-auto max-w-3xl px-6">
-            <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+            <p className="text-sm font-semibold text-[#D4A853]">
               {publishedDate}
             </p>
             <h1 className="font-heading mt-4 text-3xl font-bold text-white md:text-6xl">
@@ -159,7 +159,7 @@ export default async function StoryDetailPage({ params }: StoryDetailProps) {
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
             </svg>
             <h2 className="font-heading mt-6 text-3xl font-bold text-white md:text-4xl">
-              Every $5 feeds a student for a day.
+              Every $8 funds one freshly prepared meal for a student in need.
             </h2>
             <p className="mt-4 text-lg text-white/60">
               Stories like this one are made possible by donors like you.

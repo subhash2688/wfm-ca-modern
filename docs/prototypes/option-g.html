@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Option G — The Human (Story-First)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['DM Sans', 'sans-serif'],
+        heading: ['Playfair Display', 'serif'],
+      },
+      colors: {
+        navy: '#1A3D5C', gold: '#D4A853', cream: '#F5F0EB',
+        warm: '#FAFAF8', ink: '#1A1A1A', mid: '#4B5563',
+        light: '#6B7280', edge: '#E5E2DD', deep: '#0F1A24'
+      }
+    }
+  }
+}
+</script>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes reveal-quote {
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .fade-in  { animation: fade-in  1.2s ease both; }
+  .fade-up  { animation: fade-up  0.8s cubic-bezier(.2,.8,.3,1) both; }
+  .d1 { animation-delay: 0.3s; }
+  .d2 { animation-delay: 0.7s; }
+  .d3 { animation-delay: 1.1s; }
+  .d4 { animation-delay: 1.5s; }
+
+  .chapter {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .chapter.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Ken Burns on hero image */
+  @keyframes ken-burns {
+    from { transform: scale(1);    }
+    to   { transform: scale(1.04); }
+  }
+  .hero-img { animation: ken-burns 12s ease-in-out infinite alternate; }
+
+  /* Quote highlight underline */
+  .gold-underline {
+    background: linear-gradient(transparent 85%, #D4A853 85%);
+  }
+
+  /* Decorative quote mark */
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 20rem;
+    line-height: 0.7;
+    color: rgba(212,168,83,0.07);
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    pointer-events: none;
+    user-select: none;
+  }
+</style>
+</head>
+<body class="bg-warm font-sans text-ink antialiased">
+
+<!-- OPTION G: "The Human" — Story-First
+     No stats above the fold. A real face. A real quote. Emotional truth
+     before the ask. The page reveals itself like a magazine long-read.
+     Every scroll earns the next piece of information. -->
+
+<!-- Nav — invisible until scroll -->
+<header id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5 px-6">
+  <div class="mx-auto flex max-w-7xl items-center justify-between">
+    <div id="logo-wrap" class="rounded-md bg-white/10 px-3 py-1.5 backdrop-blur-sm transition-all duration-500">
+      <img src="/images/logos/wfm-logo.webp" alt="World Food Movement" class="h-8 w-auto">
+    </div>
+    <nav class="hidden items-center gap-8 text-sm font-medium lg:flex transition-colors duration-500" id="nav-links">
+      <a href="#" class="text-white/70 hover:text-white transition-colors">About</a>
+      <a href="#" class="text-white/70 hover:text-white transition-colors">Programs</a>
+      <a href="#" class="text-white/70 hover:text-white transition-colors">Stories</a>
+      <a href="#" class="text-white/70 hover:text-white transition-colors">Get Involved</a>
+    </nav>
+    <a href="#" id="nav-cta" class="rounded-full bg-gold px-6 py-2.5 text-sm font-bold text-navy transition-all hover:bg-[#C49A48]">
+      Fund a meal
+    </a>
+  </div>
+</header>
+
+<!-- Hero — Full bleed portrait + quote -->
+<section class="relative flex min-h-screen items-end overflow-hidden">
+  <!-- Photo -->
+  <div class="absolute inset-0">
+    <img
+      src="/images/resources/food-distribution-5.jpg"
+      alt="A student receiving a meal"
+      class="hero-img h-full w-full object-cover object-center"
+    >
+    <!-- Multi-layer overlay for readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0a1018] via-[#0a1018]/50 to-[#0a1018]/10"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0a1018]/60 via-transparent to-transparent"></div>
+  </div>
+
+  <!-- Content pinned to bottom-left -->
+  <div class="relative mx-auto w-full max-w-7xl px-6 pb-20 md:pb-28">
+    <div class="max-w-2xl">
+      <!-- Person tag fades in first -->
+      <div class="fade-in d1 mb-6 flex items-center gap-3">
+        <div class="h-px w-8 bg-gold"></div>
+        <span class="text-xs font-semibold tracking-[0.2em] text-gold/80 uppercase">A student's story</span>
+      </div>
+
+      <!-- Pull quote — the hero element -->
+      <blockquote class="fade-up d2">
+        <p class="font-heading text-4xl font-bold leading-[1.1] text-white md:text-6xl lg:text-7xl">
+          &ldquo;I was choosing<br>
+          between eating<br>
+          and <span class="italic text-gold">dropping out.</span>&rdquo;
+        </p>
+      </blockquote>
+
+      <div class="fade-up d3 mt-8 flex items-center gap-4">
+        <img src="/images/resources/food-distribution-3.jpg" alt="Priya" class="h-12 w-12 rounded-full object-cover ring-2 ring-gold/40">
+        <div>
+          <p class="font-semibold text-white">Priya Sharma</p>
+          <p class="text-sm text-white/50">Biochemistry Junior · UC San Diego</p>
+        </div>
+      </div>
+
+      <div class="fade-up d4 mt-10 flex items-center gap-5">
+        <a href="#story" class="inline-flex items-center gap-3 rounded-full bg-gold px-8 py-4 text-sm font-bold text-navy transition-all hover:bg-[#C49A48] hover:shadow-xl hover:shadow-gold/20 hover:scale-105">
+          Read her full story
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        <a href="#donate" class="text-sm font-medium text-white/50 transition-colors hover:text-white">
+          Fund meals instead →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subtle scroll hint -->
+  <div class="absolute bottom-8 right-8 flex flex-col items-center gap-2 text-white/20">
+    <span class="text-[10px] tracking-widest uppercase" style="writing-mode: vertical-rl">Scroll</span>
+    <div class="w-px h-12 bg-gradient-to-b from-white/30 to-transparent"></div>
+  </div>
+</section>
+
+<!-- Story reveal section -->
+<section id="story" class="bg-warm py-24 md:py-36">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="grid gap-16 lg:grid-cols-2 items-start">
+      <!-- Text column -->
+      <div class="chapter lg:sticky top-24">
+        <p class="text-xs font-semibold tracking-[0.25em] text-gold uppercase mb-5">The crisis</p>
+        <h2 class="font-heading text-4xl font-bold text-ink leading-tight md:text-5xl">
+          1 in 3 students<br>goes hungry.
+        </h2>
+        <p class="mt-6 text-lg text-mid leading-relaxed">
+          Food insecurity doesn't look like what you expect on a college campus.
+          It's a student skipping breakfast before an exam. A senior choosing ramen
+          over rent. A first-generation student too ashamed to tell anyone.
+        </p>
+        <p class="mt-4 text-mid leading-relaxed">
+          World Food Movement exists so that story ends. Free meals, zero stigma,
+          delivered with dignity — to any student who needs them.
+        </p>
+        <div class="mt-10 flex gap-6">
+          <div>
+            <div class="font-heading text-4xl font-bold text-navy">36%</div>
+            <div class="text-xs text-light mt-1">skip meals regularly</div>
+          </div>
+          <div class="w-px bg-edge"></div>
+          <div>
+            <div class="font-heading text-4xl font-bold text-navy">$5</div>
+            <div class="text-xs text-light mt-1">feeds a student all day</div>
+          </div>
+          <div class="w-px bg-edge"></div>
+          <div>
+            <div class="font-heading text-4xl font-bold text-navy">0%</div>
+            <div class="text-xs text-light mt-1">overhead</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image column — stacked -->
+      <div class="flex flex-col gap-6">
+        <div class="chapter rounded-2xl overflow-hidden aspect-[4/3]">
+          <img src="/images/resources/food-distribution-1.jpg" alt="" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="chapter grid grid-cols-2 gap-6">
+          <div class="rounded-2xl overflow-hidden aspect-square">
+            <img src="/images/resources/food-serving.webp" alt="" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="rounded-2xl bg-navy flex flex-col justify-end p-6">
+            <div class="font-heading text-5xl font-bold text-gold leading-none">2.3M</div>
+            <div class="mt-2 text-sm text-white/60">meals served to college students across America</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The $5 Promise -->
+<section id="donate" class="bg-navy py-24 md:py-32 relative overflow-hidden">
+  <!-- Background image subtle -->
+  <img src="/images/resources/testimonial-bg-2.webp" alt="" class="absolute inset-0 h-full w-full object-cover opacity-10">
+  <div class="relative mx-auto max-w-4xl px-6 text-center">
+    <!-- Decorative quote mark -->
+    <div class="font-heading text-[12rem] leading-none text-gold/10 absolute -top-8 left-1/2 -translate-x-1/2 pointer-events-none select-none">&ldquo;</div>
+
+    <div class="relative chapter">
+      <p class="text-xs font-semibold tracking-[0.25em] text-gold uppercase mb-6">The promise</p>
+      <h2 class="font-heading text-5xl font-bold text-white leading-tight md:text-7xl">
+        Five dollars.
+      </h2>
+      <p class="mt-6 text-2xl text-white/60 font-light leading-relaxed">
+        One fresh, nutritious meal. Prepared same-day.<br>
+        Delivered to a student in need. <span class="text-gold font-medium">Today.</span>
+      </p>
+
+      <!-- Impact ladder -->
+      <div class="chapter mt-12 grid gap-4 sm:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 p-6">
+          <div class="font-heading text-4xl font-bold text-white">$5</div>
+          <div class="text-gold text-sm font-semibold mt-1">1 meal</div>
+          <div class="text-white/40 text-xs mt-2">Changes a student's entire day</div>
+        </div>
+        <div class="rounded-2xl border border-gold/30 bg-gold/10 p-6">
+          <div class="font-heading text-4xl font-bold text-gold">$35</div>
+          <div class="text-gold text-sm font-semibold mt-1">7 meals — 1 week</div>
+          <div class="text-white/40 text-xs mt-2">A student eats through finals week</div>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6">
+          <div class="font-heading text-4xl font-bold text-white">$150</div>
+          <div class="text-gold text-sm font-semibold mt-1">30 meals — 1 month</div>
+          <div class="text-white/40 text-xs mt-2">A student eats through the semester</div>
+        </div>
+      </div>
+
+      <a href="#" class="chapter mt-10 inline-flex items-center gap-3 rounded-full bg-gold px-12 py-5 text-base font-bold text-navy transition-all hover:bg-[#C49A48] hover:shadow-2xl hover:shadow-gold/20 hover:scale-105">
+        Fund meals now
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+      <p class="mt-4 text-xs text-white/30">501(c)(3) · EIN 33-1400027 · Secure payment</p>
+    </div>
+  </div>
+</section>
+
+<!-- Voices -->
+<section class="bg-warm py-24 md:py-32">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="mb-14 flex items-end justify-between">
+      <div>
+        <p class="text-xs font-semibold tracking-[0.25em] text-gold uppercase mb-3">Voices</p>
+        <h2 class="font-heading text-4xl font-bold text-ink">From our community</h2>
+      </div>
+      <a href="#" class="text-sm font-semibold text-navy/60 hover:text-navy transition-colors">All stories →</a>
+    </div>
+    <div class="chapter grid gap-6 md:grid-cols-3">
+      <div class="rounded-2xl bg-white border border-edge p-8">
+        <div class="flex gap-1 mb-5">
+          {Array.from({length:5}).forEach(() => {})}
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="text-mid leading-relaxed text-sm">"I didn't have to choose between buying food and buying textbooks. WFM made sure I could focus on school."</p>
+        <div class="mt-6 flex items-center gap-3 border-t border-edge pt-5">
+          <img src="/images/resources/food-distribution-4.jpg" alt="" class="h-10 w-10 rounded-full object-cover">
+          <div>
+            <p class="font-semibold text-ink text-sm">Marcus T.</p>
+            <p class="text-xs text-light">Computer Science · UCLA</p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-navy p-8">
+        <div class="flex gap-1 mb-5">
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="text-white/70 leading-relaxed text-sm">"Volunteering with WFM gave me more than community service hours. It gave me perspective. I see my peers differently now."</p>
+        <div class="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
+          <img src="/images/resources/food-distribution-2.jpg" alt="" class="h-10 w-10 rounded-full object-cover">
+          <div>
+            <p class="font-semibold text-white text-sm">Anika P.</p>
+            <p class="text-xs text-white/40">Volunteer · Stanford</p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-white border border-edge p-8">
+        <div class="flex gap-1 mb-5">
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="h-4 w-4 text-gold fill-gold" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="text-mid leading-relaxed text-sm">"As a donor I finally feel confident that my money isn't disappearing into overhead. I see exactly how many meals my $50 funds."</p>
+        <div class="mt-6 flex items-center gap-3 border-t border-edge pt-5">
+          <div class="h-10 w-10 rounded-full bg-navy flex items-center justify-center text-white font-bold text-sm flex-shrink-0">SC</div>
+          <div>
+            <p class="font-semibold text-ink text-sm">Sarah Chen</p>
+            <p class="text-xs text-light">Monthly Donor · San Francisco</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Scroll-reveal for chapters
+const observer = new IntersectionObserver(
+  (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.15 }
+);
+document.querySelectorAll('.chapter').forEach(el => observer.observe(el));
+
+// Nav becomes solid on scroll
+const nav = document.getElementById('nav');
+const logoWrap = document.getElementById('logo-wrap');
+const navLinks = document.getElementById('nav-links');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    nav.classList.add('bg-warm/95', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-edge');
+    logoWrap.classList.remove('bg-white/10');
+    navLinks.querySelectorAll('a').forEach(a => { a.classList.remove('text-white/70', 'hover:text-white'); a.classList.add('text-mid', 'hover:text-navy'); });
+  } else {
+    nav.classList.remove('bg-warm/95', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-edge');
+    logoWrap.classList.add('bg-white/10');
+    navLinks.querySelectorAll('a').forEach(a => { a.classList.add('text-white/70', 'hover:text-white'); a.classList.remove('text-mid', 'hover:text-navy'); });
+  }
+});
+</script>
+</body>
+</html>

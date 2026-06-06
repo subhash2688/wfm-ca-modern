@@ -19,10 +19,10 @@ export const metadata: Metadata = {
 /* ---------- data ---------- */
 
 const programHighlights = [
-  { number: "52", label: "Partner Campuses" },
-  { number: "18", label: "States Served" },
-  { number: "1,200+", label: "Active Volunteers" },
-  { number: "$5", label: "Cost Per Meal" },
+  { number: "8", label: "Partner Campuses" },
+  { number: "20,000+", label: "Meals Served" },
+  { number: "4,000+", label: "Students Served" },
+  { number: "$8", label: "Cost Per Meal" },
 ];
 
 const volunteerBenefits = [
@@ -36,7 +36,7 @@ const volunteerBenefits = [
   },
   {
     title: "Community",
-    description: "Join 1,200+ fellow students who are making a tangible difference.",
+    description: "Join fellow students across Bay Area campuses making a tangible difference.",
   },
   {
     title: "Leadership Skills",
@@ -93,7 +93,7 @@ export default function ProgramsPage() {
                   <p className="font-heading text-4xl font-bold text-[#1A3D5C] md:text-5xl">
                     {stat.number}
                   </p>
-                  <p className="mt-1 text-sm font-medium text-[#4B5563] uppercase tracking-wide">
+                  <p className="mt-1 text-sm font-medium text-[#4B5563] ">
                     {stat.label}
                   </p>
                 </div>
@@ -110,7 +110,7 @@ export default function ProgramsPage() {
             <FadeInLeft>
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/resources/food-distribution-1.jpg"
+                  src="/images/resources/IMG_2881b.jpeg"
                   alt="Volunteers distributing meals to students on campus"
                   fill
                   className="object-cover"
@@ -121,7 +121,7 @@ export default function ProgramsPage() {
 
             <FadeInRight>
               <div>
-                <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                <p className="text-sm font-semibold text-[#D4A853]">
                   Core Program
                 </p>
                 <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
@@ -159,7 +159,7 @@ export default function ProgramsPage() {
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <FadeInLeft className="order-2 lg:order-1">
               <div>
-                <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                <p className="text-sm font-semibold text-[#D4A853]">
                   Student-Powered
                 </p>
                 <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
@@ -195,7 +195,7 @@ export default function ProgramsPage() {
             <FadeInRight className="order-1 lg:order-2">
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/resources/food-distribution-3.jpg"
+                  src="/images/resources/IMG_2970.jpeg"
                   alt="Student volunteer delivering meals"
                   fill
                   className="object-cover"
@@ -208,11 +208,19 @@ export default function ProgramsPage() {
       </section>
 
       {/* ───── Campus Partnership ───── */}
-      <section className="bg-white py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative bg-white py-24 md:py-32">
+        {/* Dot-grid texture */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage: "radial-gradient(circle, #1A3D5C0a 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
+          }}
+        />
+        <div className="relative mx-auto max-w-7xl px-6">
           <FadeIn>
             <div className="text-center">
-              <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+              <p className="text-sm font-semibold text-[#D4A853]">
                 For Universities
               </p>
               <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-5xl">
@@ -221,31 +229,62 @@ export default function ProgramsPage() {
               <p className="mx-auto mt-4 max-w-2xl text-lg text-[#6B7280]">
                 We handle the logistics. You provide the access. Together, we
                 ensure no student on your campus goes hungry. Currently active
-                across 52 campuses in 18 states.
+                across 8 campuses in the Bay Area, California.
               </p>
             </div>
           </FadeIn>
 
-          <StaggerContainer
-            className="mx-auto mt-16 grid max-w-4xl gap-8 sm:grid-cols-2 lg:grid-cols-4"
-            staggerDelay={0.12}
-          >
-            {partnershipSteps.map((s) => (
-              <StaggerItem key={s.step}>
-                <div className="text-center">
-                  <span className="font-heading text-5xl font-bold text-[#D4A853]">
-                    {s.step}
-                  </span>
-                  <h3 className="mt-4 text-lg font-semibold text-[#1A1A1A]">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-[#6B7280]">
-                    {s.description}
-                  </p>
+          <div className="mt-16 grid items-center gap-16 lg:grid-cols-2">
+            <StaggerContainer className="grid gap-8 sm:grid-cols-2" staggerDelay={0.12}>
+              {partnershipSteps.map((s) => (
+                <StaggerItem key={s.step}>
+                  <div className="rounded-2xl border border-[#E5E2DD] bg-[#FAFAF8] p-6">
+                    <span className="font-heading text-4xl font-bold text-[#D4A853]">
+                      {s.step}
+                    </span>
+                    <h3 className="mt-3 text-lg font-semibold text-[#1A1A1A]">
+                      {s.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-[#6B7280]">
+                      {s.description}
+                    </p>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+
+            <FadeInRight>
+              <div className="space-y-4">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
+                  <Image
+                    src="/images/resources/FullSize20250122TCSattvicMealsatDeAnzaKickoff028508.jpg"
+                    alt="WFM meal distribution at De Anza College campus"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/5" />
                 </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="relative aspect-square overflow-hidden rounded-xl shadow-md">
+                    <Image
+                      src="/images/resources/IMG_2970.jpeg"
+                      alt="Student volunteers on campus"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative aspect-square overflow-hidden rounded-xl shadow-md">
+                    <Image
+                      src="/images/resources/IMG_2960.jpeg"
+                      alt="Students signing up for meals"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </FadeInRight>
+          </div>
         </div>
       </section>
 
@@ -256,7 +295,7 @@ export default function ProgramsPage() {
             <FadeInLeft>
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/resources/food-serving.webp"
+                  src="/images/resources/FullSize20250122TCSattvicMealsatDeAnzaKickoff028550.jpg"
                   alt="Freshly prepared Sattvic meals in kitchen"
                   fill
                   className="object-cover"
@@ -267,7 +306,7 @@ export default function ProgramsPage() {
 
             <FadeInRight>
               <div>
-                <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                <p className="text-sm font-semibold text-[#D4A853]">
                   Nourishment First
                 </p>
                 <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
@@ -282,7 +321,7 @@ export default function ProgramsPage() {
 
                 <div className="mt-10 flex items-baseline gap-2">
                   <span className="font-heading text-6xl font-bold text-[#1A3D5C]">
-                    $5
+                    $8
                   </span>
                   <span className="text-lg text-[#6B7280]">
                     is all it costs to prepare one meal
@@ -290,7 +329,7 @@ export default function ProgramsPage() {
                 </div>
                 <p className="mt-4 text-[#4B5563]">
                   That is a balanced, freshly cooked vegetarian meal — prepared,
-                  packaged, and delivered to a student in need. Five dollars can
+                  packaged, and delivered to a student in need. Eight dollars can
                   change a student&apos;s entire day.
                 </p>
 
@@ -317,7 +356,7 @@ export default function ProgramsPage() {
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
             <div className="text-center">
-              <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+              <p className="text-sm font-semibold text-[#D4A853]">
                 Simple &amp; Seamless
               </p>
               <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-5xl">
@@ -331,7 +370,7 @@ export default function ProgramsPage() {
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="relative aspect-square overflow-hidden rounded-2xl">
                   <Image
-                    src="/images/resources/food-distribution-5.jpg"
+                    src="/images/resources/FS20251112TCWorldFoodMovementDeAnzaGFX100S00032.jpg"
                     alt="Student receiving meal on campus"
                     fill
                     className="object-cover"
@@ -339,7 +378,7 @@ export default function ProgramsPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-2xl">
                   <Image
-                    src="/images/resources/food-distribution-3.jpg"
+                    src="/images/resources/IMG_2859.jpeg"
                     alt="Students enjoying meals on campus"
                     fill
                     className="object-cover"
@@ -389,7 +428,7 @@ export default function ProgramsPage() {
       <section className="bg-[#1A3D5C] py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <FadeIn>
-            <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+            <p className="text-sm font-semibold text-[#D4A853]">
               Partner With Us
             </p>
             <h2 className="font-heading mx-auto mt-4 max-w-3xl text-3xl font-bold text-white md:text-5xl">

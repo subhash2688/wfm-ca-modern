@@ -21,7 +21,7 @@ export default function ContactPage() {
             {/* Left — Contact Info */}
             <FadeInLeft>
               <div>
-                <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                <p className="text-sm font-semibold text-[#D4A853]">
                   Reach out
                 </p>
                 <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
@@ -167,7 +167,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
             <div className="text-center">
-              <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+              <p className="text-sm font-semibold text-[#D4A853]">
                 Stay connected
               </p>
               <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">

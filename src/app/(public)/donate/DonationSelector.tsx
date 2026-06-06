@@ -4,17 +4,17 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const PRESETS = [
-  { amount: 5, label: "$5", impact: "1 student, 1 day" },
-  { amount: 10, label: "$10", impact: "2 students, 1 day" },
-  { amount: 25, label: "$25", impact: "1 student, 5 days" },
-  { amount: 50, label: "$50", impact: "2 students, 5 days" },
-  { amount: 100, label: "$100", impact: "1 student, 20 days" },
+  { amount: 8, label: "$8", impact: "1 meal for 1 student" },
+  { amount: 24, label: "$24", impact: "3 meals" },
+  { amount: 40, label: "$40", impact: "5 meals" },
+  { amount: 80, label: "$80", impact: "10 meals" },
+  { amount: 240, label: "$240", impact: "1 month of daily meals" },
 ];
 
 type Frequency = "one-time" | "monthly";
 
 export function DonationSelector() {
-  const [selectedAmount, setSelectedAmount] = useState<number | null>(25);
+  const [selectedAmount, setSelectedAmount] = useState<number | null>(40);
   const [customAmount, setCustomAmount] = useState("");
   const [isCustom, setIsCustom] = useState(false);
   const [frequency, setFrequency] = useState<Frequency>("one-time");
@@ -23,7 +23,7 @@ export function DonationSelector() {
     ? parseFloat(customAmount) || 0
     : selectedAmount || 0;
 
-  const mealsPerDay = Math.floor(activeAmount / 5);
+  const mealsPerDay = Math.floor(activeAmount / 8);
 
   function handlePresetClick(amount: number) {
     setSelectedAmount(amount);

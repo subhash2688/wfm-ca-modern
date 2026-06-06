@@ -106,7 +106,7 @@ export default async function EventDetailPage({ params }: EventDetailProps) {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-[#6B7280] uppercase">
+                  <p className="text-xs font-medium text-[#6B7280]">
                     Date
                   </p>
                   <p className="font-semibold text-[#1A1A1A]">
@@ -137,7 +137,7 @@ export default async function EventDetailPage({ params }: EventDetailProps) {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs font-medium text-[#6B7280] uppercase">
+                    <p className="text-xs font-medium text-[#6B7280]">
                       Ends
                     </p>
                     <p className="font-semibold text-[#1A1A1A]">
@@ -175,7 +175,7 @@ export default async function EventDetailPage({ params }: EventDetailProps) {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs font-medium text-[#6B7280] uppercase">
+                    <p className="text-xs font-medium text-[#6B7280]">
                       Venue
                     </p>
                     <p className="font-semibold text-[#1A1A1A]">

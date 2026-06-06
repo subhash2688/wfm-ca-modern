@@ -51,7 +51,7 @@ const PLACEHOLDER_MEMBERS: TeamMember[] = [
     id: 2,
     name: "Priya Venkatesh",
     title: "Executive Director",
-    bio: "Former university administrator who witnessed student food insecurity firsthand. Priya oversees day-to-day operations and has scaled the program from 3 to 52 campuses in just four years.",
+    bio: "Former university administrator who witnessed student food insecurity firsthand. Priya oversees day-to-day operations and helped launch the program across Bay Area community colleges starting in January 2025.",
     imagePath: null,
     teamType: "leadership",
     sortOrder: 2,
@@ -176,7 +176,7 @@ export default async function TeamPage() {
             <div className="mx-auto max-w-7xl px-6">
               <FadeIn>
                 <div className="mb-16 max-w-2xl">
-                  <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                  <p className="text-sm font-semibold text-[#D4A853]">
                     {typeInfo.title}
                   </p>
                   <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
@@ -212,7 +212,7 @@ export default async function TeamPage() {
           <FadeIn>
             <div className="overflow-hidden rounded-[2rem] bg-[#1A3D5C]">
               <div className="px-10 py-16 text-center md:px-20 md:py-20">
-                <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                <p className="text-sm font-semibold text-[#D4A853]">
                   Join us
                 </p>
                 <h2 className="font-heading mx-auto mt-4 max-w-2xl text-3xl font-bold text-white md:text-5xl">

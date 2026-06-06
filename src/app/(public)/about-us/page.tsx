@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about the World Food Movement — our mission, vision, founders, and the global feeding movement that has served over 4 billion meals.",
+    "Learn about the World Food Movement — our mission, vision, founders, and how we're fighting student hunger across Bay Area campuses.",
 };
 
 export default function AboutUsPage() {
@@ -33,7 +33,7 @@ export default function AboutUsPage() {
             <FadeInLeft>
               <div className="aspect-[4/5] overflow-hidden rounded-3xl">
                 <Image
-                  src="/images/resources/mission-vision-side-img.webp"
+                  src="/images/resources/FS20251112TCWorldFoodMovementDeAnzaGFX100S00093.jpg"
                   alt="World Food Movement volunteers serving meals"
                   width={800}
                   height={1000}
@@ -44,7 +44,7 @@ export default function AboutUsPage() {
 
             <FadeInRight>
               <div>
-                <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                <p className="text-sm font-semibold text-[#D4A853]">
                   Our purpose
                 </p>
                 <h2 className="font-heading mt-4 text-4xl leading-[1.1] font-bold text-[#1A1A1A] md:text-5xl">
@@ -53,7 +53,7 @@ export default function AboutUsPage() {
 
                 <div className="mt-10 space-y-8">
                   <div className="rounded-2xl border border-[#E5E2DD] bg-white p-8">
-                    <p className="text-xs font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                    <p className="text-xs font-semibold text-[#D4A853]">
                       Vision
                     </p>
                     <p className="font-heading mt-3 text-2xl font-bold text-[#1A1A1A] md:text-3xl">
@@ -62,7 +62,7 @@ export default function AboutUsPage() {
                   </div>
 
                   <div className="rounded-2xl border border-[#E5E2DD] bg-white p-8">
-                    <p className="text-xs font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                    <p className="text-xs font-semibold text-[#D4A853]">
                       Mission
                     </p>
                     <p className="font-heading mt-3 text-xl font-bold leading-snug text-[#1A1A1A] md:text-2xl">
@@ -91,7 +91,7 @@ export default function AboutUsPage() {
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
             <div className="mx-auto max-w-3xl text-center">
-              <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+              <p className="text-sm font-semibold text-[#D4A853]">
                 Our inspiration
               </p>
               <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
@@ -124,7 +124,7 @@ export default function AboutUsPage() {
       <section className="bg-[#F5F0EB] py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+            <p className="text-sm font-semibold text-[#D4A853]">
               Our journey
             </p>
             <h2 className="font-heading mt-4 text-4xl font-bold text-[#1A1A1A] md:text-5xl">
@@ -132,75 +132,144 @@ export default function AboutUsPage() {
             </h2>
           </FadeIn>
 
-          <StaggerContainer className="mt-16 space-y-6" staggerDelay={0.1}>
-            {[
-              {
-                year: "2000",
-                title: "The Akshaya Patra Foundation",
-                desc: "Our school lunch feeding program was initiated in Bangalore, India, beginning by feeding just over a thousand children in government schools. This humble initiative would go on to become the world's largest not-for-profit-run school lunch program.",
-              },
-              {
-                year: "2007",
-                title: "Feeding programs extend to the United Kingdom",
-                desc: "The founders extended feeding initiatives beyond India, commencing operations in the UK. The first international kitchen was set up in North London, serving children, university students and people in homeless shelters.",
-              },
-              {
-                year: "2019",
-                title: "3 billionth meal served",
-                desc: "The Hon'ble Prime Minister of India personally served the 3 billionth meal in Vrindavan, calling Akshaya Patra 'a social start-up which has turned into a movement.'",
-              },
-              {
-                year: "2024",
-                title: "4 billion meals milestone",
-                desc: "Akshaya Patra commemorated the milestone of serving 4 billion meals at the United Nations Headquarters in New York — now feeding over 2.2 million children every day across 78 kitchens in 16 states of India.",
-              },
-              {
-                year: "2025",
-                title: "World Food Movement launches in America",
-                desc: "Encouraged by the overwhelming success of the Akshaya Patra initiative, the World Food Movement was established in the United States, serving fresh, nutritious meals to students in community colleges in California, New Jersey, New York and Washington D.C.",
-              },
-            ].map((item) => (
-              <StaggerItem key={item.year}>
-                <div className="grid gap-4 rounded-2xl border border-[#E5E2DD] bg-white p-8 md:grid-cols-[120px_1fr] md:gap-8">
-                  <div className="font-heading text-3xl font-bold text-[#1A3D5C]">
-                    {item.year}
+          <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_360px]">
+            <StaggerContainer className="space-y-6" staggerDelay={0.1}>
+              {[
+                {
+                  year: "2000",
+                  title: "The Akshaya Patra Foundation",
+                  desc: "Our school lunch feeding program was initiated in Bangalore, India, beginning by feeding just over a thousand children in government schools. This humble initiative would go on to become the world's largest not-for-profit-run school lunch program.",
+                },
+                {
+                  year: "2007",
+                  title: "Feeding programs extend to the United Kingdom",
+                  desc: "The founders extended feeding initiatives beyond India, commencing operations in the UK. The first international kitchen was set up in North London, serving children, university students and people in homeless shelters.",
+                },
+                {
+                  year: "2019",
+                  title: "3 billionth meal served",
+                  desc: "The Hon'ble Prime Minister of India personally served the 3 billionth meal in Vrindavan, calling Akshaya Patra 'a social start-up which has turned into a movement.'",
+                },
+                {
+                  year: "2024",
+                  title: "4 billion meals milestone",
+                  desc: "Akshaya Patra commemorated the milestone of serving 4 billion meals at the United Nations Headquarters in New York — now feeding over 2.2 million children every day across 78 kitchens in 16 states of India.",
+                },
+                {
+                  year: "2025",
+                  title: "World Food Movement launches in America",
+                  desc: "On January 22, 2025, WFM served its first meal at De Anza College in Cupertino, California. In its first year, the program reached 4 Bay Area campuses, served over 10,000 meals to 2,000+ students, and grew to 8 campuses by 2026.",
+                },
+              ].map((item) => (
+                <StaggerItem key={item.year}>
+                  <div className="grid gap-4 rounded-2xl border border-[#E5E2DD] bg-white p-8 md:grid-cols-[120px_1fr] md:gap-8">
+                    <div className="font-heading text-3xl font-bold text-[#1A3D5C]">
+                      {item.year}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-[#1A1A1A]">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 leading-relaxed text-[#4B5563]">
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#1A1A1A]">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 leading-relaxed text-[#4B5563]">
-                      {item.desc}
-                    </p>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+
+            {/* Sticky photo column */}
+            <FadeInRight className="hidden lg:block">
+              <div className="sticky top-28 space-y-4">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-xl">
+                  <Image
+                    src="/images/resources/FullSize20250122TCSattvicMealsChelseaChangReleaseKickoff028572.jpg"
+                    alt="WFM launch day at De Anza College, January 22 2025"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/5" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0A1118]/70 to-transparent p-5">
+                    <p className="text-xs font-semibold text-[#D4A853]">January 22, 2025</p>
+                    <p className="mt-0.5 text-sm font-medium text-white">First meal at De Anza College</p>
                   </div>
                 </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+                  <Image
+                    src="/images/resources/FS20251112TCWorldFoodMovementDeAnzaGFX100S00032.jpg"
+                    alt="Students receiving meals at De Anza College"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/5" />
+                </div>
+              </div>
+            </FadeInRight>
+          </div>
         </div>
       </section>
 
       {/* ── What We Do in America ── */}
-      <section className="bg-white py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative bg-white py-24 md:py-32">
+        {/* Subtle dot-grid texture */}
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage: "radial-gradient(circle, #1A3D5C0a 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
+          }}
+        />
+        <div className="relative mx-auto max-w-7xl px-6">
           <FadeIn>
             <div className="mx-auto max-w-3xl text-center">
-              <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+              <p className="text-sm font-semibold text-[#D4A853]">
                 In America
               </p>
               <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
-                Serving communities across the United States
+                Serving Bay Area campuses
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-[#4B5563]">
-                We are currently serving in the Bay Area (California), New
-                Jersey, New York and Washington D.C. — and gradually extending
-                the program to other parts of the country.
+                We are currently serving at 8 campuses across the Bay Area,
+                California — including De Anza College, Foothill College, West
+                Valley College, Chabot College, and Las Positas College — with
+                plans to expand to more campuses in 2026 and beyond.
               </p>
             </div>
           </FadeIn>
 
+          {/* Photo mosaic */}
+          <FadeIn delay={0.1}>
+            <div className="mt-12 grid h-72 grid-cols-3 gap-3 overflow-hidden rounded-2xl md:h-96">
+              <div className="relative col-span-1 overflow-hidden rounded-xl">
+                <Image
+                  src="/images/resources/IMG_2937.jpeg"
+                  alt="Students receiving meals on campus"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <div className="relative col-span-1 overflow-hidden rounded-xl">
+                <Image
+                  src="/images/resources/IMG_2881b.jpeg"
+                  alt="Volunteers distributing food"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <div className="relative col-span-1 overflow-hidden rounded-xl">
+                <Image
+                  src="/images/resources/IMG_2859.jpeg"
+                  alt="Students enjoying meals together"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+            </div>
+          </FadeIn>
+
           <StaggerContainer
-            className="mt-16 grid gap-8 md:grid-cols-2"
+            className="mt-10 grid gap-8 md:grid-cols-2"
             staggerDelay={0.1}
           >
             <StaggerItem>
@@ -296,7 +365,7 @@ export default function AboutUsPage() {
       <section className="bg-[#FAFAF8] py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+            <p className="text-sm font-semibold text-[#D4A853]">
               Leadership
             </p>
             <h2 className="font-heading mt-4 text-4xl font-bold text-[#1A1A1A] md:text-5xl">
@@ -383,7 +452,7 @@ export default function AboutUsPage() {
       <section className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+            <p className="text-sm font-semibold text-[#D4A853]">
               Governance
             </p>
             <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
@@ -436,74 +505,118 @@ export default function AboutUsPage() {
       <section className="bg-[#F5F0EB] py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
-              What our partners say
+            <p className="text-sm font-semibold text-[#D4A853]">
+              What leaders say
             </p>
             <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
-              Trusted by educators &amp; leaders
+              Trusted by educators &amp; elected officials
             </h2>
           </FadeIn>
 
-          <StaggerContainer className="mt-12 space-y-6" staggerDelay={0.15}>
-            <StaggerItem>
-              <div className="rounded-2xl border border-[#E5E2DD] bg-white p-8 md:p-10">
-                <svg
-                  className="h-8 w-8 text-[#D4A853]/30"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <p className="mt-4 text-lg leading-relaxed text-[#4B5563]">
-                  &ldquo;I&apos;m proud to announce our partnership with the
-                  World Food Movement, launched in January 2025, with an
-                  ambitious goal to serve 50,000 meals by the end of this
-                  academic year and 1 million meals by 2030. This expertise and
-                  experience in creating nutritious, cost-effective meal
-                  programmes is truly unmatched.&rdquo;
-                </p>
-                <div className="mt-6">
-                  <p className="font-bold text-[#1A1A1A]">Dr. Omar Torres</p>
-                  <p className="text-sm text-[#6B7280]">
-                    President, De Anza College, California
+          {/* Top 2 — large format */}
+          <StaggerContainer className="mt-12 grid gap-6 md:grid-cols-2" staggerDelay={0.12}>
+            {[
+              {
+                quote: "I cannot think of a more critical time in our nation's history where this support for our students is so pivotal towards ensuring they are able to accomplish their educational goals. We are very grateful for the partnership with World Food Movement.",
+                name: "Dr. Omar Torres",
+                role: "President, De Anza College",
+                image: "/images/testimonials/omar-torres.jpg",
+              },
+              {
+                quote: "Barely a year ago, we got started on this idea of addressing student hunger in the US. It is heartwarming to see how far we have come in just about a year. 10,000 meals. Go World Food Movement. Let's march on to the million meals.",
+                name: "Dr. Siva Sivaram",
+                role: "Board Member, WFM & CEO, QuantumScape",
+                image: "/images/testimonials/siva-sivaram.jpg",
+              },
+            ].map((t) => (
+              <StaggerItem key={t.name}>
+                <div className="flex h-full flex-col rounded-2xl border border-[#E5E2DD] bg-white p-8 md:p-10">
+                  <svg className="h-8 w-8 text-[#D4A853]/30" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <p className="mt-4 flex-1 text-lg leading-relaxed text-[#4B5563]">
+                    &ldquo;{t.quote}&rdquo;
                   </p>
+                  <div className="mt-8 flex items-center gap-4 border-t border-[#E5E2DD] pt-6">
+                    <Image
+                      src={t.image}
+                      alt={t.name}
+                      width={56}
+                      height={56}
+                      className="h-14 w-14 flex-shrink-0 rounded-full object-cover shadow-md"
+                    />
+                    <div>
+                      <p className="font-bold text-[#1A1A1A]">{t.name}</p>
+                      <p className="text-sm text-[#6B7280]">{t.role}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </StaggerItem>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
 
-            <StaggerItem>
-              <div className="rounded-2xl border border-[#E5E2DD] bg-white p-8 md:p-10">
-                <svg
-                  className="h-8 w-8 text-[#D4A853]/30"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <p className="mt-4 text-lg leading-relaxed text-[#4B5563]">
-                  &ldquo;Our partners at the World Food Movement, first and
-                  foremost, thank you from the bottom of my heart because what
-                  you do is making a difference in the lives of our students. Let
-                  us continue to grow our community together through our
-                  partnership.&rdquo;
-                </p>
-                <div className="mt-6">
-                  <p className="font-bold text-[#1A1A1A]">Lee Lambert</p>
-                  <p className="text-sm text-[#6B7280]">
-                    Chancellor, Foothill-De Anza Community College
+          {/* Bottom 3 — compact */}
+          <StaggerContainer className="mt-6 grid gap-6 md:grid-cols-3" staggerDelay={0.1}>
+            {[
+              {
+                quote: "I am very excited to celebrate the World Food Movement for having served over 10,000 meals to our community college students. This is absolutely crucial to make sure that no students are ever left hungry. Thank you for your hard work and keep doing it.",
+                name: "Otto Lee",
+                role: "Supervisor, Santa Clara County",
+                image: "/images/testimonials/otto-lee.jpg",
+              },
+              {
+                quote: "Congratulations to the World Food Movement for reaching 10,000 meals served to hungry students in our home area. You are playing a pivotal role in making sure that food insecurity is being fought. I wish you a lot of luck in getting to your next milestone of a million meals.",
+                name: "Assembly Member Alex Lee",
+                role: "California Assembly District 24",
+                image: "/images/testimonials/alex-lee.jpg",
+              },
+              {
+                quote: "I want to thank the World Food Movement for being here. Our community is showing up and our students are showing up. We are so excited to be a partner with you and want to help you reach 1 million meals by 2030.",
+                name: "Dr. Dyrell Foster",
+                role: "President, Las Positas College",
+                image: "/images/testimonials/dyrell-foster.jpg",
+              },
+            ].map((t) => (
+              <StaggerItem key={t.name}>
+                <div className="flex h-full flex-col rounded-2xl border border-[#E5E2DD] bg-white p-6">
+                  <svg className="h-6 w-6 text-[#D4A853]/30" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <p className="mt-3 flex-1 leading-relaxed text-[#4B5563]">
+                    &ldquo;{t.quote}&rdquo;
                   </p>
+                  <div className="mt-6 flex items-center gap-3 border-t border-[#E5E2DD] pt-5">
+                    <Image
+                      src={t.image}
+                      alt={t.name}
+                      width={44}
+                      height={44}
+                      className="h-11 w-11 flex-shrink-0 rounded-full object-cover shadow-sm"
+                    />
+                    <div>
+                      <p className="text-sm font-bold text-[#1A1A1A]">{t.name}</p>
+                      <p className="text-xs text-[#6B7280]">{t.role}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </StaggerItem>
+              </StaggerItem>
+            ))}
           </StaggerContainer>
         </div>
       </section>
 
       {/* ── Awards & Recognition ── */}
-      <section className="bg-white py-24 md:py-32">
+      <section className="relative bg-white py-24 md:py-32">
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage: "radial-gradient(circle, #1A3D5C0a 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
+          }}
+        />
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+            <p className="text-sm font-semibold text-[#D4A853]">
               Recognition
             </p>
             <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
@@ -586,7 +699,7 @@ export default function AboutUsPage() {
         <div className="absolute inset-0 bg-[#0F1A24]/75" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <FadeIn>
-            <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+            <p className="text-sm font-semibold text-[#D4A853]">
               From our founders
             </p>
             <blockquote className="font-heading mt-6 text-2xl leading-snug font-bold text-white md:text-4xl">

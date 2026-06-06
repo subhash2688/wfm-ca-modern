@@ -111,7 +111,7 @@ export default async function CampaignDetailPage({
                   </span>
                 )}
                 {campaign.startDate && campaign.endDate && (
-                  <span>&mdash;</span>
+                  <span>to</span>
                 )}
                 {campaign.endDate && (
                   <span>
@@ -129,7 +129,7 @@ export default async function CampaignDetailPage({
             <div className="mt-10 rounded-2xl border border-[#E5E2DD] bg-white p-8">
               <div className="flex items-end justify-between">
                 <div>
-                  <p className="text-sm font-medium text-[#6B7280] uppercase">
+                  <p className="text-sm font-medium text-[#6B7280]">
                     Raised
                   </p>
                   <p className="font-heading text-4xl font-bold text-[#1A3D5C]">
@@ -137,7 +137,7 @@ export default async function CampaignDetailPage({
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-medium text-[#6B7280] uppercase">
+                  <p className="text-sm font-medium text-[#6B7280]">
                     Goal
                   </p>
                   <p className="font-heading text-2xl font-bold text-[#1A1A1A]">

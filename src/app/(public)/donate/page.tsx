@@ -26,14 +26,14 @@ export default function DonatePage() {
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
             <div className="mb-12 text-center">
-              <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+              <p className="text-sm font-semibold text-[#D4A853]">
                 Choose your impact
               </p>
               <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-5xl">
                 Every dollar feeds a student.
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-lg text-[#6B7280]">
-                Select an amount below. Each $5 provides one complete,
+                Select an amount below. Each $8 funds one freshly prepared,
                 nutritious meal for a college student in need.
               </p>
             </div>
@@ -51,7 +51,7 @@ export default function DonatePage() {
           <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
             <FadeInLeft>
               <div>
-                <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                <p className="text-sm font-semibold text-[#D4A853]">
                   The 100% model
                 </p>
                 <h2 className="font-heading mt-4 text-4xl leading-[1.1] font-bold text-[#1A1A1A] md:text-5xl lg:text-6xl">
@@ -86,7 +86,7 @@ export default function DonatePage() {
                   </div>
                   <div className="text-center">
                     <div className="font-heading text-4xl font-bold text-[#1A3D5C] md:text-5xl">
-                      $5
+                      $8
                     </div>
                     <div className="mt-2 text-sm font-medium text-[#6B7280]">
                       Per meal cost
@@ -110,7 +110,7 @@ export default function DonatePage() {
                 {/* Floating impact card */}
                 <div className="absolute -right-4 -bottom-6 rounded-2xl bg-[#1A3D5C] p-6 text-white shadow-2xl md:-right-8">
                   <div className="font-heading text-4xl font-bold text-[#D4A853]">
-                    2.3M+
+                    20,000+
                   </div>
                   <div className="mt-1 text-sm text-white/60">
                     meals served
@@ -129,10 +129,10 @@ export default function DonatePage() {
         <div className="mx-auto max-w-5xl px-6">
           <StaggerContainer className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {[
-              { number: "$5", label: "Feeds 1 student for 1 day" },
-              { number: "$35", label: "Feeds 1 student for 1 week" },
-              { number: "$150", label: "Feeds 1 student for 1 month" },
-              { number: "$1,800", label: "Feeds 1 student for 1 year" },
+              { number: "$8", label: "Feeds 1 student for 1 day" },
+              { number: "$56", label: "Feeds 1 student for 1 week" },
+              { number: "$240", label: "Feeds 1 student for 1 month" },
+              { number: "$2,400", label: "Feeds 1 student for 1 year" },
             ].map((item) => (
               <StaggerItem key={item.label}>
                 <div className="text-center">
@@ -198,7 +198,7 @@ export default function DonatePage() {
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
             <div className="mb-16 text-center">
-              <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+              <p className="text-sm font-semibold text-[#D4A853]">
                 Questions
               </p>
               <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
@@ -222,12 +222,12 @@ export default function DonatePage() {
               {
                 question: "Can I set up recurring donations?",
                 answer:
-                  "Absolutely. You can choose a monthly recurring donation from the options above. Monthly donors provide reliable, predictable support that helps us plan meal programs across our 52 partner campuses. You can cancel or modify your recurring donation at any time.",
+                  "Absolutely. You can choose a monthly recurring donation from the options above. Monthly donors provide reliable, predictable support that helps us plan meal programs across our 8 partner campuses. You can cancel or modify your recurring donation at any time.",
               },
               {
                 question: "How many meals does my donation fund?",
                 answer:
-                  "Each $5 funds one complete, nutritious meal. So $25 feeds a student for 5 days, $150 for a full month, and $1,800 covers an entire academic year. Every dollar counts — there is no minimum donation.",
+                  "Each $8 funds one freshly prepared, nutritious meal. So $40 feeds a student for 5 days, $240 for a full month, and $2,400 covers an entire academic year. Every dollar counts — there is no minimum donation.",
               },
               {
                 question: "Can I donate in honor or memory of someone?",

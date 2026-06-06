@@ -8,16 +8,16 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="inline-block rounded-md bg-white/15 px-2.5 py-1.5">
+            <div className="inline-block rounded-lg bg-white/20 px-3 py-2">
               <Image
-                src="/images/logos/wfm-logo.webp"
+                src="/images/logos/wfm-logo.jpg"
                 alt="World Food Movement"
-                width={160}
-                height={50}
-                className="h-9 w-auto"
+                width={200}
+                height={64}
+                className="h-12 w-auto"
               />
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-white/40">
+            <p className="mt-4 text-sm leading-relaxed text-white/55">
               World Food Movement for College and University Students of
               America. A 501(c)(3) nonprofit organization.
             </p>
@@ -53,7 +53,7 @@ export function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/40 transition-colors hover:border-[#D4A853]/40 hover:text-[#D4A853]"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 text-white/55 transition-colors hover:border-[#D4A853]/60 hover:text-[#D4A853]"
                 >
                   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d={s.path} />
@@ -65,7 +65,7 @@ export function Footer() {
 
           {/* About */}
           <div>
-            <h4 className="text-xs font-semibold tracking-[0.2em] text-white/50 uppercase">
+            <h4 className="text-xs font-semibold text-white/70">
               About
             </h4>
             <ul className="mt-4 space-y-3">
@@ -79,7 +79,7 @@ export function Footer() {
                 <li key={link.href + link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/40 transition-colors hover:text-[#D4A853]"
+                    className="text-sm text-white/60 transition-colors hover:text-[#D4A853]"
                   >
                     {link.label}
                   </Link>
@@ -90,7 +90,7 @@ export function Footer() {
 
           {/* Take Action */}
           <div>
-            <h4 className="text-xs font-semibold tracking-[0.2em] text-white/50 uppercase">
+            <h4 className="text-xs font-semibold text-white/70">
               Take Action
             </h4>
             <ul className="mt-4 space-y-3">
@@ -104,7 +104,7 @@ export function Footer() {
                 <li key={link.href + link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/40 transition-colors hover:text-[#D4A853]"
+                    className="text-sm text-white/60 transition-colors hover:text-[#D4A853]"
                   >
                     {link.label}
                   </Link>
@@ -115,7 +115,7 @@ export function Footer() {
 
           {/* Connect */}
           <div>
-            <h4 className="text-xs font-semibold tracking-[0.2em] text-white/50 uppercase">
+            <h4 className="text-xs font-semibold text-white/70">
               Connect
             </h4>
             <ul className="mt-4 space-y-3">
@@ -129,7 +129,7 @@ export function Footer() {
                 <li key={link.href + link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/40 transition-colors hover:text-[#D4A853]"
+                    className="text-sm text-white/60 transition-colors hover:text-[#D4A853]"
                   >
                     {link.label}
                   </Link>
@@ -140,17 +140,17 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 border-t border-white/5 pt-8">
+        <div className="mt-16 border-t border-white/10 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-xs text-white/25">
+            <p className="text-xs text-white/40">
               &copy; {new Date().getFullYear()} World Food Movement. All rights
               reserved.
             </p>
-            <p className="text-xs text-white/25">
+            <p className="text-xs text-white/40">
               501(c)(3) nonprofit &middot; EIN: 33-1400027 &middot; 100% of
               donations fund meals
             </p>
-            <div className="flex gap-4 text-xs text-white/25">
+            <div className="flex gap-4 text-xs text-white/40">
               <Link href="/privacy-policy" className="hover:text-white/50">
                 Privacy
               </Link>

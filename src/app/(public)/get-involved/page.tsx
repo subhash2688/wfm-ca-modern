@@ -22,10 +22,10 @@ const waysToHelp = [
   {
     title: "Donate",
     description:
-      "100% of your donation funds meals. $5 feeds a student for a day. Give monthly or make a one-time contribution — every dollar goes directly to nourishing students.",
+      "100% of your donation funds meals. $8 funds one freshly prepared meal for a student. Give monthly or make a one-time contribution — every dollar goes directly to nourishing students.",
     cta: "Donate Now",
     href: "/donate",
-    highlight: "$5 = 1 meal",
+    highlight: "$8 = 1 meal",
     icon: (
       <svg className="h-8 w-8 text-[#D4A853]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
@@ -64,7 +64,7 @@ const waysToHelp = [
       "Bring the World Food Movement to your university. We handle all logistics — meal preparation, volunteer coordination, and technology. You provide campus access.",
     cta: "Partner With Us",
     href: "/contact",
-    highlight: "52 campuses & growing",
+    highlight: "8 campuses & growing",
     icon: (
       <svg className="h-8 w-8 text-[#D4A853]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
@@ -82,7 +82,7 @@ const faqs = [
   {
     question: "Where does my donation go?",
     answer:
-      "100% of every public donation funds meals. Our operational costs — staff, technology, logistics — are fully covered by our founding donors. When you give $5, that entire $5 feeds a student.",
+      "100% of every public donation funds meals. Our operational costs — staff, technology, logistics — are fully covered by our founding donors. When you give $8, that entire $8 feeds a student.",
   },
   {
     question: "Can I volunteer if my campus is not a WFM partner yet?",
@@ -114,7 +114,7 @@ export default function GetInvolvedPage() {
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
             <div className="text-center">
-              <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+              <p className="text-sm font-semibold text-[#D4A853]">
                 Make an Impact
               </p>
               <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-5xl">
@@ -184,7 +184,7 @@ export default function GetInvolvedPage() {
       {/* ───── Volunteer Spotlight ───── */}
       <section className="relative overflow-hidden bg-[#1A3D5C] py-24 md:py-32">
         <Image
-          src="/images/resources/testimonial-bg-2.webp"
+          src="/images/resources/20260316_114337.jpg"
           alt=""
           fill
           className="object-cover opacity-10"
@@ -195,7 +195,7 @@ export default function GetInvolvedPage() {
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <FadeInLeft>
               <div>
-                <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                <p className="text-sm font-semibold text-[#D4A853]">
                   Volunteer Spotlight
                 </p>
                 <h2 className="font-heading mt-4 text-3xl font-bold text-white md:text-4xl">
@@ -232,7 +232,7 @@ export default function GetInvolvedPage() {
             <FadeInRight>
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/resources/food-distribution-4.jpg"
+                  src="/images/resources/IMG_2829.jpeg"
                   alt="Volunteers working together on campus"
                   fill
                   className="object-cover"
@@ -252,10 +252,10 @@ export default function GetInvolvedPage() {
             staggerDelay={0.1}
           >
             {[
-              { number: "$5", label: "Feeds a Student for a Day" },
-              { number: "$35", label: "Feeds a Student for a Week" },
-              { number: "$150", label: "Feeds a Student for a Month" },
-              { number: "$1,500", label: "Feeds a Student for a Year" },
+              { number: "$8", label: "Feeds a Student for a Day" },
+              { number: "$56", label: "Feeds a Student for a Week" },
+              { number: "$240", label: "Feeds a Student for a Month" },
+              { number: "$2,400", label: "Feeds a Student for a Year" },
             ].map((stat) => (
               <StaggerItem key={stat.label}>
                 <div className="text-center">
@@ -278,7 +278,7 @@ export default function GetInvolvedPage() {
           <div className="grid gap-16 lg:grid-cols-5">
             <div className="lg:col-span-2">
               <FadeInLeft>
-                <p className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase">
+                <p className="text-sm font-semibold text-[#D4A853]">
                   FAQ
                 </p>
                 <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
@@ -338,7 +338,7 @@ export default function GetInvolvedPage() {
               Ready to make a difference?
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
-              Every meal starts with someone who cares. Whether it is $5, 2
+              Every meal starts with someone who cares. Whether it is $8, 2
               hours, or a partnership — your action today feeds a student
               tomorrow.
             </p>

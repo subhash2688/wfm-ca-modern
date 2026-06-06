@@ -1,0 +1,758 @@
+<!DOCTYPE html><html lang="en"><head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T38RPM');</script>
+<!-- End Google Tag Manager -->
+
+<!-- this is the headcode include -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta HTTP-EQUIV="Pragma" CONTENT="private">
+<meta HTTP-EQUIV="Cache-Control" CONTENT="private, max-age=5400, pre-check=5400">
+
+	<link href="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="/_resources/css/chabot.css?v=20260403a" />
+	<link rel="stylesheet" href="/_resources/css/_chabot_ext.css?v=202500818a" />
+	<link rel="stylesheet" href="/_resources/css/oustyles.css" />
+	<link href="/assets/php_lib/phpfiletree/styles/default/default.css" rel="stylesheet" type="text/css" media="screen" />
+
+	<link rel="stylesheet" href="/assets/fa/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href='//fonts.googleapis.com/css?family=Roboto|Roboto:light' rel='stylesheet'>
+	<link href="//fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+	
+	<script src="//code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+
+<script src="//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script src="/assets/php_lib/phpfiletree/php_file_tree_jquery.js" type="text/javascript"></script>
+		
+	<script src="/assets/js/chabot.js?v=0603"></script>
+
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_9pWuVMs3IM6zFP7mfEeNetAi6fjR8i6PpinsXfz6puG', {
+        api_host: 'https://us.i.posthog.com',
+        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+    })
+</script>   		
+   		   		
+   		
+   <style>
+			header{
+				margin-bottom: 0;
+			}
+			
+			.main-content-text{
+				margin-top: 140px;
+			}
+			
+			.main-content{
+				min-height: 800px;
+				background-image: url('images/bg_campus_logo_pac.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;
+			}
+		</style>
+   	
+   	
+   <title>Not found - Chabot College</title>
+   <meta name="Description" content="404 - file not found"><script type="text/javascript">
+					var page_url="https://www.chabotcollege.edu/404.php";
+				</script></head><body>
+   <header>
+
+
+  <div id="top-header" class="container">
+    <div class="row">
+      <div class="col-3"> <a href="/" class="ga-header-toplink"><img src="/_resources/images/chabot-logo-header-white-text.png" alt="CHABOT COLLEGE" id="logo-lg" class="logo img-responsive" /></a> </div>
+      <div class="col-9 top-bar">
+      	<div class="row">
+			<div class="col offset-lg-2">
+        		<div class="float-right">
+					<ul class="top-bar-nav hidden-xs" style="color:#000000;">
+					  <li><a href="/directory/az.php" class="ga-header-toplink">A-Z</a></li>
+					  <li><a href="/directory/employee-directory.php" class="ga-header-toplink">Find People</a></li>
+					  <li><a href="/about/campus-maps.php" class="ga-header-toplink">Maps &amp; Directions</a></li>
+					  <li><a href="/safety/parking/index.php" class="ga-header-toplink">Parking</a></li>
+					  <li><a href="https://www.supportchabotcollege.org/make-a-gift.php" class="ga-header-toplink">Give</a></li>
+					  <li class="input-li">
+						<form action="/search-results.php" id="cse-search-box1">
+						  <label class="search-label" for="search-box">Search</label>
+						  <input name="q" type="text" id="search-box" class="" placeholder="Search" style="width:235px;" aria-label="Search"/>
+						  <button value="search" name="s" aria-label="Search"><span style="display:none;">Go</span><em class="fa fa-search search-icon"></em></button>
+						  <input type="hidden" name="cx" value="001753360678573100478:yh9hrsxi9q4"  aria-label="Search"/>
+						  <input type="hidden" name="cof" value="FORID:9"  aria-label="Search"/>
+						  <input type="hidden" name="ie" value="UTF-8"  aria-label="Search"/>
+						</form>
+					  </li>
+					</ul>
+				</div>
+			</div>
+        </div>
+        
+      	<div class="row top-bar-buttons text-center">
+        	<div class="col-9">
+				<a href="/admissions/become-student/index.php" class="ga-header-toplink btn btn-warning btn-sm">Apply</a>
+				<a href="/redirect/myportal.php" class="ga-header-toplink btn btn-outline-warning btn-sm mx-3">MyPortal</a>
+				<a href="/courses/index.php" class="ga-header-toplink btn btn-warning btn-sm">Class Schedule</a>
+            </div>
+			
+			<div class="col-3">
+				<div id="google_translate_element"></div>
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+						  //new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.VERTICAL, gaTrack: true, gaId: 'UA-12116292-1'}, 'google_translate_element');
+						
+						if ($(window).width() < 760) {
+						   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.VERTICAL, gaTrack: true, gaId: 'UA-12116292-1'}, 'google_translate_element_m');
+						}
+						else{
+							new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.VERTICAL, gaTrack: true, gaId: 'UA-12116292-1'}, 'google_translate_element');
+						}
+					}
+					</script>
+					<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <div><a href="/student-services/language-assistance.php" style="font-size: .8rem;color:#E6A923; padding:0;margin:0;" class="ga-header-toplink btn btn-sm">More Language Support</a></div>
+			</div>
+        </div>        	
+      </div>      
+    </div>
+  </div>
+  <div class="container-fluid main-nav-container">
+    <div class="row">
+      <nav id="main-nav" class="navbar navbar-expand-md navbar-light bg-faded">
+        <a class="navbar-brand" href="/"><img src="/_resources/images/chabot-logo-header.png" alt="CHABOT COLLEGE" class="logo img-responsive" width="200px" height="70px" /></a>
+		
+        <button class="navbar-toggler navbar-toggler-right d-print-none" type="button" data-toggle="collapse" data-target="#mobile-main-nav" aria-controls="mobile-main-nav" aria-expanded="false" aria-label="Toggle navigation">Menu<span class="navbar-toggler-icon"></span></button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+<!-- 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
+		<li class="nav-item dropdown text-center">
+			<a class="ga-menu-d nav-link" id="navbarDropdown1" data-target="#" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+			<ul class="dropdown-menu multi-column dropdown-menu-1">
+				<div class="row no-gutters">
+					<div class="col-sm-3">
+						<ul class="multi-column-dropdown">
+							<li><a class="ga-menu-d dropdown-item" href="/about">Overview</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/about/campus-maps.php">Maps &amp; Directions</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/safety/parking/index.php">Parking</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/professional-services">Professional Services</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/employment">Employment</a></li>
+							<li><a class="ga-menu-d btn btn-dark p-1" href="/outreach" style="margin-left:23px; width:auto;"><em>Outreach</em></a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<ul class="multi-column-dropdown">
+							<li><a class="ga-menu-d dropdown-item" href="/accreditation">Accreditation</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/diversity">Diversity &amp; Inclusion</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/governance">Governance</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/planning">Planning</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/safety/asr.php">Safety Clery Report</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/about/title-ix/index.php">Title IX</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<div class="group-title">OFFICES</div>
+						<ul class="multi-column-dropdown">
+							<li><a class="ga-menu-d dropdown-item" href="/president">President's Office</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/academics/office-academic-services">Academic Services</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/administrative-services">Administrative Services</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/student-services">Student Services</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="http://www.supportchabotcollege.org">Foundation</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<div class="group-title">SUPPORT<br/>CHABOT COLLEGE</div>
+						<ul class="multi-column-dropdown">
+							<li><a class="ga-menu-d dropdown-item" href="https://www.supportchabotcollege.org/join.php">Alumni</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="https://www.supportchabotcollege.org/make-a-gift.php">Give</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="http://www.supportchabotcollege.org">Foundation</a></li>
+						</ul>
+					</div>
+				</div>
+			</ul>
+		</li>
+<!-- 2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 -->
+            <li class="nav-item dropdown text-center"> <a class="ga-menu-d nav-link" id="navbarDropdown2" data-target="#" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admissions &amp; Aid <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu multi-column columns-2">
+                <div class="row no-gutters">
+                  <div class="col-sm-6">
+                    <div class="group-title">ADMISSIONS</div>
+                    <ul class="multi-column-dropdown">
+                      <li><a class="ga-menu-d dropdown-item" href="/admissions/become-student/index.php">Apply</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="https://www.chabotcollege.edu/redirect/clpccd-student-registration.php">Registration</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/admissions/index.php">Admissions &amp; Records</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/admissions/forms.php">Forms for Admissions &amp; Records</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/admissions/transcripts/index.php">Transcripts</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/EarlyCollege/index.php#highschool">For High School Students</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="group-title">PAYING FOR COLLEGE</div>
+                    <ul class="multi-column-dropdown">
+                      <li><a class="ga-menu-d dropdown-item" href="/finaid">Financial Aid Office</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/finaid/forms.php">Forms for Financial Aid</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/finaid/free-tuition/index.php">Free Tuition Promise Grant</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/scholarships">Scholarships</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/admissions/cost-payment/index.php">Tuition &amp; Fees, Payment</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </ul>
+            </li>			  
+<!-- 333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 -->			  
+		   <li class="nav-item dropdown text-center"> <a class="ga-menu-d nav-link" id="navbarDropdown3" data-target="#" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Academics &amp; Student Support <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu multi-column dropdown-menu-3">
+                <div class="row no-gutters">
+                 <div class="col-8"><div class="row no-gutters">
+                  <div class="col-4">
+                    <ul class="multi-column-dropdown">
+                      <li><a class="ga-menu-d dropdown-item" href="/academics/index.php">Academic Overview</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/admissions/academic-calendar/index.php">Academic Calendar</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/courses">Class Schedule</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/courses/index.php#catalog">College Catalog</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-4">
+  					<div class="group-title">ACADEMIC PROGRAMS</div>
+                    <ul class="multi-column-dropdown">
+                      <li><a class="ga-menu-d dropdown-item" href="/lcp">Learning &amp; Career Pathways</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/academics/programs.php">Degrees &amp; Certificates</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/ce/">Career Education</a></li>
+					  <li><a class="ga-menu-d dropdown-item" href="/ce/student-resources.php#apprenticeship">Apprenticeships</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/academics/noncredit/">Noncredit</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/default.php#areas">Areas of Study</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-4">
+					<div class="group-title">ONLINE SYSTEMS</div>
+                    	<ul class="multi-column-dropdown">
+							<li><a class="ga-menu-d dropdown-item" href="/online/canvas-home.php">Canvas</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/redirect/myportal.php">MyPortal</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/admissions/degreeworks/index.php">DegreeWorks</a></li>
+							<li><a class="ga-menu-d dropdown-item" href="/redirect/zonemail.php">Zonemail</a></li>
+							<!-- <li><a class="dropdown-item" href="https://myportal.clpccd.cc.ca.us/cp/home/displaylogin">The Zone</a></li> -->
+							<li><a class="dropdown-item" href="/stay-informed.php">Stay Informed</a></li>
+						 </ul>
+                  </div></div>
+				 </div>
+                  <div class="col-4">
+					  <div class="group-title">SUPPORT &amp; RESOURCES</div>
+					  <div class="row no-gutters">
+						  <div class="col-6">
+							  <ul>						  
+								  <li><a class="ga-menu-d dropdown-item" href="/redirect/bookstore.php">Bookstore</a></li>
+								  <li><a class="ga-menu-d dropdown-item" href="/counseling/">Counseling</a></li>
+								  <li><a class="ga-menu-d dropdown-item" href="/students/basic-needs.php">Basic Needs</a></li>
+								  <li><a class="ga-menu-d dropdown-item" href="/student-services/health-center/">Health Center</a></li>
+								  <li><a class="ga-menu-d dropdown-item" href="/library/">Library</a></li>
+							  </ul>
+						  </div>
+						  <div class="col-6">
+							  <ul>
+								  <li><a class="ga-menu-d dropdown-item" href="/specialprograms">Special Programs</a></li>
+								  <li><a class="ga-menu-d dropdown-item" href="/counseling/transfer-center/index.php">Transfer Center</a></li>
+								  <li><a class="ga-menu-d dropdown-item" href="/academics/learning-connection/index.php">Tutoring</a></li>
+								  <li><a class="ga-menu-d btn btn-dark px-2 mt-2" href="/students"><strong><em>All Resources</em></strong></a></li>
+								  <li><a class="ga-menu-d btn btn-warning text-dark px-2 mt-2" href="/students"><strong><em>Questions? Ask Us</em></strong></a></li>
+							  </ul>
+						  </div>
+					  </div>
+                  </div>
+                </div>
+              </ul>
+            </li>			  
+<!-- 44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444 -->			
+            <li class="nav-item dropdown text-center"> <a class="ga-menu-d nav-link" id="navbarDropdown4" data-target="#" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Campus Life <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu multi-column columns-2 dropdown-menu-4">
+                <div class="row no-gutters">
+                  <div class="col-sm-6">                    
+                    <ul class="multi-column-dropdown">
+                      <li><a class="ga-menu-d dropdown-item" href="http://athletics.chabotcollege.edu">Athletics</a></li>
+					  <li><a class="ga-menu-d dropdown-item" href="/cafeteria">Cafeteria</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/safety/">Campus Safety</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/events/">Events Calendar</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/safety/parking/">Parking</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul class="multi-column-dropdown">
+                      <li><a class="ga-menu-d dropdown-item" href="https://www.spectator.news">Spectator: Student Newspaper</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/student-services/student-life/student-clubs/">Student Clubs</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/student-services/student-life/">Student Life Office</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/student-services/student-life/student-senate/">Student Senate</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/academics/arts-media-communications/theater-arts/">Theater Performances</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </ul>
+            </li>
+<!-- 555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 -->
+            <li class="nav-item dropdown text-center"> <a class="ga-menu-d nav-link" id="navbarDropdown5" data-target="#" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Finish Line <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu multi-column columns-3 dropdown-menu-5">
+                <div class="row no-gutters">
+                  <div class="col-sm-4">
+                    <div class="group-title">GETTING HERE</div>
+                    <ul class="multi-column-dropdown">
+                      <li><a class="ga-menu-d dropdown-item" href="/admissions/degreeworks/">DegreeWorks</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/admissions/transcripts/">Official Transcript</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="group-title">TRANSFER</div>
+                    <ul class="multi-column-dropdown">
+                      <li><a class="ga-menu-d dropdown-item" href="/counseling/transfer/ge-requirement-transfer-archive.php">GE Certification</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/counseling/transfer-center/workshops.php">Transfer Workshops</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="group-title">GRADUATION</div>
+                    <ul class="multi-column-dropdown">
+                      <li><a class="ga-menu-d dropdown-item" href="/admissions/graduation.php">Overview</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/commencement/">Commencement</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </ul>
+            </li>
+<!-- 666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666 -->
+            <li class="nav-item dropdown text-center"> <a class="ga-menu-d nav-link" id="navbarDropdown6" data-target="#" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculty &amp; Staff <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu multi-column dropdown-menu-6">
+                <div class="row no-gutters">
+                  <div class="col-sm-12">
+                    <ul class="multi-column-dropdown">
+                      <li><a class="ga-menu-d dropdown-item" href="/canvas">Canvas</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="/redirect/myportal.php">MyPortal</a></li>
+                      <li><a class="ga-menu-d dropdown-item" href="https://outlook.office.com">Email</a></li>
+				   
+						<div class="row no-gutters">             
+						  <div class="col-sm-12 text-center">
+							<a class="ga-menu-d btn btn-dark px-4 mt-3" href="/faculty-staff" style="width:auto;"><em>More Resources</em></a>
+
+						  </div>
+						</div>
+                    </ul>
+                  </div>
+                </div>
+              </ul>
+
+
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+<!-- mobile-main-nav -->
+<div id="mobile-top-nav" class="col-12 d-print-none pb-2" style="background:#e5e5e5;">
+    <div class="row">
+        <div class="col text-center">
+            <a class="ga-header-toplink-m btn btn-sm btn-dark p-1 pl-3 pr-3 m-0 mr-2 mb-2" role="button" href="/admissions/become-student/index.php">Apply</a>					 
+            <a class="ga-header-toplink-m btn btn-sm btn-dark pl-3 pr-3 pt-1 pb-1 m-0 mb-2" role="button" href="/myportal">MyPortal</a>
+            <a class="ga-header-toplink-m btn btn-sm btn-dark p-1 pl-3 pr-3 m-0 mr-2 mb-2" role="button" href="/courses/index.php">Class Schedule</a>			
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <div id="google_translate_element_m"></div>
+            <div><a href="/student-services/language-assistance.php" style="font-size: .8rem; padding:0;margin:0;" class="ga-header-toplink btn btn-secondary btn-sm">More Language Support</a></div>
+        </div>
+    </div>
+	
+    <div class="row">
+        <div class="col text-center pt-2">	
+			<form action="/search-results.php" id="mobile-search-form">
+				<label class="search-label" for="mobile-search-box">Search string</label><input name="q" type="text" id="mobile-search-box" class="" placeholder="Search" aria-label="Search"/><button value="search" name="s" aria-label="Search"><span style="display:none;">Go</span><em class="fa fa-search search-icon"></em></button>
+				<input type="hidden" name="cx" value="001753360678573100478:yh9hrsxi9q4"  aria-label="Search"/> 
+				<input type="hidden" name="cof" value="FORID:9" aria-label="Search" /> 
+				<input type="hidden" name="ie" value="UTF-8" aria-label="Search" />
+    		</form>
+        </div>
+    </div>
+	
+</div>
+<div id="mobile-main-nav" class="container text-left collapse navbar-collapse">
+    
+    <div id="accordion-nav" class="accordion">
+        <div class="card">
+            <a class="card-title">
+                <div class="ga-menu-m card-header collapsed" data-toggle="collapse" href="#collapse1">
+                    About
+                </div>
+            </a>
+            <div id="collapse1" class="collapse" data-parent="#accordion-nav">
+                <div class="card-body">
+                    <ul>
+                        <li><a href="/about" class="ga-menu-m">Overview</a></li>
+                        <li><a href="/about/campus-maps.php" class="ga-menu-m">Maps &amp; Directions</a></li>
+                        <li><a href="/safety/parking/index.php" class="ga-menu-m">Parking</a></li>
+                        <li><a href="/professional-services" class="ga-menu-m">Professional Services</a></li>
+                        <li><a href="/employment" class="ga-menu-m">Employment</a></li>
+                        <li><a href="/accreditation" class="ga-menu-m">Accreditation</a></li>
+                        <li><a href="/diversity" class="ga-menu-m">Diversity &amp; Inclusion</a></li>
+                        <li><a href="/planning" class="ga-menu-m">Planning</a></li>
+                        <li><a href="/safety/asr.php" class="ga-menu-m">Safety Clery Report</a></li>
+                        <li><a href="/about/title-ix/index.php" class="ga-menu-m">Title IX</a></li>
+                        <li><a href="/outreach" class="ga-menu-m">Outreach</a></li>
+                    </ul>
+                    <div class="ga-menu-m group-title">OFFICES</div>
+                    <ul>
+                        <li><a href="/president" class="ga-menu-m">President's Office</a></li>
+                        <li><a href="/academics/office-academic-services" class="ga-menu-m">Academic Services</a></li>
+                        <li><a href="/administrative-services" class="ga-menu-m">Administrative Services</a></li>
+                        <li><a href="/student-services" class="ga-menu-m">Student Services</a></li>
+                        <li><a href="https://www.supportchabotcollege.org" class="ga-menu-m">Foundation</a></li>
+                    </ul>
+                    <div class="ga-menu-m group-title">SUPPORT CHABOT COLLEGE</div>
+                    <ul>
+                        <li><a href="https://www.supportchabotcollege.org/join.php" class="ga-menu-m">Alumni</a></li>
+                        <li><a href="https://www.supportchabotcollege.org/make-a-gift.php" class="ga-menu-m">Give</a></li>
+                        <li><a href="https://www.supportchabotcollege.org" class="ga-menu-m">Foundation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <a class="card-title">
+                <div class="ga-menu-m card-header collapsed" data-toggle="collapse" href="#collapse2">
+                    Admissions &amp; Aid
+                </div>
+            </a>
+            <div id="collapse2" class="collapse" data-parent="#accordion-nav">
+                <div class="card-body">
+                    <div class="group-title">ADMISSIONS</div>
+                    <ul>
+                        <li><a href="/admissions/become-student/index.php" class="ga-menu-m">Apply</a></li>
+                        <li><a href="https://www.chabotcollege.edu/redirect/clpccd-student-registration.php" class="ga-menu-m">Registration</a></li>
+                        <li><a href="/admissions/index.php" class="ga-menu-m">Admissions &amp; Records</a></li>
+                        <li><a href="/admissions/forms.php" class="ga-menu-m">Forms</a></li>
+                        <li><a href="/admissions/transcripts/index.php" class="ga-menu-m">Transcripts</a></li>
+                        <li><a href="/EarlyCollege/index.php#highschool" class="ga-menu-m">For High School Students</a></li>
+                    </ul>
+                    <div class="group-title">PAYING FOR COLLEGE</div>
+                    <ul>
+                        <li><a href="/finaid" class="ga-menu-m">Financial Aid Office</a></li>
+                        <li><a href="/finaid/forms.php" class="ga-menu-m">Forms</a></li>
+                        <li><a href="/finaid/free-tuition/index.php" class="ga-menu-m">Free Tuition Promise Grant</a></li>
+                        <li><a href="/scholarships" class="ga-menu-m">Scholarships</a></li>
+                        <li><a href="/admissions/cost-payment/index.php" class="ga-menu-m">Tuition &amp; Fees, Payment</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <a class="card-title">
+                <div class="ga-menu-m card-header collapsed" data-toggle="collapse" href="#collapse3">
+                    Academics &amp; Student Support
+                </div>
+            </a>
+            <div id="collapse3" class="collapse" data-parent="#accordion-nav">
+                <div class="card-body">
+                    <ul>
+                        <li><a href="/academics/index.php" class="ga-menu-m">Academic Overview</a></li>
+                        <li><a href="/admissions/academic-calendar/index.php" class="ga-menu-m">Academic Calendar</a></li>
+                        <li><a href="/courses" class="ga-menu-m">Class Schedule</a></li>
+                        <li><a href="/courses/index.php#catalog" class="ga-menu-m">College Catalog</a></li>
+                    </ul>
+					
+                    <div class="group-title">ACADEMIC PROGRAMS</div>
+                    <ul>						
+                      <li><a href="/lcp" class="ga-menu-m">Learning &amp; Career Pathways</a></li>
+                      <li><a href="/academics/programs.php" class="ga-menu-m">Degrees &amp; Certificates</a></li>
+                      <li><a href="/ce/" class="ga-menu-m">Career Education</a></li>
+					  <li><a href="/ce/student-resources.php#apprenticeship" class="ga-menu-m">Apprenticeships</a></li>
+                      <li><a href="/academics/noncredit/" class="ga-menu-m">Noncredit</a></li>
+                      <li><a href="/default.php#areas" class="ga-menu-m">Areas of Study</a></li>
+                    </ul>
+					
+                    <div class="group-title">ONLINE SYSTEMS</div>
+                    <ul>
+                        <li><a href="/canvas" class="ga-menu-m">Canvas</a></li>
+                        <li><a href="/redirect/myportal.php" class="ga-menu-m">MyPortal</a></li>
+                        <li><a href="/admissions/degreeworks/index.php" class="ga-menu-m">DegreeWorks</a></li>
+                        <li><a href="/redirect/zonemail.php" class="ga-menu-m">Zonemail</a></li>
+                        <!-- <li><a href="https://myportal.clpccd.cc.ca.us/cp/home/displaylogin">The Zone</a></li> -->
+                        <li><a href="/stay-informed.php" class="ga-menu-m">Stay Informed</a></li>
+                    </ul>
+                    <div class="group-title">SUPPORT &amp; RESOURCES</div>
+                    <ul>
+                        <li><a href="/redirect/bookstore.php" class="ga-menu-m">Bookstore</a></li>
+                        <li><a href="/counseling" class="ga-menu-m">Counseling</a></li>
+                        <li><a href="/students/basic-needs.php" class="ga-menu-m">Basic Needs</a></li>
+                        <li><a href="/student-services/health-center/" class="ga-menu-m">Health Center</a></li>
+                        <li><a href="https://libraryguides.chabotcollege.edu/home">Library</a></li>
+                        <li><a href="/specialprograms" class="ga-menu-m">Special Programs</a></li>
+                        <li><a href="/counseling/transfer-center/index.php" class="ga-menu-m">Transfer Center</a></li>
+                        <li><a href="/academics/learning-connection/index.php" class="ga-menu-m">Tutoring</a></li>
+                        <li><a href="/students"><em>All Resources</em></a></li>
+                        <li><a href="/students"><em>Questions? Ask Us</em></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <a class="card-title">
+                <div class="ga-menu-m card-header collapsed" data-toggle="collapse" href="#collapse5">
+                    Campus Life
+                </div>
+            </a>
+            <div id="collapse5" class="collapse" data-parent="#accordion-nav">
+                <div class="card-body">
+                    <ul>
+                        <li><a href="http://athletics.chabotcollege.edu" class="ga-menu-m">Athletics</a></li>
+                        <li><a href="/cafeteria" class="ga-menu-m">Cafeteria</a></li>
+                        <li><a href="/safety/" class="ga-menu-m">Campus Safety</a></li>
+                        <li><a href="/events/" class="ga-menu-m">Events Calendar</a></li>
+                        <li><a href="/safety/parking/" class="ga-menu-m">Parking</a></li>
+                        <li><a href="https://www.spectator.news" class="ga-menu-m">Spectator: Student Newspaper</a></li>
+                        <li><a href="/student-services/student-life/student-clubs/" class="ga-menu-m">Student Clubs</a></li>
+                        <li><a href="/student-services/student-life/" class="ga-menu-m">Student Life Office</a></li>
+                        <li><a href="/student-services/student-life/student-senate/" class="ga-menu-m">Student Senate</a></li>
+                        <li><a href="/academics/arts-media-communications/theater-arts/" class="ga-menu-m">Theater Performances</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <a class="card-title">
+                <div class="ga-menu-m card-header collapsed" data-toggle="collapse" href="#collapse6">
+                    Faculty &amp; Staff
+                </div>
+            </a>
+            <div id="collapse6" class="collapse" data-parent="#accordion-nav">
+                <div class="card-body">
+                    <ul>
+                        <li><a href="/canvas" class="ga-menu-m">Canvas</a></li>
+                        <li><a href="/redirect/myportal.php" class="ga-menu-m">MyPortal</a></li>
+                        <li><a href="https://outlook.office.com/" class="ga-menu-m">Email</a></li>
+                        <li><a href="/faculty-staff" class="ga-menu-m"><em>More Resources</em></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -accordion-nav -->		  
+    <div id="button-nav">
+        <div class="row">
+            <div class="col-6 button-item"><a href="/directory/az.php" class="ga-menu-m">A-Z</a></div>
+            <div class="col-6 button-item"><a href="/directory/employee-directory.php" class="ga-menu-m">Find People</a></div>
+        </div>
+        <div class="row">
+            <div class="col-6 button-item"><a href="/map" class="ga-menu-m">Maps &amp; Directions</a></div>
+            <div class="col-6 button-item"><a href="/safety/parking/index.php" class="ga-menu-m">Parking</a></div>
+        </div>
+        <div class="row">
+            <div class="col-6 button-item"><a href="https://www.supportchabotcollege.org/make-a-gift.php" class="ga-menu-m">Give</a></div>
+        </div>
+    </div>
+</div>
+<!-- -mobile-main-nav -->
+      
+    </div>
+  </div>
+
+<div class="container alert alert-secondary d-none d-print-none" id="qr-print-global">
+	<div class="row justify-content-center">
+		<strong>Scan QR to go to the web version of this page</strong>
+	</div>
+
+	<div class="row justify-content-center" aria-hidden="true">
+		<img class="mx-auto d-block" src='/create-qr.php?u=http://www.chabotcollege.edu/_resources/images/chabot-logo.png' alt="qr code" aria-hidden="true">
+	</div>
+</div>
+
+
+</header>
+   <div class="main-content">
+      <div class="container"><!-- Emergency Alert --><div class="warning-div">
+   <div class="row text-center">
+      <div class=""></div>
+   </div>
+</div></div>
+      <div class="container">
+         <div class="row yellow-outer">
+            <div class="col-md-12 main-content-text col-sm-12 col-xs-12 side-padding">
+               <div class="gray-box"><br><br>
+                  
+                  <h1 style="text-align: center;">Sorry! The page you were looking for could not be found</h1>
+                  
+                  <h2 class="w3lstext" style="text-align: center;"><em>You may</em>:</h2>
+                  
+                  <p class="w3lstext" style="text-align: center;">Start from our<span>&nbsp;</span><a href="/default.php">Main Page</a>.</p>
+                  
+                  <p class="w3lstext" style="text-align: center;">Or, use the search at the top-right on this page.</p>
+                  
+                  <p class="w3lstext" style="text-align: center;">Or, use the menu bar by placing your mouse over each area.</p>
+                  
+                  <p class="w3lstext" style="text-align: center;">&nbsp;</p>
+                  </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer>
+
+<div class="container-fluid" style="background-color:#fff; color:#000;">
+		<div class="row">
+			<div class="col-lg-6 offset-lg-3 text-center mt-3 mb-3">
+				For support in other languages, visit our 
+					<a href="/student-services/language-assistance.php">language assistance page</a>.
+				<br/>
+				For disability and accessibility support, contact <a href="/dsps/dsps-contact.php">DSPS</a>.
+				<br/><br/>
+				<em>All academic and career technical education programs and student support programs and services are open to all students without regard to race, color, national origin, sex or disability status.</em>
+			</div>
+		</div>
+</div>
+
+	<div class="text-center vertical-center" id="return-to-top-container">
+		<a href="" onclick="return false;" title="Return to top" id="return-to-top-bar" aria-label="Return to top" style="">
+			<div class="navFooterBackToTop">
+			  <span class="navFooterBackToTopText">
+				Back to top
+			  </span>
+			</div>	
+		</a>
+	</div>
+
+<div class="container-fluid stay-informed-container">
+	<div class="container py-4">
+		<div class="row py-2 d-flex align-items-center justify-content-center title">
+			STAY INFORMED
+	   	</div>
+		
+		<div class="row py-2 d-flex align-items-center justify-content-center">
+			<div class="col-lg-6 text-center text-md-end p-0">
+				<a href="/safety/index.php#alert" class="ga-menu-f icons">
+					<img src="/images/stay-informed/text-alert.jpg" alt="text alert" class="m-1 m-lg-0">
+				</a>
+				<a href="/redirect/zonemail.php" class="ga-menu-f icons">
+					<img src="/images/stay-informed/zonemail.jpg" alt="zonemail" class="m-1 m-lg-0">
+				</a>
+			</div>
+			<div class="col-lg-6 social-icons">
+				<a href="http://www.facebook.com/ChabotCollege" class="ga-menu-f" aria-label="Chabot College Facebook" title="Chabot College Facebook">
+					<em class="fa-brands fa-facebook-square" aria-hidden="true"></em>
+				</a>
+				<a href="https://www.instagram.com/chabot_college/" class="ga-menu-f" aria-label="Chabot College Instagram" title="Chabot College Instagram">
+					<em class="fa-brands fa-instagram" aria-hidden="true"></em>
+				</a>
+				<a href="http://twitter.com/chabot_college" class="ga-menu-f" aria-label="Chabot College Twitter" title="Chabot College Twitter">
+					<em class="fa-brands fa-x-twitter" aria-hidden="true"></em>
+				</a>
+				<a href="http://www.youtube.com/user/ChabotCollege" class="ga-menu-f" aria-label="Chabot College Youtube" title="Chabot College YouTube">
+					<em class="fa-brands fa-youtube-square" aria-hidden="true"></em>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <div class="container footer-top-row">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-12 text-center">
+        <a href="/?ref=logo-f" class="ga-menu-f"><img src="/_resources/images/chabot-logo-footer.png" width="175" alt="Chabot College" /></a>
+        <br><br>
+
+        <p>25555 Hesperian Blvd<br>
+          Hayward, CA 94545<br>
+          (510) 723-6600<br>
+		  <a href="https://www.google.com/maps/place/Chabot+College/@37.6404921,-122.1056913,17.78z/data=!4m5!3m4!1s0x808f914b037ff413:0x7e63f92d4f890bc5!8m2!3d37.6427231!4d-122.1062344?authuser=1" class="ga-menu-f small">Google Map</a> | <a href="/about/campus-maps.php" class="ga-menu-f small">Campus Map</a>
+		  </p>
+      </div>
+      <div class="col-lg-9 col-md-9 col-sm-12 footer-nav text-center">
+      	<div class="row">
+       
+          <div class="col">
+            <ul>
+				<li><a href="/apply" class="ga-menu-f">Apply</a></li>
+                <li><a href="/redirect/myportal.php" class="ga-menu-f">MyPortal</a></li>
+                <li><a href="/redirect/bookstore.php" class="ga-menu-f">Bookstore</a></li>
+				<li ><a href="https://libraryguides.chabotcollege.edu/home" class="ga-menu-f">Library</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+              <li><a href="/canvas" class="ga-menu-f">Canvas</a></li>
+              <li><a href="/redirect/zonemail.php" class="ga-menu-f">Student Zonemail</a></li>
+              <!--li><a href="https://myportal.clpccd.cc.ca.us/cp/home/displaylogin">The Zone</a></li-->
+              <li><a href="/events" class="ga-menu-f">Events</a></li>
+              <li><a href="/employment/" class="ga-menu-f">Employment</a></li>
+              <li><a href="/safety/parking/" class="ga-menu-f">Parking</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+              <li><a href="/about" class="ga-menu-f">About</a></li>
+              <li><a href="/accessibility" class="ga-menu-f">Accessibility</a></li>
+              <li><a href="/map" class="ga-menu-f">Map &amp; Directions</a></li>
+              <li><a href="/safety" class="ga-menu-f">Safety &amp; Security</a></li>
+              <li><a href="/web/website-info.php" class="ga-menu-f">Site Policies</a></li>	
+              <li><a href="/student-services/incident-referral/index.php" class="ga-menu-f">Incident Referral Forms</a></li>				
+            </ul>
+          </div>
+          <div class="col">
+            <ul>
+              <li><a href="/accreditation" class="ga-menu-f">Accreditation</a></li>
+              <li><a href="/governance" class="ga-menu-f">Governance</a></li>
+              <li><a href="/governance/academic-senate/agenda-minutes.php" class="ga-menu-f">Academic Senate</a></li>
+              <li><a href="/governance/classified-senate" class="ga-menu-f">Classified Senate</a></li>
+              <li><a href="/student-services/student-life/student-senate/agenda-minutes.php" class="ga-menu-f">Student Senate</a></li>
+              <li><a href="/governance/curriculum/agenda-minutes.php" class="ga-menu-f">Curriculum Committee</a></li>
+              <li><a href="https://www.clpccd.org/board/index.php" class="ga-menu-f">Governing Board</a></li>				
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 text-center" style="font-size:.8em;"> <a href="http://www.clpccd.org/" class="ga-menu-f"><img src="/_resources/images/clpccd-logo-footer.png" alt="CLPCCD" /></a> <br><br>
+          7600 Dublin Blvd, 3rd fl<br/>
+          Dublin, CA 94568<br/>
+          (925) 485-5208      
+          <div class="hidden-lg-up">
+                <br><br>
+            </div>          
+        </div>          
+        
+        <div class="col-lg-6 col-md-6 col-sm-12 text-center" style="font-size:.8em;"> <a href="http://www.laspositascollege.edu" class="ga-menu-f"><img src="/_resources/images/lpc-logo-footer.png" alt="LPC" /></a> <br><br>
+			3000 Campus Hill Dr<br/>
+          	Livermore, CA 94551<br/>
+          	(925) 424-1000 </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+        	<br>
+            <span id="directedit" style="font-weight:bold;">&copy;</span> Copyright 2026 Chabot College <br><br></div>
+      </div>
+    </div>
+  </div>
+</footer>
+   
+<a href="" onclick="return false;" title="Return to top" id="return-to-top" aria-label="Return to top" aria-hidden="true" class="d-print-none"><em class="fa fa-arrow-up d-print-none" aria-label="Return to top"></em></a>
+<script src="/_resources/js/direct-edit.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/_resources/js/main.js" type="text/javascript"></script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T38RPM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->   <div id="hidden" style="display:none;"><a id="de" href="https://a.cms.omniupdate.com/11/?skin=clpccd&amp;account=chabotcollege&amp;site=www&amp;action=de&amp;path=/404.pcf" target="_blank">©</a></div>
+<!-- ouc:info uuid="c717b713-d7e6-45e7-9d7d-5b5e262ad2e9"/ --></body></html>

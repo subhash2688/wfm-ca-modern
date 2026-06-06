@@ -30,7 +30,7 @@ export function PageHero({ label, title, subtitle, imageSrc }: PageHeroProps) {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="text-sm font-semibold tracking-[0.2em] text-[#D4A853] uppercase"
+          className="text-sm font-semibold text-[#D4A853]"
         >
           {label}
         </motion.p>
