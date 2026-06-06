@@ -258,7 +258,7 @@ export default function ProgramsPage() {
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
                   <Image
                     src="/images/resources/FullSize20250122TCSattvicMealsatDeAnzaKickoff028508.jpg"
-                    alt="WFM meal distribution at De Anza College campus"
+                    alt="WFM fresh meal distribution at De Anza College campus"
                     fill
                     className="object-cover"
                   />
@@ -288,7 +288,7 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* ───── Sattvic Kitchen Program ───── */}
+      {/* ───── Fresh Meals Program ───── */}
       <section className="bg-[#F5F0EB] py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid items-center gap-16 lg:grid-cols-2">
@@ -296,7 +296,7 @@ export default function ProgramsPage() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image
                   src="/images/resources/FullSize20250122TCSattvicMealsatDeAnzaKickoff028550.jpg"
-                  alt="Freshly prepared Sattvic meals in kitchen"
+                  alt="Freshly cooked plant-based meals prepared for students"
                   fill
                   className="object-cover"
                 />
@@ -310,13 +310,13 @@ export default function ProgramsPage() {
                   Nourishment First
                 </p>
                 <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
-                  Sattvic Kitchen Program
+                  Fresh Meals Program
                 </h2>
                 <p className="mt-6 text-lg leading-relaxed text-[#4B5563]">
-                  Our partner kitchens prepare fresh, nutritious vegetarian meals
-                  daily using the Sattvic approach — wholesome, plant-based food
-                  designed to nourish both body and mind. Every meal is crafted
-                  with care and delivered the same day.
+                  Our partner kitchens prepare freshly cooked, plant-based meals
+                  every day — wholesome, nutritious food designed to fuel focus
+                  and sustain energy through long class days. Every meal is
+                  crafted with care and delivered the same morning.
                 </p>
 
                 <div className="mt-10 flex items-baseline gap-2">
@@ -328,13 +328,13 @@ export default function ProgramsPage() {
                   </span>
                 </div>
                 <p className="mt-4 text-[#4B5563]">
-                  That is a balanced, freshly cooked vegetarian meal — prepared,
+                  That is a balanced, freshly cooked plant-based meal — prepared,
                   packaged, and delivered to a student in need. Eight dollars can
                   change a student&apos;s entire day.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  {["Fresh Daily", "100% Vegetarian", "Balanced Nutrition", "Zero Waste"].map(
+                  {["Cooked Fresh Daily", "Plant-Based", "Balanced Nutrition", "Zero Waste"].map(
                     (tag) => (
                       <span
                         key={tag}

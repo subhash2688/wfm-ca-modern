@@ -73,7 +73,6 @@ export function Footer() {
                 { label: "Our Mission", href: "/about-us" },
                 { label: "Programs", href: "/programs" },
                 { label: "Team", href: "/team" },
-                { label: "Financial Reports", href: "/about-us#financial-reports" },
                 { label: "Contact", href: "/contact" },
               ].map((link) => (
                 <li key={link.href + link.label}>

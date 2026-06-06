@@ -217,7 +217,7 @@ export default function DonatePage() {
               {
                 question: "Where does my money go?",
                 answer:
-                  "100% of your donation goes directly to preparing and delivering nutritious Sattvic meals to college students. Our operational costs — salaries, technology, marketing — are covered by a separate group of founding donors, so your gift is never diluted by overhead.",
+                  "100% of your donation goes directly to preparing and delivering freshly cooked, plant-based meals to college students. Our operational costs — salaries, technology, marketing — are covered by a separate group of founding donors, so your gift is never diluted by overhead.",
               },
               {
                 question: "Can I set up recurring donations?",

@@ -61,7 +61,7 @@ export function Header() {
               href="/login"
               className="hidden text-[15px] font-medium text-[#4B5563] transition-colors hover:text-[#1A3D5C] lg:block"
             >
-              Log in
+              Student Portal
             </Link>
             <Link
               href="/donate"
@@ -123,7 +123,7 @@ export function Header() {
                 onClick={() => setMobileOpen(false)}
                 className="border-b border-[#E5E2DD] py-4 text-base font-medium text-[#4B5563]"
               >
-                Log in
+                Student Portal
               </Link>
               <Link
                 href="/donate"

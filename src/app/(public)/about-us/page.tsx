@@ -22,7 +22,7 @@ export default function AboutUsPage() {
       <PageHero
         label="About Us"
         title="No one should go hungry."
-        subtitle="Inspired by a vision of compassion that has already served over 4 billion meals worldwide, the World Food Movement brings free, nutritious meals to college students across America."
+        subtitle="Inspired by global food-service movements that have nourished millions, WFM is bringing free, hot meals to college students across America — starting in the Bay Area."
         imageSrc="/images/banners/hero-2.webp"
       />
 
@@ -95,25 +95,24 @@ export default function AboutUsPage() {
                 Our inspiration
               </p>
               <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
-                A movement born from compassion
+                Proven at scale. Now here.
               </h2>
               <p className="mt-8 text-lg leading-relaxed text-[#4B5563]">
-                His Divine Grace A.C. Bhaktivedanta Swami Prabhupada, the
-                Founder-Acharya of the International Society for Krishna
-                Consciousness (ISKCON), came to America with the vision of
-                giving every human being the opportunity for a life of
-                happiness, good health and peace of mind.
+                Across Asia, Europe, and the UK, community-led food movements
+                have demonstrated what becomes possible when purpose-driven
+                people organize around a single goal: no one goes hungry.
+                Millions of meals served. Millions of lives changed.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-[#4B5563]">
-                One day in Mayapur, a village near Kolkata, India, Srila
-                Prabhupada looked out of his window and saw a group of children
-                fighting with street dogs for food. From this simple yet
-                heartbreaking incident came the determination that{" "}
+                In the United States, 47% of community college students
+                experience food insecurity — not for lack of food, but for lack
+                of access and resources. WFM was founded to close that gap. Our
+                founders have spent decades proving that{" "}
                 <strong className="text-[#1A3D5C]">
-                  no one within the radius of any centre should go hungry.
+                  organized communities can end hunger at scale.
                 </strong>{" "}
-                It is his inspiration that helped initiate feeding programs
-                across the globe.
+                Now they are bringing that experience to America&apos;s
+                college campuses.
               </p>
             </div>
           </FadeIn>
@@ -128,7 +127,7 @@ export default function AboutUsPage() {
               Our journey
             </p>
             <h2 className="font-heading mt-4 text-4xl font-bold text-[#1A1A1A] md:text-5xl">
-              From 1,000 meals to 4 billion.
+              20,000 meals. On a mission to 1 million.
             </h2>
           </FadeIn>
 
@@ -136,34 +135,34 @@ export default function AboutUsPage() {
             <StaggerContainer className="space-y-6" staggerDelay={0.1}>
               {[
                 {
-                  year: "2000",
-                  title: "The Akshaya Patra Foundation",
-                  desc: "Our school lunch feeding program was initiated in Bangalore, India, beginning by feeding just over a thousand children in government schools. This humble initiative would go on to become the world's largest not-for-profit-run school lunch program.",
+                  year: "Jan 2025",
+                  title: "First meal at De Anza College",
+                  desc: "On January 22, 2025, WFM served its first meal at De Anza College in Cupertino, California. Thirty students showed up to the launch. By the end of the first week, hundreds were signing up.",
                 },
                 {
-                  year: "2007",
-                  title: "Feeding programs extend to the United Kingdom",
-                  desc: "The founders extended feeding initiatives beyond India, commencing operations in the UK. The first international kitchen was set up in North London, serving children, university students and people in homeless shelters.",
+                  year: "Mar 2025",
+                  title: "Expanded to 4 campuses",
+                  desc: "Within two months of launch, WFM reached four Bay Area campuses — serving over 1,000 meals per month to students who previously skipped meals to make rent.",
                 },
                 {
-                  year: "2019",
-                  title: "3 billionth meal served",
-                  desc: "The Hon'ble Prime Minister of India personally served the 3 billionth meal in Vrindavan, calling Akshaya Patra 'a social start-up which has turned into a movement.'",
+                  year: "Nov 2025",
+                  title: "10,000 meals milestone",
+                  desc: "WFM celebrated its 10,000th meal alongside California Assembly Member Alex Lee, Santa Clara County Supervisor Otto Lee, and college presidents across the Bay Area.",
                 },
                 {
-                  year: "2024",
-                  title: "4 billion meals milestone",
-                  desc: "Akshaya Patra commemorated the milestone of serving 4 billion meals at the United Nations Headquarters in New York — now feeding over 2.2 million children every day across 78 kitchens in 16 states of India.",
+                  year: "2026",
+                  title: "20,000 meals and growing",
+                  desc: "Now serving 8 Bay Area campuses, WFM has delivered over 20,000 freshly cooked meals to more than 4,000 students. Expansion to additional California campuses is underway.",
                 },
                 {
-                  year: "2025",
-                  title: "World Food Movement launches in America",
-                  desc: "On January 22, 2025, WFM served its first meal at De Anza College in Cupertino, California. In its first year, the program reached 4 Bay Area campuses, served over 10,000 meals to 2,000+ students, and grew to 8 campuses by 2026.",
+                  year: "2030",
+                  title: "The vision: 1 million meals",
+                  desc: "Every dollar, every volunteer, and every campus partnership brings us closer to our goal of 1 million meals served across California and beyond. The movement is just getting started.",
                 },
               ].map((item) => (
                 <StaggerItem key={item.year}>
-                  <div className="grid gap-4 rounded-2xl border border-[#E5E2DD] bg-white p-8 md:grid-cols-[120px_1fr] md:gap-8">
-                    <div className="font-heading text-3xl font-bold text-[#1A3D5C]">
+                  <div className="grid gap-4 rounded-2xl border border-[#E5E2DD] bg-white p-8 md:grid-cols-[140px_1fr] md:gap-8">
+                    <div className="font-heading text-2xl font-bold text-[#1A3D5C]">
                       {item.year}
                     </div>
                     <div>
@@ -212,7 +211,6 @@ export default function AboutUsPage() {
 
       {/* ── What We Do in America ── */}
       <section className="relative bg-white py-24 md:py-32">
-        {/* Subtle dot-grid texture */}
         <div
           className="pointer-events-none absolute inset-0"
           style={{
@@ -275,18 +273,8 @@ export default function AboutUsPage() {
             <StaggerItem>
               <div className="rounded-2xl border border-[#E5E2DD] bg-[#FAFAF8] p-8">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1A3D5C]/5 text-[#1A3D5C]">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"
-                    />
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0012 20.904a48.627 48.627 0 008.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
                   </svg>
                 </div>
                 <h3 className="mt-5 text-xl font-bold text-[#1A1A1A]">
@@ -305,18 +293,8 @@ export default function AboutUsPage() {
             <StaggerItem>
               <div className="rounded-2xl border border-[#E5E2DD] bg-[#FAFAF8] p-8">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1A3D5C]/5 text-[#1A3D5C]">
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                    />
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                   </svg>
                 </div>
                 <h3 className="mt-5 text-xl font-bold text-[#1A1A1A]">
@@ -338,15 +316,20 @@ export default function AboutUsPage() {
       {/* ── Impact Numbers ── */}
       <section className="bg-[#1A3D5C] py-20">
         <div className="mx-auto max-w-7xl px-6">
+          <FadeIn>
+            <p className="mb-12 text-center text-sm font-semibold text-[#D4A853]">
+              Our impact — since January 2025
+            </p>
+          </FadeIn>
           <StaggerContainer
             className="grid grid-cols-2 gap-y-12 md:grid-cols-4"
             staggerDelay={0.1}
           >
             {[
-              { number: "4B+", label: "meals served globally" },
-              { number: "2.2M", label: "children fed daily in India" },
-              { number: "78", label: "kitchens across India" },
-              { number: "16", label: "states in India" },
+              { number: "20,000+", label: "meals served in the US" },
+              { number: "8", label: "Bay Area campuses" },
+              { number: "4,000+", label: "students served" },
+              { number: "1M", label: "meals — our 2030 goal" },
             ].map((stat) => (
               <StaggerItem key={stat.label}>
                 <div className="text-center">
@@ -379,9 +362,15 @@ export default function AboutUsPage() {
           >
             <StaggerItem>
               <div className="rounded-2xl border border-[#E5E2DD] bg-white p-8 md:p-10">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-[#1A3D5C] font-heading text-xl font-bold text-white">
-                    MP
+                <div className="flex items-start gap-5">
+                  {/* Drop photo at public/images/founders/madhu-pandit-dasa.jpg */}
+                  <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-2xl bg-[#1A3D5C]">
+                    <Image
+                      src="/images/founders/madhu-pandit-dasa.jpg"
+                      alt="Madhu Pandit Dasa"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-[#1A1A1A]">
@@ -393,26 +382,20 @@ export default function AboutUsPage() {
                   </div>
                 </div>
                 <p className="mt-6 leading-relaxed text-[#4B5563]">
-                  Founder and Chairman of The Akshaya Patra Foundation and
-                  Chairman of the Global Hare Krishna Movement. A distinguished
-                  alumnus of IIT-Bombay, he has rendered more than four decades
-                  of selfless service to society through humanitarian
-                  initiatives, decisively championing the cause of universal food
-                  security. Under his visionary leadership, Akshaya Patra has
-                  become the world&apos;s largest NGO-run school lunch program.
+                  A distinguished alumnus of IIT-Bombay, he brings four decades
+                  of experience leading large-scale humanitarian feeding programs
+                  across Asia, Europe, and now America. Under his guidance, WFM
+                  is building an operational model that puts freshly cooked,
+                  nutritious meals in the hands of college students who need them
+                  most — with zero overhead and maximum dignity.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {[
-                    "Padma Shri",
-                    "Gandhi Peace Prize",
-                    "Nikkei Asia Prize",
-                    "IIT-Bombay Distinguished Alumnus",
-                  ].map((award) => (
+                  {["IIT-Bombay Distinguished Alumnus", "40+ years in food security"].map((tag) => (
                     <span
-                      key={award}
+                      key={tag}
                       className="rounded-full bg-[#D4A853]/10 px-3 py-1 text-xs font-medium text-[#D4A853]"
                     >
-                      {award}
+                      {tag}
                     </span>
                   ))}
                 </div>
@@ -421,9 +404,15 @@ export default function AboutUsPage() {
 
             <StaggerItem>
               <div className="rounded-2xl border border-[#E5E2DD] bg-white p-8 md:p-10">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-[#1A3D5C] font-heading text-xl font-bold text-white">
-                    CD
+                <div className="flex items-start gap-5">
+                  {/* Drop photo at public/images/founders/chanchalapathi-dasa.jpg */}
+                  <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-2xl bg-[#1A3D5C]">
+                    <Image
+                      src="/images/founders/chanchalapathi-dasa.jpg"
+                      alt="Chanchalapathi Dasa"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-[#1A1A1A]">
@@ -435,13 +424,22 @@ export default function AboutUsPage() {
                   </div>
                 </div>
                 <p className="mt-6 leading-relaxed text-[#4B5563]">
-                  Co-founder and Vice Chairman of The Akshaya Patra Foundation.
-                  He came across the teachings of Srila Prabhupada while pursuing
-                  studies at the Indian Institute of Science. He directs the
-                  strategy, growth, and governance of the organizations, actively
-                  involved in policy planning, operations, public affairs, and
-                  emergency food relief activities.
+                  A graduate of the Indian Institute of Science, he has spent
+                  his career directing the strategy, growth, and governance of
+                  large-scale humanitarian food organizations. He leads WFM&apos;s
+                  policy planning, campus operations, public affairs, and
+                  community engagement across the Bay Area and beyond.
                 </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["Indian Institute of Science", "Operations & Strategy"].map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-[#D4A853]/10 px-3 py-1 text-xs font-medium text-[#D4A853]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </StaggerItem>
           </StaggerContainer>
@@ -470,13 +468,13 @@ export default function AboutUsPage() {
                   Dr. Siva Sivaram
                 </h3>
                 <p className="mt-1 text-sm font-medium text-[#D4A853]">
-                  Board Member &middot; Chairman, Akshaya Patra USA
+                  Board Member &middot; President &amp; CEO, QuantumScape
                 </p>
                 <p className="mt-4 text-sm leading-relaxed text-[#4B5563]">
-                  President and CEO of QuantumScape. A seasoned entrepreneur and
-                  philanthropist who has held executive positions at major global
-                  corporations including Western Digital. Brings strategic vision
-                  and leadership to expand the program&apos;s reach in the U.S.
+                  A seasoned entrepreneur and philanthropist who has held
+                  executive positions at major global corporations including
+                  Western Digital. Brings strategic vision and leadership to
+                  expand the program&apos;s reach across the U.S.
                 </p>
               </div>
             </StaggerItem>
@@ -605,7 +603,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* ── Awards & Recognition ── */}
+      {/* ── Trust & Transparency ── */}
       <section className="relative bg-white py-24 md:py-32">
         <div
           className="pointer-events-none absolute inset-0"
@@ -617,14 +615,14 @@ export default function AboutUsPage() {
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
             <p className="text-sm font-semibold text-[#D4A853]">
-              Recognition
+              Transparency
             </p>
             <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-4xl">
-              Awards &amp; accolades
+              Why donors trust us
             </h2>
             <p className="mt-4 max-w-2xl text-lg text-[#6B7280]">
-              Our feeding programs and initiatives have received numerous
-              prestigious awards and recognition worldwide.
+              We operate with complete transparency. Your donation goes exactly
+              where we say it does — to meals on campuses, nothing else.
             </p>
           </FadeIn>
 
@@ -634,53 +632,57 @@ export default function AboutUsPage() {
           >
             {[
               {
-                title: "Gandhi Peace Prize",
-                desc: "Acknowledging contribution to providing school lunch to millions of children across India.",
+                title: "501(c)(3) Registered Nonprofit",
+                desc: "Officially registered with the IRS. All donations are fully tax-deductible. EIN: 33-1400027.",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                ),
               },
               {
-                title: "Padma Shri Award",
-                desc: "The fourth-highest civilian award of the Republic of India, awarded to Shri Madhu Pandit Dasa.",
+                title: "100% Meals-Funded Model",
+                desc: "Operational costs — salaries, tech, marketing — are covered by a separate group of founding donors. Every public donation funds meals only.",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                ),
               },
               {
-                title: "Nikkei Asia Prize",
-                desc: "For supporting education by nourishing children and playing a pivotal role in socio-economic development.",
+                title: "$8 Per Meal — Verified",
+                desc: "Every meal costs exactly $8 to prepare and deliver. A freshly cooked, nutritious, plant-based meal — tracked and verified per serving.",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                ),
               },
               {
-                title: "BBC Global Food Champion",
-                desc: "An annual award that honours people or causes that help societies and inspire lives.",
+                title: "8 Verified Partner Campuses",
+                desc: "Active partnerships with De Anza, Foothill, West Valley, Chabot, Ohlone, Las Positas, Evergreen Valley, and Mission College.",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0012 20.904a48.627 48.627 0 008.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
+                ),
               },
               {
-                title: "National Award for Child Welfare",
-                desc: "Awarded by the President of India for outstanding work in child welfare.",
+                title: "Endorsed by Elected Officials",
+                desc: "Recognized by California Assembly Member Alex Lee, Santa Clara County Supervisor Otto Lee, and college presidents across the Bay Area.",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                ),
               },
               {
-                title: "Case studies at Harvard, Stanford, MIT",
-                desc: "Operational efficiency and systems studied and included in the syllabi of leading global institutions.",
+                title: "Secure Payments",
+                desc: "Donations processed via Stripe with 256-bit SSL encryption. Your payment information is never stored on our servers.",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                ),
               },
-            ].map((award) => (
-              <StaggerItem key={award.title}>
+            ].map((item) => (
+              <StaggerItem key={item.title}>
                 <div className="rounded-2xl border border-[#E5E2DD] bg-[#FAFAF8] p-6">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#D4A853]/10">
-                    <svg
-                      className="h-5 w-5 text-[#D4A853]"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={1.5}
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
-                      />
+                    <svg className="h-5 w-5 text-[#D4A853]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                      {item.icon}
                     </svg>
                   </div>
-                  <h3 className="mt-4 font-bold text-[#1A1A1A]">
-                    {award.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">
-                    {award.desc}
-                  </p>
+                  <h3 className="mt-4 font-bold text-[#1A1A1A]">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[#6B7280]">{item.desc}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -716,7 +718,7 @@ export default function AboutUsPage() {
                 href="/donate"
                 className="inline-flex items-center gap-3 rounded-full bg-[#D4A853] px-10 py-4 text-base font-bold text-[#1A3D5C] transition-all hover:bg-[#C49A48] hover:shadow-xl hover:shadow-[#D4A853]/20"
               >
-                Support the mission
+                Fund a meal
               </Link>
               <Link
                 href="/get-involved"

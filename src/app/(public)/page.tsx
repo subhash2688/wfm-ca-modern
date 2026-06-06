@@ -52,14 +52,19 @@ export default function HomePage() {
             </h1>
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-white/65 md:text-xl">
               47% of California community college students face food insecurity.
-              Your $8 funds a freshly prepared meal for a student in need.
+              <sup className="text-[#D4A853]">*</sup> Your{" "}
+              <span className="font-bold text-white">$8</span> funds a freshly
+              cooked, plant-based meal for a student in need.
+            </p>
+            <p className="mt-3 text-xs text-white/30">
+              * California Competes, 2023. californiacompetes.org
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
                 href="/donate"
                 className="group inline-flex items-center gap-3 rounded-full bg-[#D4A853] px-10 py-4 text-base font-bold text-[#1A3D5C] transition-all hover:bg-[#E4BC6A] hover:shadow-2xl hover:shadow-[#D4A853]/30 hover:-translate-y-0.5"
               >
-                Fund meals today
+                Fund a meal
                 <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -89,7 +94,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-2 divide-x divide-white/[0.07] md:grid-cols-4">
             {[
-              { number: "20,000+", label: "Meals served" },
+              { number: "20,000+", label: "Meals served since Jan 2025" },
               { number: "8", label: "Partner campuses" },
               { number: "4,000+", label: "Students served" },
               { number: "$8", label: "Cost per meal" },
@@ -210,7 +215,7 @@ export default function HomePage() {
               {
                 step: "02",
                 title: "Kitchens prepare",
-                desc: "Partner kitchens prepare fresh Sattvic meals every morning. Each meal costs $8 — funded entirely by donors like you.",
+                desc: "Partner kitchens cook fresh, plant-based meals every morning. Each meal costs $8 — funded entirely by donors like you.",
                 image: "/images/resources/IMG_2810.jpeg",
               },
               {
@@ -486,7 +491,7 @@ export default function HomePage() {
                     href="/donate"
                     className="inline-flex items-center gap-3 rounded-full bg-[#D4A853] px-10 py-4 text-base font-bold text-[#1A3D5C] transition-all hover:bg-[#E4BC6A] hover:shadow-xl hover:shadow-[#D4A853]/20 hover:-translate-y-0.5"
                   >
-                    Fund meals today
+                    Fund a meal
                   </Link>
                   <Link
                     href="/get-involved"
@@ -499,7 +504,7 @@ export default function HomePage() {
               <div className="relative hidden lg:block">
                 <Image
                   src="/images/resources/FullSize20250122TCSattvicMealsatDeAnzaKickoff028508.jpg"
-                  alt="Volunteers distributing meals"
+                  alt="Volunteers distributing freshly cooked meals to students"
                   fill
                   className="object-cover"
                 />
