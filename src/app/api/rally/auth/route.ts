@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { createHmac } from "crypto";
+import { cookies } from "next/headers";
 
 const SESSION_COOKIE = "rally_vol_session";
 const OTP_EXPIRY_MINUTES = 10;
@@ -19,6 +20,34 @@ function signSession(data: object): string {
   const payload = Buffer.from(JSON.stringify(data)).toString("base64");
   const sig = createHmac("sha256", secret).update(payload).digest("hex");
   return `${payload}.${sig}`;
+}
+
+function verifySessionToken(token: string): { volunteerId: number } | null {
+  const parts = token.split(".");
+  if (parts.length !== 2) return null;
+  const [payload, sig] = parts;
+  const secret = process.env.NEXTAUTH_SECRET ?? "dev-secret";
+  const expected = createHmac("sha256", secret).update(payload).digest("hex");
+  if (sig !== expected) return null;
+  try {
+    return JSON.parse(Buffer.from(payload, "base64").toString("utf8")) as { volunteerId: number };
+  } catch {
+    return null;
+  }
+}
+
+export async function GET() {
+  const jar = await cookies();
+  const token = jar.get(SESSION_COOKIE)?.value;
+  if (!token) return NextResponse.json({ volunteer: null });
+  const session = verifySessionToken(token);
+  if (!session) return NextResponse.json({ volunteer: null });
+  const volunteer = await db.rallyVolunteer.findUnique({
+    where: { id: session.volunteerId },
+    select: { id: true, firstName: true, lastName: true, phone: true, status: true },
+  });
+  if (!volunteer || volunteer.status === "inactive") return NextResponse.json({ volunteer: null });
+  return NextResponse.json({ volunteer });
 }
 
 export async function POST(req: NextRequest) {
