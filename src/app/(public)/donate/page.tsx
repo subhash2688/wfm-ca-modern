@@ -30,11 +30,12 @@ export default function DonatePage() {
                 Choose your impact
               </p>
               <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-5xl">
-                Every dollar feeds a student.
+                Feed a student all year.
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-lg text-[#6B7280]">
-                Select an amount below. Each $8 funds one freshly prepared,
-                nutritious meal for a college student in need.
+                $8 funds one meal. Monthly giving lets us plan kitchens around
+                students — and quietly compounds into hundreds of meals over a
+                year.
               </p>
             </div>
           </FadeIn>

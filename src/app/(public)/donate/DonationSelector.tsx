@@ -3,27 +3,55 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const PRESETS = [
+type Frequency = "monthly" | "one-time";
+
+interface Preset {
+  amount: number;
+  label: string;
+  impact: string;
+}
+
+const MONTHLY_PRESETS: Preset[] = [
+  { amount: 24, label: "$24", impact: "A weekly meal — all year long" },
+  { amount: 40, label: "$40", impact: "Two meals a week for a student" },
+  { amount: 96, label: "$96", impact: "Feed a student all school year" },
+  { amount: 200, label: "$200", impact: "A weekday meal for a student" },
+  { amount: 500, label: "$500", impact: "Sponsor a small cohort" },
+];
+
+const ONETIME_PRESETS: Preset[] = [
   { amount: 8, label: "$8", impact: "1 meal for 1 student" },
   { amount: 24, label: "$24", impact: "3 meals" },
   { amount: 40, label: "$40", impact: "5 meals" },
   { amount: 80, label: "$80", impact: "10 meals" },
-  { amount: 240, label: "$240", impact: "1 month of daily meals" },
+  { amount: 240, label: "$240", impact: "A month of daily meals" },
 ];
 
-type Frequency = "one-time" | "monthly";
+const FOUNDING_GOAL = 100;
+const FOUNDING_CURRENT = 17;
 
 export function DonationSelector() {
-  const [selectedAmount, setSelectedAmount] = useState<number | null>(40);
+  const [frequency, setFrequency] = useState<Frequency>("monthly");
+  const [selectedAmount, setSelectedAmount] = useState<number | null>(96);
   const [customAmount, setCustomAmount] = useState("");
   const [isCustom, setIsCustom] = useState(false);
-  const [frequency, setFrequency] = useState<Frequency>("one-time");
+
+  const presets = frequency === "monthly" ? MONTHLY_PRESETS : ONETIME_PRESETS;
+  const defaultByFreq = frequency === "monthly" ? 96 : 40;
 
   const activeAmount = isCustom
     ? parseFloat(customAmount) || 0
     : selectedAmount || 0;
 
-  const mealsPerDay = Math.floor(activeAmount / 8);
+  const mealsPerCycle = Math.floor(activeAmount / 8);
+  const annualMeals = frequency === "monthly" ? mealsPerCycle * 12 : mealsPerCycle;
+
+  function handleFrequencyChange(freq: Frequency) {
+    setFrequency(freq);
+    setSelectedAmount(freq === "monthly" ? 96 : 40);
+    setIsCustom(false);
+    setCustomAmount("");
+  }
 
   function handlePresetClick(amount: number) {
     setSelectedAmount(amount);
@@ -46,15 +74,58 @@ export function DonationSelector() {
     );
   }
 
+  const foundingProgress = Math.min((FOUNDING_CURRENT / FOUNDING_GOAL) * 100, 100);
+
   return (
     <div className="mx-auto max-w-2xl">
+      {/* Founding 100 social proof card — only on monthly */}
+      <AnimatePresence>
+        {frequency === "monthly" && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="mb-8 overflow-hidden rounded-2xl border border-[#D4A853]/30 bg-gradient-to-r from-[#D4A853]/8 to-[#D4A853]/3 p-5"
+          >
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex-1">
+                <p className="text-xs font-bold tracking-wider text-[#A07F30] uppercase">
+                  Join the Founding 100
+                </p>
+                <p className="mt-1.5 text-sm font-semibold text-[#1A1A1A]">
+                  {FOUNDING_CURRENT} monthly donors are funding our path to 1M meals.
+                </p>
+                <p className="mt-0.5 text-xs text-[#6B7280]">
+                  Be among the first 100. Your name on our founding wall, forever.
+                </p>
+              </div>
+              <div className="hidden sm:block">
+                <div className="font-heading text-3xl font-black text-[#D4A853]">
+                  {FOUNDING_CURRENT}
+                  <span className="text-base font-bold text-[#6B7280]">/{FOUNDING_GOAL}</span>
+                </div>
+              </div>
+            </div>
+            <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/60">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${foundingProgress}%` }}
+                transition={{ duration: 0.9, ease: "easeOut" }}
+                className="h-full rounded-full bg-gradient-to-r from-[#D4A853] to-[#E4BC6A]"
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Frequency toggle */}
       <div className="mb-10 flex justify-center">
-        <div className="inline-flex rounded-full border border-[#E5E2DD] bg-white p-1.5 shadow-sm">
-          {(["one-time", "monthly"] as Frequency[]).map((freq) => (
+        <div className="relative inline-flex rounded-full border border-[#E5E2DD] bg-white p-1.5 shadow-sm">
+          {(["monthly", "one-time"] as Frequency[]).map((freq) => (
             <button
               key={freq}
-              onClick={() => setFrequency(freq)}
+              onClick={() => handleFrequencyChange(freq)}
               className={`relative rounded-full px-8 py-3 text-sm font-semibold transition-all ${
                 frequency === freq
                   ? "text-[#1A3D5C]"
@@ -71,18 +142,51 @@ export function DonationSelector() {
               <span className="relative z-10 capitalize">
                 {freq === "one-time" ? "One-time" : "Monthly"}
               </span>
+              {freq === "monthly" && (
+                <span className="absolute -top-2.5 -right-2 z-20 rounded-full bg-[#D4A853] px-2 py-0.5 text-[9px] font-bold tracking-wider text-[#1A3D5C] uppercase shadow-sm">
+                  5× Impact
+                </span>
+              )}
             </button>
           ))}
         </div>
       </div>
 
+      {/* One-time soft nudge */}
+      <AnimatePresence>
+        {frequency === "one-time" && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="-mt-6 mb-8 overflow-hidden"
+          >
+            <button
+              onClick={() => handleFrequencyChange("monthly")}
+              className="group flex w-full items-start gap-3 rounded-xl border border-[#E5E2DD] bg-[#FAFAF8] p-4 text-left transition-all hover:border-[#D4A853]/40 hover:bg-white"
+            >
+              <span className="mt-0.5 text-lg">💡</span>
+              <span className="flex-1 text-sm text-[#4B5563]">
+                Monthly donors feed{" "}
+                <span className="font-bold text-[#1A1A1A]">5× more students</span>{" "}
+                over a lifetime — and we can plan kitchens around predictable funding.{" "}
+                <span className="font-semibold text-[#1A3D5C] underline decoration-[#D4A853] decoration-2 underline-offset-4 group-hover:text-[#D4A853]">
+                  Switch to monthly →
+                </span>
+              </span>
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Amount grid */}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-        {PRESETS.map((preset) => {
+        {presets.map((preset) => {
           const isSelected = !isCustom && selectedAmount === preset.amount;
+          const isRecommended = frequency === "monthly" && preset.amount === defaultByFreq;
           return (
             <motion.button
-              key={preset.amount}
+              key={`${frequency}-${preset.amount}`}
               onClick={() => handlePresetClick(preset.amount)}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -92,6 +196,11 @@ export function DonationSelector() {
                   : "border-[#E5E2DD] bg-white hover:border-[#D4A853]/40 hover:shadow-md"
               }`}
             >
+              {isRecommended && !isSelected && (
+                <span className="absolute top-3 right-3 rounded-full bg-[#1A3D5C] px-2 py-0.5 text-[9px] font-bold tracking-wider text-white uppercase">
+                  Most Loved
+                </span>
+              )}
               {isSelected && (
                 <motion.div
                   layoutId="amount-selected"
@@ -119,6 +228,9 @@ export function DonationSelector() {
                 }`}
               >
                 {preset.label}
+                {frequency === "monthly" && (
+                  <span className="text-base font-medium text-[#6B7280]">/mo</span>
+                )}
               </span>
               <span className="mt-2 block text-sm text-[#6B7280]">
                 {preset.impact}
@@ -194,8 +306,11 @@ export function DonationSelector() {
                 value={customAmount}
                 onChange={(e) => setCustomAmount(e.target.value)}
                 autoFocus
-                className="w-full bg-transparent font-heading text-2xl font-bold text-[#1A1A1A] placeholder-[#6B7280]/40 outline-none"
+                className="font-heading w-full bg-transparent text-2xl font-bold text-[#1A1A1A] placeholder-[#6B7280]/40 outline-none"
               />
+              {frequency === "monthly" && customAmount && (
+                <span className="text-sm font-medium text-[#6B7280]">/mo</span>
+              )}
             </div>
           </motion.div>
         )}
@@ -216,16 +331,31 @@ export function DonationSelector() {
                 ${activeAmount}
                 {frequency === "monthly" ? "/month" : ""}
               </span>{" "}
-              donation will provide
+              {frequency === "monthly" ? "funds" : "provides"}
             </p>
             <p className="font-heading mt-2 text-3xl font-bold text-[#1A3D5C]">
-              {mealsPerDay > 0
-                ? `${mealsPerDay} nutritious meal${mealsPerDay > 1 ? "s" : ""}`
-                : "a contribution to meals"}
+              {frequency === "monthly"
+                ? `${annualMeals} meals over the next year`
+                : mealsPerCycle > 0
+                  ? `${mealsPerCycle} nutritious meal${mealsPerCycle > 1 ? "s" : ""}`
+                  : "a contribution to meals"}
             </p>
-            {frequency === "monthly" && mealsPerDay > 0 && (
-              <p className="mt-1 text-sm text-[#D4A853]">
-                That&apos;s {mealsPerDay * 12} meals over the next year
+            {frequency === "monthly" && mealsPerCycle > 0 && (
+              <p className="mt-2 text-sm text-[#6B7280]">
+                That&apos;s{" "}
+                <span className="font-semibold text-[#D4A853]">
+                  {mealsPerCycle} meals every month
+                </span>{" "}
+                — predictable funding we can plan around.
+              </p>
+            )}
+            {frequency === "one-time" && mealsPerCycle > 0 && (
+              <p className="mt-2 text-sm text-[#6B7280]">
+                Make it monthly and you&apos;ll feed{" "}
+                <span className="font-semibold text-[#D4A853]">
+                  {mealsPerCycle * 12} students
+                </span>{" "}
+                this year alone.
               </p>
             )}
           </motion.div>
@@ -239,7 +369,9 @@ export function DonationSelector() {
         whileTap={{ scale: 0.98 }}
         className="group mt-8 flex w-full items-center justify-center gap-3 rounded-full bg-[#D4A853] px-10 py-5 text-lg font-bold text-[#1A3D5C] shadow-xl shadow-[#D4A853]/20 transition-all hover:bg-[#C49A48] hover:shadow-2xl hover:shadow-[#D4A853]/30"
       >
-        Donate{activeAmount > 0 ? ` $${activeAmount}` : ""} now
+        {frequency === "monthly"
+          ? `Become a monthly donor${activeAmount > 0 ? ` · $${activeAmount}/mo` : ""}`
+          : `Donate${activeAmount > 0 ? ` $${activeAmount}` : ""} now`}
         <svg
           className="h-5 w-5 transition-transform group-hover:translate-x-1"
           fill="none"
@@ -255,22 +387,30 @@ export function DonationSelector() {
         </svg>
       </motion.button>
 
-      {/* Security line */}
-      <div className="mt-4 flex items-center justify-center gap-2 text-xs text-[#6B7280]">
-        <svg
-          className="h-4 w-4"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-          />
-        </svg>
-        Secure payment powered by Stripe. Your information is encrypted.
+      {/* Security + cancel-anytime line */}
+      <div className="mt-4 flex flex-col items-center justify-center gap-1 text-xs text-[#6B7280] sm:flex-row sm:gap-3">
+        <div className="flex items-center gap-2">
+          <svg
+            className="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+            />
+          </svg>
+          Secure payment via Stripe
+        </div>
+        {frequency === "monthly" && (
+          <>
+            <span className="hidden sm:inline">·</span>
+            <span>Cancel or change anytime</span>
+          </>
+        )}
       </div>
     </div>
   );
