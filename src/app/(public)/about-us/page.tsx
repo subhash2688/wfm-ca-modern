@@ -21,7 +21,7 @@ export default function AboutUsPage() {
     <main className="overflow-x-hidden">
       <PageHero
         label="About Us"
-        title="No one should go hungry."
+        title="No student goes hungry."
         subtitle="Inspired by global food-service movements that have nourished millions, WFM is bringing free, hot meals to college students across America — starting in the Bay Area."
         imageSrc="/images/banners/hero-2.webp"
       />
@@ -57,7 +57,7 @@ export default function AboutUsPage() {
                       Vision
                     </p>
                     <p className="font-heading mt-3 text-2xl font-bold text-[#1A1A1A] md:text-3xl">
-                      No one should go hungry.
+                      No student goes hungry.
                     </p>
                   </div>
 
@@ -66,8 +66,8 @@ export default function AboutUsPage() {
                       Mission
                     </p>
                     <p className="font-heading mt-3 text-xl font-bold leading-snug text-[#1A1A1A] md:text-2xl">
-                      To serve free, fresh and nutritious meals to everyone in
-                      need and build a healthier and happier world.
+                      To provide 1 million meals annually across the U.S. by
+                      2030, promoting healthier bodies and minds.
                     </p>
                   </div>
                 </div>
