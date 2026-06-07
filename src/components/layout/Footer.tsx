@@ -120,7 +120,6 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               {[
                 { label: "News & Updates", href: "/news" },
-                { label: "Stories", href: "/stories" },
                 { label: "Events", href: "/events" },
                 { label: "Photo Gallery", href: "/photo-gallery" },
                 { label: "FAQs", href: "/faqs" },
