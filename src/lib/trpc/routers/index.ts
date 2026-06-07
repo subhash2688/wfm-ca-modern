@@ -11,6 +11,8 @@ import { campaignRouter } from "./campaign";
 import { collegeRouter } from "./college";
 import { pageRouter } from "./page";
 import { settingsRouter } from "./settings";
+import { rallyRouter } from "./rally";
+import { rallyVolunteerRouter } from "./rallyVolunteer";
 
 export const appRouter = router({
   news: newsRouter,
@@ -25,6 +27,8 @@ export const appRouter = router({
   college: collegeRouter,
   page: pageRouter,
   settings: settingsRouter,
+  rally: rallyRouter,
+  rallyVolunteer: rallyVolunteerRouter,
 });
 
 export type AppRouter = typeof appRouter;
