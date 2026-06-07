@@ -92,19 +92,79 @@ export default function HomePage() {
 
       {/* ── 2. Stats ── */}
       <section className="bg-[#0A1118]">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-2 divide-x divide-white/[0.07] md:grid-cols-4">
+        {/* Gold accent line */}
+        <div className="h-px bg-gradient-to-r from-transparent via-[#D4A853]/50 to-transparent" />
+
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-20">
+          {/* Stat grid */}
+          <div className="grid grid-cols-2 gap-px md:grid-cols-4">
             {[
-              { number: "20,000+", label: "Meals served since Jan 2025" },
-              { number: "8", label: "Partner campuses" },
-              { number: "4,000+", label: "Students served" },
-              { number: "$8", label: "Cost per meal" },
-            ].map((stat) => (
-              <div key={stat.label} className="flex flex-col items-center justify-center py-12 px-6 text-center md:py-16 md:px-10">
-                <div className="font-heading text-5xl font-black text-[#D4A853] md:text-6xl">{stat.number}</div>
-                <div className="mt-2 text-xs font-semibold text-white/50">{stat.label}</div>
+              {
+                number: "20,000+",
+                label: "Meals served",
+                sub: "since January 2025",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5A2.25 2.25 0 0 0 12.75 4.5h-1.5A2.25 2.25 0 0 0 9 6.75v1.5M3 13.121V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18v-4.879a2.25 2.25 0 0 0-.456-1.367l-3.905-5.173a2.25 2.25 0 0 0-1.797-.898H8.158a2.25 2.25 0 0 0-1.797.898L2.456 11.754A2.25 2.25 0 0 0 3 13.12Z" />
+                ),
+              },
+              {
+                number: "8",
+                label: "Partner campuses",
+                sub: "across the Bay Area",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                ),
+              },
+              {
+                number: "4,000+",
+                label: "Students fed",
+                sub: "no paperwork, no stigma",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                ),
+              },
+              {
+                number: "$8",
+                label: "Cost per meal",
+                sub: "100% donor-funded",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                ),
+              },
+            ].map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`flex flex-col items-center px-6 py-10 text-center md:px-10 ${i < 3 ? "border-r border-white/[0.06]" : ""}`}
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#D4A853]/10">
+                  <svg className="h-5 w-5 text-[#D4A853]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                    {stat.icon}
+                  </svg>
+                </div>
+                <div className="font-heading mt-4 text-5xl font-black text-[#D4A853] md:text-6xl">{stat.number}</div>
+                <div className="mt-1.5 text-sm font-bold text-white/80">{stat.label}</div>
+                <div className="mt-0.5 text-xs text-white/35">{stat.sub}</div>
               </div>
             ))}
+          </div>
+
+          {/* Progress toward 1M */}
+          <div className="mt-10 rounded-2xl border border-white/[0.07] bg-white/[0.03] px-8 py-6">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="text-sm font-bold text-white/70">On our way to <span className="text-[#D4A853]">1,000,000 meals</span> by 2030</p>
+                <p className="mt-0.5 text-xs text-white/30">20,000 served · 980,000 to go · every $8 moves us forward</p>
+              </div>
+              <Link
+                href="/donate"
+                className="flex-shrink-0 rounded-full bg-[#D4A853] px-6 py-2.5 text-sm font-bold text-[#1A3D5C] transition-all hover:bg-[#C49A48]"
+              >
+                Fund a meal
+              </Link>
+            </div>
+            <div className="mt-4 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+              <div className="h-full w-[2%] rounded-full bg-gradient-to-r from-[#D4A853] to-[#E4BC6A]" />
+            </div>
           </div>
         </div>
       </section>
