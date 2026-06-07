@@ -3,8 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 // ─── Existing enums ───────────────────────────────────────────
@@ -456,7 +457,7 @@ model Page {
   id              Int           @id @default(autoincrement())
   title           String
   slug            String        @unique
-  content         String?       @db.LongText
+  content         String?       @db.Text
   excerpt         String?       @db.Text
   featuredImage   String?
   status          ContentStatus @default(DRAFT)
@@ -481,7 +482,7 @@ model News {
   title           String
   slug            String        @unique
   shortDesc       String?       @db.Text
-  content         String?       @db.LongText
+  content         String?       @db.Text
   imagePath       String?
   publishDate     DateTime      @default(now())
   status          ContentStatus @default(DRAFT)
@@ -507,7 +508,7 @@ model Blog {
   title           String
   slug            String        @unique
   shortDesc       String?       @db.Text
-  content         String?       @db.LongText
+  content         String?       @db.Text
   imagePath       String?
   publishDate     DateTime      @default(now())
   status          ContentStatus @default(DRAFT)
@@ -531,7 +532,7 @@ model Event {
   title           String
   slug            String              @unique
   shortDesc       String?             @db.Text
-  content         String?             @db.LongText
+  content         String?             @db.Text
   imagePath       String?
   eventDate       DateTime
   endDate         DateTime?
@@ -570,7 +571,7 @@ model Story {
   id          Int           @id @default(autoincrement())
   title       String
   slug        String        @unique
-  content     String?       @db.LongText
+  content     String?       @db.Text
   excerpt     String?       @db.Text
   imagePath   String?
   authorName  String?
@@ -613,7 +614,7 @@ model GalleryImage {
 model Faq {
   id        Int           @id @default(autoincrement())
   question  String        @db.Text
-  answer    String        @db.LongText
+  answer    String        @db.Text
   category  String?
   sortOrder Int           @default(0)
   status    ContentStatus @default(PUBLISHED)
@@ -657,7 +658,7 @@ model Contact {
 model Newsletter {
   id        Int           @id @default(autoincrement())
   title     String
-  content   String        @db.LongText
+  content   String        @db.Text
   sentAt    DateTime?
   status    ContentStatus @default(DRAFT)
   createdAt DateTime      @default(now())
@@ -725,7 +726,7 @@ model FinancialReport {
 model Setting {
   id    Int    @id @default(autoincrement())
   key   String @unique
-  value String @db.LongText
+  value String @db.Text
 
   @@map("settings")
 }
@@ -748,7 +749,7 @@ model EmailTemplate {
   id        Int      @id @default(autoincrement())
   name      String   @unique
   subject   String
-  body      String   @db.LongText
+  body      String   @db.Text
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
