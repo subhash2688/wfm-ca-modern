@@ -95,6 +95,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               {[
                 { label: "Donate", href: "/donate" },
+                { label: "Corporate Partnerships", href: "/corporate" },
                 { label: "Volunteer", href: "/get-involved" },
                 { label: "Start a Fundraiser", href: "/campaigns" },
                 { label: "Campus Partnership", href: "/contact" },
@@ -145,8 +146,7 @@ export function Footer() {
               reserved.
             </p>
             <p className="text-xs text-white/40">
-              501(c)(3) nonprofit &middot; EIN: 33-1400027 &middot; 100% of
-              donations fund meals
+              501(c)(3) &middot; EIN: 33-1400027 &middot; Benevity-registered &middot; 100% to meals
             </p>
             <div className="flex gap-4 text-xs text-white/40">
               <Link href="/privacy-policy" className="hover:text-white/50">
