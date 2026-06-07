@@ -71,10 +71,10 @@ export function Header() {
 
           <div className="flex items-center gap-4">
             <Link
-              href="/login"
+              href="/v/login"
               className="hidden text-[15px] font-medium text-white/50 transition-colors hover:text-white lg:block"
             >
-              Student Portal
+              Volunteer Portal
             </Link>
             <Link
               href="/donate"

@@ -98,6 +98,7 @@ export function Footer() {
                 { label: "Donate", href: "/donate" },
                 { label: "Corporate Partnerships", href: "/corporate" },
                 { label: "Volunteer", href: "/get-involved" },
+                { label: "Volunteer Portal", href: "/v/login" },
                 { label: "Start a Fundraiser", href: "/campaigns" },
                 { label: "Campus Partnership", href: "/contact" },
                 { label: "Sign Up for Meals", href: "/get-involved" },
@@ -180,6 +181,9 @@ export function Footer() {
               </Link>
               <Link href="/terms" className="hover:text-white/50">
                 Terms
+              </Link>
+              <Link href="/login" className="hover:text-white/50">
+                Staff Login
               </Link>
             </div>
           </div>
