@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { EmailSignup } from "@/components/EmailSignup";
 
 export function Footer() {
   return (
@@ -138,8 +139,33 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Newsletter */}
+        <div className="mt-16 rounded-2xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
+          <div className="grid items-center gap-6 md:grid-cols-5">
+            <div className="md:col-span-3">
+              <p className="text-xs font-bold tracking-wider text-[#D4A853] uppercase">
+                Monthly impact update
+              </p>
+              <h3 className="font-heading mt-2 text-2xl font-bold text-white md:text-3xl">
+                One short email a month. Real students. Real meals.
+              </h3>
+              <p className="mt-2 text-sm text-white/55">
+                Milestones from our partner campuses, new openings, and quiet wins worth knowing about. No spam. Unsubscribe anytime.
+              </p>
+            </div>
+            <div className="md:col-span-2">
+              <EmailSignup
+                source="footer"
+                variant="dark"
+                placeholder="Your email"
+                buttonLabel="Subscribe"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Bottom bar */}
-        <div className="mt-16 border-t border-white/10 pt-8">
+        <div className="mt-12 border-t border-white/10 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-xs text-white/40">
               &copy; {new Date().getFullYear()} World Food Movement. All rights

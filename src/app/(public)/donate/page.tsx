@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
 import { FadeIn, FadeInLeft, FadeInRight, StaggerContainer, StaggerItem } from "@/components/ui/motion";
 import { DonationSelector } from "./DonationSelector";
+import { DonateEmailPopover } from "@/components/DonateEmailPopover";
 
 export const metadata: Metadata = {
   title: "Donate",
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 export default function DonatePage() {
   return (
     <main className="overflow-x-hidden">
+      <DonateEmailPopover />
       <PageHero
         label="Donate"
         title="Feed a student today."
