@@ -104,7 +104,7 @@ export default function ProfilePage() {
         <div className="flex items-center gap-4 mb-4">
           <div
             className="w-14 h-14 rounded-full flex items-center justify-center text-white text-xl font-bold flex-shrink-0"
-            style={{ backgroundColor: "#2D6A4F" }}
+            style={{ backgroundColor: "#1A3D5C" }}
           >
             {me.firstName[0]}{me.lastName[0]}
           </div>
@@ -151,7 +151,7 @@ export default function ProfilePage() {
             <button
               onClick={() => setEditing(true)}
               className="text-sm font-medium"
-              style={{ color: "#2D6A4F" }}
+              style={{ color: "#1A3D5C" }}
             >
               Edit
             </button>
@@ -188,7 +188,7 @@ export default function ProfilePage() {
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                   className="w-full px-3 py-2.5 border border-gray-300 rounded-xl text-sm outline-none focus:ring-2 focus:border-transparent"
-                  style={{ "--tw-ring-color": "#2D6A4F" } as React.CSSProperties}
+                  style={{ "--tw-ring-color": "#1A3D5C" } as React.CSSProperties}
                 />
               </div>
               <div>
@@ -198,7 +198,7 @@ export default function ProfilePage() {
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                   className="w-full px-3 py-2.5 border border-gray-300 rounded-xl text-sm outline-none focus:ring-2 focus:border-transparent"
-                  style={{ "--tw-ring-color": "#2D6A4F" } as React.CSSProperties}
+                  style={{ "--tw-ring-color": "#1A3D5C" } as React.CSSProperties}
                 />
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function ProfilePage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-3 py-2.5 border border-gray-300 rounded-xl text-sm outline-none focus:ring-2 focus:border-transparent"
-                style={{ "--tw-ring-color": "#2D6A4F" } as React.CSSProperties}
+                style={{ "--tw-ring-color": "#1A3D5C" } as React.CSSProperties}
                 placeholder="optional"
               />
             </div>
@@ -218,7 +218,7 @@ export default function ProfilePage() {
                 onClick={handleSave}
                 disabled={updateProfile.isPending}
                 className="flex-1 h-11 rounded-xl text-white font-semibold text-sm disabled:opacity-50"
-                style={{ backgroundColor: "#2D6A4F" }}
+                style={{ backgroundColor: "#1A3D5C" }}
               >
                 {updateProfile.isPending ? "Saving…" : "Save changes"}
               </button>

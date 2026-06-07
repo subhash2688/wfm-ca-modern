@@ -74,7 +74,7 @@ function ShiftCard({ shift }: { shift: ShiftItem }) {
             {shift.isSignedUp && (
               <span
                 className="text-xs px-2.5 py-1 rounded-full font-semibold text-white"
-                style={{ backgroundColor: "#2D6A4F" }}
+                style={{ backgroundColor: "#1A3D5C" }}
               >
                 Signed Up ✓
               </span>

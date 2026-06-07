@@ -15,7 +15,7 @@ const STATUS_LABELS: Record<SignupStatus, string> = {
 };
 
 const STATUS_COLORS: Record<SignupStatus, { bg: string; text: string }> = {
-  signed_up: { bg: "#EBF5EE", text: "#2D6A4F" },
+  signed_up: { bg: "#EBF5EE", text: "#1A3D5C" },
   confirmed: { bg: "#D1FAE5", text: "#065F46" },
   checked_in: { bg: "#DBEAFE", text: "#1E40AF" },
   completed: { bg: "#F3F4F6", text: "#374151" },

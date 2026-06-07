@@ -69,8 +69,9 @@ export default function RegisterPage() {
     <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4 py-8">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">Create your account</h1>
-          <p className="text-sm text-gray-500 mt-2">
+          <img src="/images/logos/wfm-logo.jpg" alt="WFM" width={48} height={48} className="rounded-xl mx-auto mb-4" />
+          <h1 className="text-2xl font-bold text-white">Create your account</h1>
+          <p className="text-sm text-white/50 mt-2">
             Just a few details to get you started.
           </p>
         </div>
@@ -95,7 +96,7 @@ export default function RegisterPage() {
                   value={firstName}
                   onChange={(e) => { setFirstName(e.target.value); setErrors((p) => ({ ...p, firstName: "" })); }}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base outline-none focus:ring-2 focus:border-transparent text-gray-900 placeholder:text-gray-400"
-                  style={{ "--tw-ring-color": "#2D6A4F" } as React.CSSProperties}
+                  style={{ "--tw-ring-color": "#1A3D5C" } as React.CSSProperties}
                   placeholder="Alex"
                   aria-invalid={!!errors.firstName}
                   aria-describedby={errors.firstName ? "firstName-error" : undefined}
@@ -115,7 +116,7 @@ export default function RegisterPage() {
                   value={lastName}
                   onChange={(e) => { setLastName(e.target.value); setErrors((p) => ({ ...p, lastName: "" })); }}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base outline-none focus:ring-2 focus:border-transparent text-gray-900 placeholder:text-gray-400"
-                  style={{ "--tw-ring-color": "#2D6A4F" } as React.CSSProperties}
+                  style={{ "--tw-ring-color": "#1A3D5C" } as React.CSSProperties}
                   placeholder="Smith"
                   aria-invalid={!!errors.lastName}
                   aria-describedby={errors.lastName ? "lastName-error" : undefined}
@@ -137,7 +138,7 @@ export default function RegisterPage() {
                 value={email}
                 onChange={(e) => { setEmail(e.target.value); setErrors((p) => ({ ...p, email: "" })); }}
                 className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base outline-none focus:ring-2 focus:border-transparent text-gray-900 placeholder:text-gray-400"
-                style={{ "--tw-ring-color": "#2D6A4F" } as React.CSSProperties}
+                style={{ "--tw-ring-color": "#1A3D5C" } as React.CSSProperties}
                 placeholder="alex@example.com"
                 aria-invalid={!!errors.email}
                 aria-describedby={errors.email ? "email-error" : undefined}
@@ -156,7 +157,7 @@ export default function RegisterPage() {
                   className="sr-only peer"
                   id="isYouth"
                 />
-                <div className="w-5 h-5 border-2 border-gray-300 rounded peer-checked:border-0 peer-checked:bg-[#2D6A4F] transition-colors flex items-center justify-center">
+                <div className="w-5 h-5 border-2 border-gray-300 rounded peer-checked:border-0 peer-checked:bg-[#1A3D5C] transition-colors flex items-center justify-center">
                   {isYouth && (
                     <svg width="12" height="9" viewBox="0 0 12 9" fill="none" aria-hidden>
                       <path d="M1 4l3.5 3.5L11 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -173,8 +174,8 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full h-14 rounded-xl text-white font-semibold text-base transition-opacity disabled:opacity-50 mt-2"
-              style={{ backgroundColor: "#2D6A4F" }}
+              className="w-full h-14 rounded-xl font-bold text-base transition-opacity disabled:opacity-50 mt-2"
+              style={{ backgroundColor: "#D4A853", color: "#1A3D5C" }}
             >
               {loading ? "Creating account…" : "Create account"}
             </button>

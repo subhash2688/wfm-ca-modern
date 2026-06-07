@@ -124,13 +124,14 @@ export default function VerifyPage() {
     : "";
 
   return (
-    <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
+    <main className="min-h-screen bg-[#0A1118] flex flex-col items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">Enter your code</h1>
-          <p className="text-sm text-gray-500 mt-2">
+          <img src="/images/logos/wfm-logo.jpg" alt="WFM" width={48} height={48} className="rounded-xl mx-auto mb-4" />
+          <h1 className="text-2xl font-bold text-white">Enter your code</h1>
+          <p className="text-sm text-white/50 mt-2">
             We sent a 6-digit code to{" "}
-            <span className="font-medium text-gray-700">+1 {displayPhone}</span>
+            <span className="font-medium text-white/80">+1 {displayPhone}</span>
           </p>
         </div>
 
@@ -147,7 +148,7 @@ export default function VerifyPage() {
                 onChange={(e) => handleDigitChange(i, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(i, e)}
                 className="w-12 h-14 text-center text-xl font-semibold border border-gray-300 rounded-xl outline-none focus:ring-2 focus:border-transparent text-gray-900"
-                style={{ "--tw-ring-color": "#2D6A4F" } as React.CSSProperties}
+                style={{ "--tw-ring-color": "#1A3D5C" } as React.CSSProperties}
                 aria-label={`Digit ${i + 1}`}
                 disabled={loading}
               />
@@ -181,7 +182,7 @@ export default function VerifyPage() {
                 onClick={handleResend}
                 disabled={resendState === "sending"}
                 className="text-sm font-medium underline-offset-2 hover:underline disabled:opacity-50"
-                style={{ color: "#2D6A4F" }}
+                style={{ color: "#1A3D5C" }}
               >
                 {resendState === "sending" ? "Sending…" : "Resend code"}
               </button>

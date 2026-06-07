@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Volunteer {
   id: number;
@@ -91,6 +92,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <VolunteerContext.Provider value={{ volunteer, loading }}>
       <div className="min-h-screen bg-gray-50 flex flex-col">
+        <header className="sticky top-0 z-40 bg-[#0A1118] px-4 py-3 flex items-center gap-3 shadow-sm">
+          <Image src="/images/logos/wfm-logo.jpg" alt="WFM" width={28} height={28} className="rounded-md" />
+          <span className="text-white font-bold text-sm tracking-tight">World Food Movement</span>
+        </header>
         <main className="flex-1 pb-20">{children}</main>
 
         <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 safe-area-inset-bottom z-50">
@@ -105,7 +110,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
                   key={href}
                   href={href}
                   className="flex-1 flex flex-col items-center justify-center gap-1 py-3 min-h-[56px] transition-colors"
-                  style={{ color: isActive ? "#2D6A4F" : "#9CA3AF" }}
+                  style={{ color: isActive ? "#D4A853" : "#9CA3AF" }}
                   aria-current={isActive ? "page" : undefined}
                 >
                   <Icon />

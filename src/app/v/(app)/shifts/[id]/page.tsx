@@ -146,7 +146,7 @@ export default function ShiftDetailPage({ params }: { params: Promise<{ id: stri
             onClick={() => signup.mutate({ shiftId: id })}
             disabled={isMutating}
             className="w-full h-14 rounded-xl text-white font-semibold text-base disabled:opacity-50 transition-opacity"
-            style={{ backgroundColor: "#2D6A4F" }}
+            style={{ backgroundColor: "#1A3D5C" }}
           >
             {signup.isPending ? "Signing up…" : "Sign Up"}
           </button>
@@ -162,7 +162,7 @@ export default function ShiftDetailPage({ params }: { params: Promise<{ id: stri
           <div className="space-y-3">
             <div
               className="w-full h-14 rounded-xl flex items-center justify-center font-semibold text-white text-base"
-              style={{ backgroundColor: "#2D6A4F" }}
+              style={{ backgroundColor: "#1A3D5C" }}
             >
               Signed Up ✓
             </div>
@@ -171,7 +171,7 @@ export default function ShiftDetailPage({ params }: { params: Promise<{ id: stri
                 onClick={() => checkIn.mutate({ shiftId: id })}
                 disabled={isMutating}
                 className="w-full h-14 rounded-xl font-semibold text-base border-2 transition-opacity disabled:opacity-50"
-                style={{ borderColor: "#2D6A4F", color: "#2D6A4F" }}
+                style={{ borderColor: "#1A3D5C", color: "#1A3D5C" }}
               >
                 {checkIn.isPending ? "Checking in…" : "Check In"}
               </button>
