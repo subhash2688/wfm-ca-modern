@@ -58,7 +58,7 @@ export default async function NewsPage() {
                 </Link>
               </FadeInLeft>
               <FadeInRight>
-                <span className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${categoryColors[featured.category] ?? "bg-gray-100 text-gray-600"}`}>
+                <span className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${(featured.category ? categoryColors[featured.category] : null) ?? "bg-gray-100 text-gray-600"}`}>
                   {featured.category}
                 </span>
                 <Link href={`/news/${featured.slug}`} className="group">
@@ -128,7 +128,7 @@ export default async function NewsPage() {
                     </div>
                     <div className="flex flex-1 flex-col p-6">
                       <div className="flex items-center gap-3">
-                        <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${categoryColors[item.category] ?? "bg-gray-100 text-gray-600"}`}>
+                        <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${(item.category ? categoryColors[item.category] : null) ?? "bg-gray-100 text-gray-600"}`}>
                           {item.category}
                         </span>
                         <time className="text-xs text-[#6B7280]">
