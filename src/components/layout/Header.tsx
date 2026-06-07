@@ -1,26 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "About", href: "/about-us" },
-  { label: "Programs", href: "/programs" },
-  { label: "Get Involved", href: "/get-involved" },
+  { label: "Our Story", href: "/about-us" },
+  { label: "How It Works", href: "/programs" },
+  { label: "Volunteer", href: "/get-involved" },
   { label: "Corporate", href: "/corporate" },
-  { label: "Updates", href: "/news" },
+  { label: "News", href: "/news" },
 ];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <header className="fixed top-0 right-0 left-0 z-50 border-b border-[#E5E2DD] bg-white/97 shadow-sm backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+      <header
+        className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "border-b border-white/10 bg-[#0A1118]/95 shadow-lg backdrop-blur-md"
+            : "border-b border-transparent bg-gradient-to-b from-[#0A1118]/70 to-transparent"
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/images/logos/wfm-logo.jpg"
@@ -41,11 +55,10 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={`group relative py-1 text-[15px] font-medium transition-colors duration-200 ${
-                    active ? "text-[#1A3D5C]" : "text-[#6B7280] hover:text-[#1A3D5C]"
+                    active ? "text-white" : "text-white/60 hover:text-white"
                   }`}
                 >
                   {link.label}
-                  {/* Sliding gold underline */}
                   <span
                     className={`absolute bottom-0 left-0 h-[2px] bg-[#D4A853] transition-all duration-300 ${
                       active ? "w-full" : "w-0 group-hover:w-full"
@@ -59,7 +72,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <Link
               href="/login"
-              className="hidden text-[15px] font-medium text-[#4B5563] transition-colors hover:text-[#1A3D5C] lg:block"
+              className="hidden text-[15px] font-medium text-white/50 transition-colors hover:text-white lg:block"
             >
               Student Portal
             </Link>
@@ -77,21 +90,11 @@ export function Header() {
               aria-label="Toggle menu"
             >
               {mobileOpen ? (
-                <svg
-                  className={`h-6 w-6 text-[#1A1A1A]`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                <svg
-                  className={`h-6 w-6 text-[#1A1A1A]`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               )}
@@ -103,16 +106,16 @@ export function Header() {
       {/* Mobile drawer */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
-          <div className="absolute inset-0 bg-black/40" onClick={() => setMobileOpen(false)} />
-          <div className="absolute top-0 right-0 h-full w-72 bg-white pt-20 shadow-2xl">
+          <div className="absolute inset-0 bg-black/60" onClick={() => setMobileOpen(false)} />
+          <div className="absolute top-0 right-0 h-full w-72 bg-[#0A1118] pt-20 shadow-2xl">
             <nav className="flex flex-col px-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`border-b border-[#E5E2DD] py-4 text-base font-medium ${
-                    pathname.startsWith(link.href) ? "text-[#1A3D5C]" : "text-[#4B5563]"
+                  className={`border-b border-white/10 py-4 text-base font-medium ${
+                    pathname.startsWith(link.href) ? "text-white" : "text-white/60"
                   }`}
                 >
                   {link.label}
@@ -121,7 +124,7 @@ export function Header() {
               <Link
                 href="/login"
                 onClick={() => setMobileOpen(false)}
-                className="border-b border-[#E5E2DD] py-4 text-base font-medium text-[#4B5563]"
+                className="border-b border-white/10 py-4 text-base font-medium text-white/60"
               >
                 Student Portal
               </Link>

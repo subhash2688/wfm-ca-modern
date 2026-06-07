@@ -1,23 +1,16 @@
-import Image from "next/image";
-import Link from "next/link";
 import { getLatestYouTubeVideos } from "@/lib/youtube";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion";
-
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-}
+import { VideoCard } from "@/components/VideoCard";
 
 export async function YouTubeFeed() {
-  const videos = await getLatestYouTubeVideos(6);
+  const all = await getLatestYouTubeVideos(12);
+  const videos = all.filter((v) => !v.isShort);
 
   return (
     <section className="bg-[#0A1118] py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
-        {/* Header */}
+
+        {/* ── Regular Videos ── */}
         <FadeIn>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -40,65 +33,22 @@ export async function YouTubeFeed() {
           </div>
         </FadeIn>
 
-        {/* Video grid */}
-        <StaggerContainer
-          className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
-          staggerDelay={0.08}
-        >
-          {videos.map((video, i) => (
-            <StaggerItem key={video.id}>
-              <a
-                href={video.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] transition-all duration-300 hover:border-[#D4A853]/40 hover:bg-white/[0.07]"
-              >
-                {/* Thumbnail */}
-                <div className="relative aspect-video overflow-hidden">
-                  <Image
-                    src={video.thumbnail}
-                    alt={video.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    unoptimized
-                  />
-                  <div className="absolute inset-0 bg-[#0A1118]/30" />
-                  {/* Play button */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-200 group-hover:scale-110">
-                      <svg className="ml-1 h-5 w-5 text-[#1A3D5C]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </div>
-                  {/* Latest badge on first video */}
-                  {i === 0 && (
-                    <div className="absolute left-3 top-3 rounded-full bg-[#D4A853] px-2.5 py-0.5 text-xs font-bold text-[#1A3D5C]">
-                      Latest
-                    </div>
-                  )}
-                </div>
-
-                {/* Info */}
-                <div className="flex flex-1 flex-col p-4">
-                  <p className="text-xs text-white/35">{formatDate(video.publishedAt)}</p>
-                  <h3 className="mt-1.5 text-sm font-semibold leading-snug text-white/85 line-clamp-2 transition-colors group-hover:text-white">
-                    {video.title}
-                  </h3>
-                  {video.description && (
-                    <p className="mt-1.5 text-xs leading-relaxed text-white/35 line-clamp-2">
-                      {video.description}
-                    </p>
-                  )}
-                </div>
-              </a>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+        {videos.length > 0 && (
+          <StaggerContainer
+            className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+            staggerDelay={0.08}
+          >
+            {videos.map((video, i) => (
+              <StaggerItem key={video.id}>
+                <VideoCard video={video} isLatest={i === 0} />
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        )}
 
         {/* Bottom link */}
         <FadeIn>
-          <div className="mt-10 text-center">
+          <div className="mt-12 text-center">
             <a
               href="https://www.youtube.com/@WFMCA"
               target="_blank"
@@ -112,6 +62,7 @@ export async function YouTubeFeed() {
             </a>
           </div>
         </FadeIn>
+
       </div>
     </section>
   );
