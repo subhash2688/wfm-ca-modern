@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import CampusMap from "@/components/CampusMapLoader";
+import { WFM_CAMPUSES } from "@/lib/data/campuses";
 import {
   FadeIn,
   FadeInLeft,
@@ -285,6 +287,48 @@ export default function ProgramsPage() {
               </div>
             </FadeInRight>
           </div>
+        </div>
+      </section>
+
+      {/* ───── Where we serve (map) ───── */}
+      <section className="bg-[#FAFAF8] py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <FadeIn>
+            <div className="text-center">
+              <p className="text-sm font-semibold text-[#D4A853]">
+                Where We Serve
+              </p>
+              <h2 className="font-heading mt-4 text-3xl font-bold text-[#1A1A1A] md:text-5xl">
+                8 campuses across the Bay Area.
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-[#6B7280]">
+                From the South Bay to the East Bay, we partner with community
+                colleges where the need is greatest. Click a pin to learn more.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn className="mt-12">
+            <CampusMap />
+          </FadeIn>
+
+          <StaggerContainer
+            className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4"
+            staggerDelay={0.05}
+          >
+            {WFM_CAMPUSES.map((c) => (
+              <StaggerItem key={c.name}>
+                <div className="rounded-xl border border-[#E5E2DD] bg-white p-4">
+                  <p className="text-sm font-semibold text-[#1A3D5C]">
+                    {c.name}
+                  </p>
+                  <p className="mt-1 text-xs text-[#6B7280]">
+                    {c.city} · {c.region}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </section>
 

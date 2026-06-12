@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
 function formatPhoneDisplay(raw: string): string {
   const digits = raw.replace(/\D/g, "").slice(0, 10);
@@ -56,7 +55,7 @@ export default function LoginPage() {
     <main className="min-h-screen bg-[#0A1118] flex flex-col items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <Image src="/images/logos/wfm-logo.jpg" alt="World Food Movement" width={64} height={64} className="rounded-xl mx-auto mb-4" />
+          <img src="/images/logos/wfm-logo.jpg" alt="World Food Movement" style={{ width: "240px", height: "auto" }} className="rounded-xl mx-auto mb-4" />
           <h1 className="text-2xl font-bold text-white">World Food Movement</h1>
           <p className="text-white/50 mt-1 text-sm">Volunteer Portal</p>
         </div>

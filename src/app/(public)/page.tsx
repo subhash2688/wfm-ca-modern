@@ -1,17 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { YouTubeFeed } from "@/components/YouTubeFeed";
+import { WFM_CAMPUSES } from "@/lib/data/campuses";
 
-const partners = [
-  { name: "De Anza College", city: "Cupertino, CA", logo: "/images/campuses/de-anza.svg" },
-  { name: "Foothill College", city: "Los Altos Hills, CA", logo: "/images/campuses/foothill.svg" },
-  { name: "West Valley College", city: "Saratoga, CA", logo: "/images/campuses/west-valley.svg" },
-  { name: "Chabot College", city: "Hayward, CA", logo: "/images/campuses/chabot.png" },
-  { name: "Ohlone College", city: "Fremont, CA", logo: "/images/campuses/ohlone.jpg" },
-  { name: "Las Positas College", city: "Livermore, CA", logo: "/images/campuses/las-positas.png" },
-  { name: "Evergreen Valley College", city: "San Jose, CA", logo: "/images/campuses/evergreen.png" },
-  { name: "Mission College", city: "Santa Clara, CA", logo: "/images/campuses/mission.png" },
-];
+const partners = WFM_CAMPUSES.map((c) => ({
+  name: c.name,
+  city: `${c.city}, CA`,
+  logo: c.logo,
+}));
 
 export default function HomePage() {
   return (
@@ -482,7 +478,7 @@ export default function HomePage() {
                     Fund a meal
                   </Link>
                   <Link
-                    href="/get-involved"
+                    href="/volunteer"
                     className="inline-flex items-center gap-3 rounded-full border border-white/20 px-10 py-4 text-base font-bold text-white/70 transition-all hover:border-white/40 hover:text-white"
                   >
                     Volunteer

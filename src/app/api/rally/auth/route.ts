@@ -5,6 +5,8 @@ import { cookies } from "next/headers";
 
 const SESSION_COOKIE = "rally_vol_session";
 const OTP_EXPIRY_MINUTES = 10;
+const SESSION_SECRET = process.env.RALLY_SESSION_SECRET ?? "dev-rally-secret-change-in-prod";
+const SESSION_MAX_AGE = 60 * 60 * 24 * 30;
 
 function normalizePhone(raw: string): string {
   const digits = raw.replace(/\D/g, "");
@@ -15,25 +17,24 @@ function generateOtp(): string {
   return String(Math.floor(100000 + Math.random() * 900000));
 }
 
-function signSession(data: object): string {
-  const secret = process.env.NEXTAUTH_SECRET ?? "dev-secret";
-  const payload = Buffer.from(JSON.stringify(data)).toString("base64");
-  const sig = createHmac("sha256", secret).update(payload).digest("hex");
+function signSession(volunteerId: number): string {
+  const ts = String(Date.now());
+  const payload = `${volunteerId}.${ts}`;
+  const sig = createHmac("sha256", SESSION_SECRET).update(payload).digest("hex");
   return `${payload}.${sig}`;
 }
 
 function verifySessionToken(token: string): { volunteerId: number } | null {
   const parts = token.split(".");
-  if (parts.length !== 2) return null;
-  const [payload, sig] = parts;
-  const secret = process.env.NEXTAUTH_SECRET ?? "dev-secret";
-  const expected = createHmac("sha256", secret).update(payload).digest("hex");
+  if (parts.length !== 3) return null;
+  const [id, ts, sig] = parts;
+  const expected = createHmac("sha256", SESSION_SECRET).update(`${id}.${ts}`).digest("hex");
   if (sig !== expected) return null;
-  try {
-    return JSON.parse(Buffer.from(payload, "base64").toString("utf8")) as { volunteerId: number };
-  } catch {
-    return null;
-  }
+  const age = (Date.now() - Number(ts)) / 1000;
+  if (age > SESSION_MAX_AGE) return null;
+  const volunteerId = Number(id);
+  if (!Number.isFinite(volunteerId)) return null;
+  return { volunteerId };
 }
 
 export async function GET() {
@@ -131,7 +132,13 @@ export async function POST(req: NextRequest) {
       where: { phone: normalized },
     });
     if (volunteer) {
-      const token = signSession({ volunteerId: volunteer.id, phone: normalized });
+      if (volunteer.status !== "active") {
+        return NextResponse.json(
+          { error: "Your account isn't active yet. We'll text you once you're approved." },
+          { status: 403 }
+        );
+      }
+      const token = signSession(volunteer.id);
       const res = NextResponse.json({
         status: "existing",
         volunteerId: volunteer.id,
@@ -140,6 +147,7 @@ export async function POST(req: NextRequest) {
         httpOnly: true,
         sameSite: "lax",
         path: "/",
+        maxAge: SESSION_MAX_AGE,
       });
       await db.rallyVolunteer.update({
         where: { id: volunteer.id },
@@ -172,12 +180,13 @@ export async function POST(req: NextRequest) {
         lastSeen: new Date(),
       },
     });
-    const token = signSession({ volunteerId: volunteer.id, phone: normalized });
+    const token = signSession(volunteer.id);
     const res = NextResponse.json({ ok: true, volunteerId: volunteer.id });
     res.cookies.set(SESSION_COOKIE, token, {
       httpOnly: true,
       sameSite: "lax",
       path: "/",
+      maxAge: SESSION_MAX_AGE,
     });
     return res;
   }

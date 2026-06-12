@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { serverTRPC } from "@/lib/trpc/server";
 import { PageHero } from "@/components/layout/PageHero";
+import LinkedInFeed from "@/components/LinkedInFeed";
+import InstagramFeed from "@/components/InstagramFeed";
 import { FadeIn, FadeInLeft, FadeInRight, StaggerContainer, StaggerItem } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
@@ -161,6 +163,10 @@ export default async function NewsPage() {
           </div>
         </section>
       )}
+
+      <LinkedInFeed />
+
+      <InstagramFeed />
 
       {/* CTA */}
       <section className="bg-[#1A3D5C] py-20">

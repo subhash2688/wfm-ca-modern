@@ -96,35 +96,35 @@ function SuggestionPanel({
   return (
     <div
       className={cn(
-        "fixed inset-y-0 right-0 z-40 flex w-96 flex-col bg-[#0A1118] shadow-2xl transition-transform duration-300 border-l border-white/10",
+        "fixed inset-y-0 right-0 z-40 flex w-96 flex-col bg-white shadow-2xl transition-transform duration-300 border-l border-stone-200",
         shift !== null ? "translate-x-0" : "translate-x-full"
       )}
     >
-      <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+      <div className="flex items-center justify-between border-b border-stone-200 px-5 py-4">
         <div>
-          <h2 className="text-base font-semibold text-white">Volunteer Suggestions</h2>
+          <h2 className="text-base font-semibold text-stone-900">Volunteer Suggestions</h2>
           {shift && (
-            <p className="mt-0.5 text-xs text-white/40">
+            <p className="mt-0.5 text-xs text-stone-500">
               {shift.campus.name} · {formatDate(shift.date)}
             </p>
           )}
         </div>
-        <button onClick={onClose} className="rounded-md p-1 text-white/40 hover:text-white">
+        <button onClick={onClose} className="rounded-md p-1 text-stone-500 hover:text-stone-900">
           <X className="size-4" />
         </button>
       </div>
 
       {shift && (
-        <div className="border-b border-white/8 bg-white/3 px-5 py-3">
+        <div className="border-b border-stone-200 bg-stone-50 px-5 py-3">
           <div className="flex items-center justify-between">
-            <span className="text-xs text-white/50">
+            <span className="text-xs text-stone-500">
               {shift._count.signups} / {shift.requiredCount} filled
             </span>
             <Badge variant="destructive" className="text-[11px]">
               {gapCount} gap{gapCount !== 1 ? "s" : ""}
             </Badge>
           </div>
-          <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+          <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-stone-200">
             <div
               className="h-full rounded-full bg-amber-500"
               style={{
@@ -138,12 +138,12 @@ function SuggestionPanel({
       <div className="flex-1 overflow-y-auto p-4">
         {isLoading ? (
           <div className="flex items-center justify-center py-16">
-            <Loader2 className="size-6 animate-spin text-white/30" />
+            <Loader2 className="size-6 animate-spin text-stone-400" />
           </div>
         ) : !suggestions || suggestions.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-16 text-center">
-            <Users className="mb-3 size-10 text-white/10" />
-            <p className="text-sm text-white/30">No suggestions available.</p>
+            <Users className="mb-3 size-10 text-stone-300" />
+            <p className="text-sm text-stone-400">No suggestions available.</p>
           </div>
         ) : (
           <div className="space-y-2">
@@ -164,27 +164,27 @@ function SuggestionPanel({
                   className={cn(
                     "rounded-xl border p-4 transition-colors",
                     isAdded
-                      ? "border-green-500/30 bg-green-500/5"
-                      : "border-white/8 bg-white/5"
+                      ? "border-green-300 bg-green-50"
+                      : "border-stone-200 bg-white"
                   )}
                 >
                   <div className="mb-2 flex items-start justify-between gap-2">
                     <div>
-                      <p className="text-sm font-medium text-white">
+                      <p className="text-sm font-medium text-stone-900">
                         {volunteer.firstName} {volunteer.lastName}
                       </p>
-                      <p className="text-xs text-white/40">{volunteer.phone}</p>
+                      <p className="text-xs text-stone-500">{volunteer.phone}</p>
                     </div>
-                    <div className="flex shrink-0 items-center gap-1 rounded-full bg-amber-500/15 px-2.5 py-1">
-                      <Star className="size-3 text-amber-400" />
-                      <span className="text-xs font-medium text-amber-300">
+                    <div className="flex shrink-0 items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1">
+                      <Star className="size-3 text-amber-600" />
+                      <span className="text-xs font-medium text-amber-700">
                         {score}
                       </span>
                     </div>
                   </div>
 
                   {campusMatch && (
-                    <div className="mb-2 flex items-center gap-1.5 text-xs text-green-400">
+                    <div className="mb-2 flex items-center gap-1.5 text-xs text-green-700">
                       <MapPin className="size-3" />
                       Prefers this campus
                     </div>
@@ -195,7 +195,7 @@ function SuggestionPanel({
                       {reasons.map((r) => (
                         <span
                           key={r}
-                          className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[11px] text-white/50"
+                          className="rounded-full border border-stone-200 bg-white px-2 py-0.5 text-[11px] text-stone-500"
                         >
                           {r}
                         </span>
@@ -210,7 +210,7 @@ function SuggestionPanel({
                     className={cn(
                       "w-full text-xs",
                       isAdded
-                        ? "bg-green-600/20 text-green-400 hover:bg-green-600/20 cursor-default"
+                        ? "bg-green-100 text-green-700 hover:bg-green-100 cursor-default"
                         : "bg-amber-500 text-black hover:bg-amber-400"
                     )}
                   >
@@ -252,14 +252,14 @@ function GapShiftCard({
       className={cn(
         "w-full rounded-xl border p-4 text-left transition-all",
         selected
-          ? "border-amber-500/40 bg-amber-500/5 ring-1 ring-amber-500/20"
-          : "border-white/8 bg-white/5 hover:border-white/15 hover:bg-white/8"
+          ? "border-amber-400 bg-amber-50 ring-1 ring-amber-200"
+          : "border-stone-200 bg-white hover:border-stone-300 hover:bg-stone-100"
       )}
     >
       <div className="mb-3 flex items-start justify-between gap-2">
         <div>
-          <p className="font-medium text-white">{shift.campus.name}</p>
-          <p className="mt-0.5 text-sm text-white/40">
+          <p className="font-medium text-stone-900">{shift.campus.name}</p>
+          <p className="mt-0.5 text-sm text-stone-500">
             {formatDate(shift.date)} · {formatTime(shift.startTime)} – {formatTime(shift.endTime)}
           </p>
         </div>
@@ -267,23 +267,23 @@ function GapShiftCard({
           variant="destructive"
           className={cn(
             "shrink-0 text-[11px]",
-            urgency === "high" && "bg-red-500/20 text-red-400",
-            urgency === "medium" && "bg-orange-500/20 text-orange-400",
-            urgency === "low" && "bg-yellow-500/20 text-yellow-400"
+            urgency === "high" && "bg-red-100 text-red-600",
+            urgency === "medium" && "bg-orange-100 text-orange-700",
+            urgency === "low" && "bg-yellow-100 text-yellow-700"
           )}
         >
           {gapCount} gap{gapCount !== 1 ? "s" : ""}
         </Badge>
       </div>
 
-      <div className="mb-2 flex items-center gap-2 text-xs text-white/40">
+      <div className="mb-2 flex items-center gap-2 text-xs text-stone-500">
         <span>{shift.shiftType.replace("_", " ")}</span>
         <span>·</span>
         <span>{shift.serviceType}</span>
       </div>
 
       <div className="flex items-center gap-2">
-        <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
+        <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-stone-200">
           <div
             className={cn(
               "h-full rounded-full",
@@ -292,7 +292,7 @@ function GapShiftCard({
             style={{ width: `${fillPct}%` }}
           />
         </div>
-        <span className="text-xs tabular-nums text-white/50">
+        <span className="text-xs tabular-nums text-stone-500">
           {shift._count.signups}/{shift.requiredCount}
         </span>
       </div>
@@ -321,27 +321,27 @@ export default function GapsPage() {
     <>
       <div className="p-6">
         <div className="mb-5">
-          <h1 className="text-xl font-semibold text-white">Staffing Gaps</h1>
-          <p className="mt-0.5 text-sm text-white/40">
+          <h1 className="text-xl font-semibold text-stone-900">Staffing Gaps</h1>
+          <p className="mt-0.5 text-sm text-stone-500">
             {isLoading ? "Loading…" : `${sortedShifts.length} understaffed shift${sortedShifts.length !== 1 ? "s" : ""}`}
           </p>
         </div>
 
         {isLoading ? (
           <div className="flex items-center justify-center py-24">
-            <Loader2 className="size-6 animate-spin text-white/30" />
+            <Loader2 className="size-6 animate-spin text-stone-400" />
           </div>
         ) : isError ? (
-          <div className="py-24 text-center text-sm text-red-400">
+          <div className="py-24 text-center text-sm text-red-600">
             Failed to load gaps.
           </div>
         ) : sortedShifts.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-24 text-center">
-            <div className="mb-4 flex size-16 items-center justify-center rounded-full bg-green-500/10">
-              <AlertTriangle className="size-8 text-green-500/40" />
+            <div className="mb-4 flex size-16 items-center justify-center rounded-full bg-green-50">
+              <AlertTriangle className="size-8 text-green-500" />
             </div>
-            <p className="text-base font-medium text-white/60">All shifts fully staffed</p>
-            <p className="mt-1 text-sm text-white/30">No gaps to fill right now.</p>
+            <p className="text-base font-medium text-stone-600">All shifts fully staffed</p>
+            <p className="mt-1 text-sm text-stone-400">No gaps to fill right now.</p>
           </div>
         ) : (
           <div

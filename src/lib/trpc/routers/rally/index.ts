@@ -4,6 +4,7 @@ import { shiftRouter } from "./shift";
 import { volunteerRouter } from "./volunteer";
 import { signupRouter } from "./signup";
 import { dashboardRouter } from "./dashboard";
+import { rallyLeadsRouter } from "./leads";
 
 export const rallyRouter = router({
   campus: campusRouter,
@@ -11,4 +12,5 @@ export const rallyRouter = router({
   volunteer: volunteerRouter,
   signup: signupRouter,
   dashboard: dashboardRouter,
+  leads: rallyLeadsRouter,
 });

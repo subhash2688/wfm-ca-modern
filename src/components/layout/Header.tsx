@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,15 +8,17 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { label: "Our Story", href: "/about-us" },
   { label: "How It Works", href: "/programs" },
-  { label: "Volunteer", href: "/get-involved" },
+  { label: "Volunteer", href: "/volunteer" },
   { label: "Corporate", href: "/corporate" },
   { label: "News", href: "/news" },
 ];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const loginRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -24,6 +26,24 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!loginOpen) return;
+    const onClick = (e: MouseEvent) => {
+      if (loginRef.current && !loginRef.current.contains(e.target as Node)) {
+        setLoginOpen(false);
+      }
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLoginOpen(false);
+    };
+    document.addEventListener("mousedown", onClick);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onClick);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [loginOpen]);
 
   return (
     <>
@@ -70,12 +90,49 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Link
-              href="/v/login"
-              className="hidden text-[15px] font-medium text-white/50 transition-colors hover:text-white lg:block"
-            >
-              Volunteer Portal
-            </Link>
+            <div ref={loginRef} className="relative hidden border-l border-white/15 pl-5 lg:block">
+              <button
+                type="button"
+                onClick={() => setLoginOpen((v) => !v)}
+                aria-haspopup="menu"
+                aria-expanded={loginOpen}
+                className="flex items-center gap-1.5 rounded-full border border-white/20 px-4 py-1.5 text-[13px] font-semibold text-white/70 transition-all hover:border-white/40 hover:bg-white/5 hover:text-white"
+              >
+                Login
+                <svg
+                  className={`h-3 w-3 transition-transform ${loginOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {loginOpen && (
+                <div
+                  role="menu"
+                  className="absolute right-0 top-full mt-2 w-44 overflow-hidden rounded-xl border border-white/10 bg-[#0A1118] shadow-xl"
+                >
+                  <Link
+                    href="/v/login"
+                    role="menuitem"
+                    onClick={() => setLoginOpen(false)}
+                    className="block px-4 py-3 text-sm font-medium text-white/80 transition-colors hover:bg-white/5 hover:text-white"
+                  >
+                    Volunteer
+                  </Link>
+                  <Link
+                    href="/rally/dashboard"
+                    role="menuitem"
+                    onClick={() => setLoginOpen(false)}
+                    className="block border-t border-white/10 px-4 py-3 text-sm font-medium text-white/80 transition-colors hover:bg-white/5 hover:text-white"
+                  >
+                    Staff
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link
               href="/donate"
               className="rounded-full bg-[#D4A853] px-7 py-2.5 text-[15px] font-bold text-[#1A3D5C] transition-all hover:bg-[#C49A48] hover:shadow-lg"
@@ -121,13 +178,25 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/login"
-                onClick={() => setMobileOpen(false)}
-                className="border-b border-white/10 py-4 text-base font-medium text-white/60"
-              >
-                Student Portal
-              </Link>
+              <p className="mt-6 mb-3 text-[11px] font-semibold uppercase tracking-wider text-white/30">
+                Login
+              </p>
+              <div className="flex gap-2">
+                <Link
+                  href="/v/login"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex-1 rounded-full border border-white/20 px-4 py-2.5 text-center text-sm font-semibold text-white/80"
+                >
+                  Volunteer
+                </Link>
+                <Link
+                  href="/rally/dashboard"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex-1 rounded-full border border-white/20 px-4 py-2.5 text-center text-sm font-semibold text-white/80"
+                >
+                  Staff
+                </Link>
+              </div>
               <Link
                 href="/donate"
                 onClick={() => setMobileOpen(false)}

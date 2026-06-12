@@ -127,7 +127,7 @@ export default function VerifyPage() {
     <main className="min-h-screen bg-[#0A1118] flex flex-col items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <img src="/images/logos/wfm-logo.jpg" alt="WFM" width={48} height={48} className="rounded-xl mx-auto mb-4" />
+          <img src="/images/logos/wfm-logo.jpg" alt="World Food Movement" width={240} className="rounded-xl mx-auto mb-4 w-60 h-auto" />
           <h1 className="text-2xl font-bold text-white">Enter your code</h1>
           <p className="text-sm text-white/50 mt-2">
             We sent a 6-digit code to{" "}

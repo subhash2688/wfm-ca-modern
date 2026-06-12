@@ -135,6 +135,23 @@ enum RallyActivityAction {
   export
   sms
   reset
+  activate
+  lead_create
+}
+
+enum VolunteerLeadStatus {
+  pending
+  training_invited
+  training_scheduled
+  training_complete
+  activated
+  rejected
+}
+
+enum VolunteerLeadType {
+  individual
+  regular
+  group
 }
 
 // ─── Core auth models ─────────────────────────────────────────
@@ -806,6 +823,7 @@ model RallyVolunteer {
   updatedAt           DateTime             @updatedAt
   signups             RallySignup[]
   activityLogs        RallyActivityLog[]
+  lead                VolunteerLead?
 
   @@index([status])
   @@index([phone])
@@ -884,6 +902,32 @@ model RallySmsCode {
 
   @@index([phone])
   @@map("rally_sms_codes")
+}
+
+model VolunteerLead {
+  id                Int                  @id @default(autoincrement())
+  firstName         String
+  lastName          String
+  phone             String               @unique
+  email             String?
+  campusName        String
+  volunteerType     VolunteerLeadType    @default(individual)
+  availability      Json                 @default("{}")
+  groupName         String?
+  groupSize         Int?
+  status            VolunteerLeadStatus  @default(pending)
+  trainingWaived    Boolean              @default(false)
+  notes             String?              @db.Text
+  activatedAt       DateTime?
+  activatedBy       Int?
+  volunteerId       Int?                 @unique
+  volunteer         RallyVolunteer?      @relation(fields: [volunteerId], references: [id])
+  createdAt         DateTime             @default(now())
+  updatedAt         DateTime             @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+  @@map("volunteer_leads")
 }
 
 model RallyActivityLog {

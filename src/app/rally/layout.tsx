@@ -12,10 +12,12 @@ import {
   AlertTriangle,
   LogOut,
   ChevronRight,
+  UserPlus,
 } from "lucide-react";
 
 const navItems = [
   { label: "Dashboard", href: "/rally/dashboard", icon: LayoutDashboard },
+  { label: "Leads", href: "/rally/leads", icon: UserPlus },
   { label: "Shifts", href: "/rally/shifts", icon: Calendar },
   { label: "Volunteers", href: "/rally/volunteers", icon: Users },
   { label: "Gaps", href: "/rally/gaps", icon: AlertTriangle },
@@ -26,12 +28,12 @@ function RallySidebar() {
   const { data: session } = useSession();
 
   return (
-    <aside className="flex h-screen w-60 flex-col bg-[#0A1118] text-white">
-      <div className="flex h-16 items-center gap-3 border-b border-white/10 px-5">
-        <Image src="/images/logos/wfm-logo.jpg" alt="WFM" width={32} height={32} className="rounded-md" />
+    <aside className="flex h-screen w-60 flex-col bg-[#1A3D5C] text-white">
+      <div className="flex h-24 items-center gap-3 border-b border-white/10 px-5">
+        <Image src="/images/logos/wfm-logo.jpg" alt="WFM" width={64} height={64} className="rounded-md" />
         <div>
-          <p className="text-sm font-bold tracking-tight text-white">WFM Rally</p>
-          <p className="text-[10px] text-white/40 leading-none">Staff Dashboard</p>
+          <p className="text-lg font-bold tracking-tight text-white">WFM Rally</p>
+          <p className="text-xs text-white/50 leading-none mt-1">Staff Dashboard</p>
         </div>
       </div>
 
@@ -96,7 +98,7 @@ export default function RallyLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen overflow-hidden bg-[#0D1620]">
+    <div className="flex h-screen overflow-hidden bg-[#F5F6F8]">
       <RallySidebar />
       <main className="flex-1 overflow-y-auto">
         {children}

@@ -1,26 +1,36 @@
 import { PrismaClient } from "@prisma/client";
+import { hash } from "bcryptjs";
+import { WFM_CAMPUSES } from "../src/lib/data/campuses";
 
 const db = new PrismaClient();
 
 async function main() {
-  // ─── Campuses ────────────────────────────────────────────────
-  const campuses = await Promise.all([
-    db.rallyCampus.upsert({
-      where: { name: "Berkeley Campus" },
-      update: {},
-      create: { name: "Berkeley Campus", city: "Berkeley", zipCode: "94720", region: "East Bay", color: "green" },
-    }),
-    db.rallyCampus.upsert({
-      where: { name: "Oakland Campus" },
-      update: {},
-      create: { name: "Oakland Campus", city: "Oakland", zipCode: "94612", region: "East Bay", color: "blue" },
-    }),
-    db.rallyCampus.upsert({
-      where: { name: "San Francisco Campus" },
-      update: {},
-      create: { name: "San Francisco Campus", city: "San Francisco", zipCode: "94102", region: "Bay Area", color: "amber" },
-    }),
-  ]);
+  // ─── Staff User ──────────────────────────────────────────────
+  const staffPassword = await hash("wfm2026", 10);
+  await db.user.upsert({
+    where: { email: "admin@wfmca.org" },
+    update: {},
+    create: {
+      email: "admin@wfmca.org",
+      password: staffPassword,
+      firstName: "WFM",
+      lastName: "Admin",
+      role: "SUPER_ADMIN",
+      status: "ACTIVE",
+    },
+  });
+  console.log("✅ Seeded staff user: admin@wfmca.org / wfm2026");
+
+  // ─── Campuses (synced from WFM_CAMPUSES — single source of truth) ───
+  const campuses = await Promise.all(
+    WFM_CAMPUSES.map((c) =>
+      db.rallyCampus.upsert({
+        where: { name: c.name },
+        update: { city: c.city, zipCode: c.zipCode, region: c.region, color: c.color },
+        create: { name: c.name, city: c.city, zipCode: c.zipCode, region: c.region, color: c.color },
+      })
+    )
+  );
 
   console.log(`✅ Seeded ${campuses.length} campuses`);
 
@@ -33,7 +43,7 @@ async function main() {
         firstName: "Priya", lastName: "Sharma",
         phone: "15105550101", email: "priya@example.com",
         status: "active", isYouth: false,
-        preferredCampuses: ["Berkeley Campus"],
+        preferredCampuses: ["De Anza College"],
         preferredShiftTypes: ["Meal_Prep", "Packing"],
         availability: { sunday: ["morning", "afternoon"] },
       },
@@ -45,7 +55,7 @@ async function main() {
         firstName: "Marcus", lastName: "Johnson",
         phone: "15105550102",
         status: "active", isYouth: false,
-        preferredCampuses: ["Oakland Campus"],
+        preferredCampuses: ["Chabot College"],
         preferredShiftTypes: ["Delivery"],
         availability: { saturday: ["morning"] },
       },
@@ -57,7 +67,7 @@ async function main() {
         firstName: "Aisha", lastName: "Patel",
         phone: "15105550103", email: "aisha@example.com",
         status: "active", isYouth: false,
-        preferredCampuses: ["Berkeley Campus", "Oakland Campus"],
+        preferredCampuses: ["De Anza College", "Chabot College"],
         preferredShiftTypes: ["Meal_Prep"],
         availability: { sunday: ["morning"], saturday: ["morning"] },
       },
@@ -69,7 +79,7 @@ async function main() {
         firstName: "Devon", lastName: "Williams",
         phone: "15105550104",
         status: "active", isYouth: true,
-        preferredCampuses: ["San Francisco Campus"],
+        preferredCampuses: ["Ohlone College"],
         preferredShiftTypes: ["Packing", "Setup"],
         availability: { sunday: ["afternoon"] },
       },
@@ -81,7 +91,7 @@ async function main() {
         firstName: "Sofia", lastName: "Martinez",
         phone: "15105550105", email: "sofia@example.com",
         status: "active", isYouth: false,
-        preferredCampuses: ["Berkeley Campus"],
+        preferredCampuses: ["De Anza College"],
         preferredShiftTypes: ["Meal_Prep", "Packing", "Delivery"],
         availability: { sunday: ["morning", "afternoon"], saturday: ["morning", "afternoon"] },
       },
@@ -195,8 +205,8 @@ async function main() {
   await db.rallyActivityLog.createMany({
     data: [
       { actionType: "seed", description: "Database seeded with initial data", timestamp: new Date() },
-      { actionType: "signup", description: "Priya Sharma signed up for Berkeley Sunday shift", volunteerId: volunteers[0].id, shiftId: shifts[0].id, timestamp: new Date(Date.now() - 3600000) },
-      { actionType: "signup", description: "Marcus Johnson signed up for Oakland Sunday shift", volunteerId: volunteers[1].id, shiftId: shifts[2].id, timestamp: new Date(Date.now() - 7200000) },
+      { actionType: "signup", description: "Priya Sharma signed up for De Anza College Sunday shift", volunteerId: volunteers[0].id, shiftId: shifts[0].id, timestamp: new Date(Date.now() - 3600000) },
+      { actionType: "signup", description: "Marcus Johnson signed up for Chabot College Sunday shift", volunteerId: volunteers[1].id, shiftId: shifts[2].id, timestamp: new Date(Date.now() - 7200000) },
     ],
   });
 

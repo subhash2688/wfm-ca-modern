@@ -123,12 +123,12 @@ function NewShiftDialog({
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
       />
-      <div className="relative z-10 w-full max-w-lg rounded-xl border border-white/10 bg-[#0D1620] shadow-2xl">
-        <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-          <h2 className="text-base font-semibold text-white">New Shift</h2>
+      <div className="relative z-10 w-full max-w-lg rounded-xl border border-stone-200 bg-white shadow-2xl">
+        <div className="flex items-center justify-between border-b border-stone-200 px-5 py-4">
+          <h2 className="text-base font-semibold text-stone-900">New Shift</h2>
           <button
             onClick={onClose}
-            className="rounded-md p-1 text-white/40 transition-colors hover:text-white"
+            className="rounded-md p-1 text-stone-500 transition-colors hover:text-stone-900"
           >
             <X className="size-4" />
           </button>
@@ -136,88 +136,88 @@ function NewShiftDialog({
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-5">
           <div>
-            <label className="mb-1.5 block text-xs font-medium text-white/60">
+            <label className="mb-1.5 block text-xs font-medium text-stone-600">
               Campus
             </label>
             <select
               {...register("campusId")}
-              className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20"
+              className="w-full rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200"
               disabled={campusLoading}
             >
-              <option value="" className="bg-[#0D1620]">Select campus…</option>
+              <option value="" className="bg-white">Select campus…</option>
               {campuses?.map((c) => (
-                <option key={c.id} value={c.id} className="bg-[#0D1620]">
+                <option key={c.id} value={c.id} className="bg-white">
                   {c.name}
                 </option>
               ))}
             </select>
             {errors.campusId && (
-              <p className="mt-1 text-xs text-red-400">{errors.campusId.message}</p>
+              <p className="mt-1 text-xs text-red-600">{errors.campusId.message}</p>
             )}
           </div>
 
           <div className="grid grid-cols-3 gap-3">
             <div>
-              <label className="mb-1.5 block text-xs font-medium text-white/60">Date</label>
+              <label className="mb-1.5 block text-xs font-medium text-stone-600">Date</label>
               <input
                 type="date"
                 {...register("date")}
-                className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 [color-scheme:dark]"
+                className="w-full rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200"
               />
               {errors.date && (
-                <p className="mt-1 text-xs text-red-400">{errors.date.message}</p>
+                <p className="mt-1 text-xs text-red-600">{errors.date.message}</p>
               )}
             </div>
             <div>
-              <label className="mb-1.5 block text-xs font-medium text-white/60">Start</label>
+              <label className="mb-1.5 block text-xs font-medium text-stone-600">Start</label>
               <input
                 type="time"
                 {...register("startTime")}
-                className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 [color-scheme:dark]"
+                className="w-full rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200"
               />
               {errors.startTime && (
-                <p className="mt-1 text-xs text-red-400">{errors.startTime.message}</p>
+                <p className="mt-1 text-xs text-red-600">{errors.startTime.message}</p>
               )}
             </div>
             <div>
-              <label className="mb-1.5 block text-xs font-medium text-white/60">End</label>
+              <label className="mb-1.5 block text-xs font-medium text-stone-600">End</label>
               <input
                 type="time"
                 {...register("endTime")}
-                className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 [color-scheme:dark]"
+                className="w-full rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200"
               />
               {errors.endTime && (
-                <p className="mt-1 text-xs text-red-400">{errors.endTime.message}</p>
+                <p className="mt-1 text-xs text-red-600">{errors.endTime.message}</p>
               )}
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="mb-1.5 block text-xs font-medium text-white/60">
+              <label className="mb-1.5 block text-xs font-medium text-stone-600">
                 Shift Type
               </label>
               <select
                 {...register("shiftType")}
-                className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20"
+                className="w-full rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200"
               >
                 {SHIFT_TYPES.map((t) => (
-                  <option key={t} value={t} className="bg-[#0D1620]">
+                  <option key={t} value={t} className="bg-white">
                     {t.replace("_", " ")}
                   </option>
                 ))}
               </select>
             </div>
             <div>
-              <label className="mb-1.5 block text-xs font-medium text-white/60">
+              <label className="mb-1.5 block text-xs font-medium text-stone-600">
                 Service Type
               </label>
               <select
                 {...register("serviceType")}
-                className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20"
+                className="w-full rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200"
               >
                 {SERVICE_TYPES.map((t) => (
-                  <option key={t} value={t} className="bg-[#0D1620]">
+                  <option key={t} value={t} className="bg-white">
                     {t}
                   </option>
                 ))}
@@ -226,7 +226,7 @@ function NewShiftDialog({
           </div>
 
           <div>
-            <label className="mb-1.5 block text-xs font-medium text-white/60">
+            <label className="mb-1.5 block text-xs font-medium text-stone-600">
               Required Volunteers
             </label>
             <input
@@ -234,26 +234,26 @@ function NewShiftDialog({
               min={1}
               max={100}
               {...register("requiredCount")}
-              className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20"
+              className="w-full rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200"
             />
             {errors.requiredCount && (
-              <p className="mt-1 text-xs text-red-400">{errors.requiredCount.message}</p>
+              <p className="mt-1 text-xs text-red-600">{errors.requiredCount.message}</p>
             )}
           </div>
 
           <div>
-            <label className="mb-1.5 block text-xs font-medium text-white/60">
+            <label className="mb-1.5 block text-xs font-medium text-stone-600">
               Notes (optional)
             </label>
             <textarea
               {...register("notes")}
               rows={2}
-              className="w-full resize-none rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20"
+              className="w-full resize-none rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm text-stone-900 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-200"
             />
           </div>
 
           {createShift.error && (
-            <p className="text-xs text-red-400">
+            <p className="text-xs text-red-600">
               {createShift.error.message}
             </p>
           )}
@@ -263,7 +263,7 @@ function NewShiftDialog({
               type="button"
               variant="ghost"
               onClick={onClose}
-              className="text-white/60 hover:text-white"
+              className="text-stone-600 hover:text-stone-900"
             >
               Cancel
             </Button>
@@ -309,7 +309,7 @@ export default function ShiftsPage() {
         accessorFn: (r) => r.date,
         header: "Date",
         cell: ({ row }) => (
-          <span className="text-sm text-white/90">
+          <span className="text-sm text-stone-800">
             {formatDate(row.original.date)}
           </span>
         ),
@@ -318,7 +318,7 @@ export default function ShiftsPage() {
         accessorKey: "campus.name",
         header: "Campus",
         cell: ({ getValue }) => (
-          <span className="text-sm font-medium text-white">
+          <span className="text-sm font-medium text-stone-900">
             {getValue() as string}
           </span>
         ),
@@ -327,7 +327,7 @@ export default function ShiftsPage() {
         accessorKey: "shiftType",
         header: "Shift",
         cell: ({ getValue }) => (
-          <span className="text-sm text-white/70">
+          <span className="text-sm text-stone-600">
             {(getValue() as string).replace("_", " ")}
           </span>
         ),
@@ -336,14 +336,14 @@ export default function ShiftsPage() {
         accessorKey: "serviceType",
         header: "Service",
         cell: ({ getValue }) => (
-          <span className="text-sm text-white/70">{getValue() as string}</span>
+          <span className="text-sm text-stone-600">{getValue() as string}</span>
         ),
       },
       {
         id: "time",
         header: "Time",
         cell: ({ row }) => (
-          <span className="text-sm text-white/60">
+          <span className="text-sm text-stone-600">
             {formatTime(row.original.startTime)} – {formatTime(row.original.endTime)}
           </span>
         ),
@@ -358,7 +358,7 @@ export default function ShiftsPage() {
           const full = signed >= required;
           return (
             <div className="flex items-center gap-2">
-              <div className="h-1.5 w-16 overflow-hidden rounded-full bg-white/10">
+              <div className="h-1.5 w-16 overflow-hidden rounded-full bg-stone-200">
                 <div
                   className={cn(
                     "h-full rounded-full",
@@ -370,7 +370,7 @@ export default function ShiftsPage() {
               <span
                 className={cn(
                   "text-xs tabular-nums",
-                  full ? "text-green-400" : "text-white/50"
+                  full ? "text-green-700" : "text-stone-500"
                 )}
               >
                 {signed}/{required}
@@ -401,7 +401,7 @@ export default function ShiftsPage() {
               deleteShift.mutate({ id: row.original.id });
             }}
             disabled={deletingId === row.original.id}
-            className="rounded-md p-1.5 text-white/20 transition-colors hover:bg-red-500/10 hover:text-red-400 disabled:opacity-50"
+            className="rounded-md p-1.5 text-stone-300 transition-colors hover:bg-red-50 hover:text-red-600 disabled:opacity-50"
           >
             {deletingId === row.original.id ? (
               <Loader2 className="size-3.5 animate-spin" />
@@ -431,8 +431,8 @@ export default function ShiftsPage() {
       <div className="space-y-5 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-xl font-semibold text-white">Shifts</h1>
-            <p className="mt-0.5 text-sm text-white/40">
+            <h1 className="text-xl font-semibold text-stone-900">Shifts</h1>
+            <p className="mt-0.5 text-sm text-stone-500">
               {shifts?.length ?? 0} shifts total
             </p>
           </div>
@@ -446,33 +446,33 @@ export default function ShiftsPage() {
         </div>
 
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-white/30" />
+          <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-stone-400" />
           <input
             value={globalFilter}
             onChange={(e) => setGlobalFilter(e.target.value)}
             placeholder="Filter shifts…"
-            className="w-full rounded-lg border border-white/10 bg-white/5 py-2 pl-9 pr-4 text-sm text-white placeholder-white/30 outline-none focus:border-amber-500/40 focus:ring-1 focus:ring-amber-500/10"
+            className="w-full rounded-lg border border-stone-200 bg-white py-2 pl-9 pr-4 text-sm text-stone-900 placeholder-stone-400 outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-100"
           />
         </div>
 
-        <div className="overflow-hidden rounded-xl border border-white/8">
+        <div className="overflow-hidden rounded-xl border border-stone-200">
           {isLoading ? (
             <div className="flex items-center justify-center py-16">
-              <Loader2 className="size-6 animate-spin text-white/30" />
+              <Loader2 className="size-6 animate-spin text-stone-400" />
             </div>
           ) : isError ? (
-            <div className="py-16 text-center text-sm text-red-400">
+            <div className="py-16 text-center text-sm text-red-600">
               Failed to load shifts.
             </div>
           ) : (
             <table className="w-full">
               <thead>
                 {table.getHeaderGroups().map((hg) => (
-                  <tr key={hg.id} className="border-b border-white/8 bg-white/3">
+                  <tr key={hg.id} className="border-b border-stone-200 bg-stone-50">
                     {hg.headers.map((header) => (
                       <th
                         key={header.id}
-                        className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-white/40"
+                        className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-stone-500"
                       >
                         {header.isPlaceholder ? null : (
                           <button
@@ -506,7 +506,7 @@ export default function ShiftsPage() {
                   <tr>
                     <td
                       colSpan={columns.length}
-                      className="py-16 text-center text-sm text-white/30"
+                      className="py-16 text-center text-sm text-stone-400"
                     >
                       <CalendarDays className="mx-auto mb-2 size-8 opacity-20" />
                       No shifts found.
@@ -516,7 +516,7 @@ export default function ShiftsPage() {
                   table.getRowModel().rows.map((row) => (
                     <tr
                       key={row.id}
-                      className="border-b border-white/5 transition-colors hover:bg-white/3"
+                      className="border-b border-stone-100 transition-colors hover:bg-stone-50"
                     >
                       {row.getVisibleCells().map((cell) => (
                         <td key={cell.id} className="px-4 py-3">

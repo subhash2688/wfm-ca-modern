@@ -22,6 +22,9 @@ export function Footer() {
               World Food Movement for College and University Students of
               America. A 501(c)(3) nonprofit organization.
             </p>
+            <a href="tel:+14084717564" className="mt-2 inline-block text-sm text-white/55 hover:text-[#D4A853] transition-colors">
+              (408) 471-7564
+            </a>
             <div className="mt-6 flex gap-3">
               {[
                 {
@@ -97,11 +100,11 @@ export function Footer() {
               {[
                 { label: "Donate", href: "/donate" },
                 { label: "Corporate Partnerships", href: "/corporate" },
-                { label: "Volunteer", href: "/get-involved" },
+                { label: "Volunteer", href: "/volunteer" },
                 { label: "Volunteer Portal", href: "/v/login" },
                 { label: "Start a Fundraiser", href: "/campaigns" },
                 { label: "Campus Partnership", href: "/contact" },
-                { label: "Sign Up for Meals", href: "/get-involved" },
+                { label: "Sign Up for Meals", href: "/volunteer" },
               ].map((link) => (
                 <li key={link.href + link.label}>
                   <Link
@@ -182,8 +185,8 @@ export function Footer() {
               <Link href="/terms" className="hover:text-white/50">
                 Terms
               </Link>
-              <Link href="/login" className="hover:text-white/50">
-                Staff Login
+              <Link href="/rally/dashboard" className="hover:text-white/50">
+                Staff Dashboard
               </Link>
             </div>
           </div>

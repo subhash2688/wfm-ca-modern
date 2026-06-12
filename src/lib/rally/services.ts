@@ -299,7 +299,7 @@ export async function sendShiftReminders(): Promise<void> {
 // ─── Activity logging ─────────────────────────────────────────
 
 export async function logActivity(
-  actionType: "create" | "update" | "delete" | "check_in" | "signup" | "seed" | "export" | "sms" | "reset",
+  actionType: "create" | "update" | "delete" | "check_in" | "signup" | "seed" | "export" | "sms" | "reset" | "activate" | "lead_create",
   description: string,
   volunteerId?: number,
   shiftId?: number

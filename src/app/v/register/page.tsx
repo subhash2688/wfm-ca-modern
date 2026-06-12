@@ -69,7 +69,7 @@ export default function RegisterPage() {
     <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4 py-8">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <img src="/images/logos/wfm-logo.jpg" alt="WFM" width={48} height={48} className="rounded-xl mx-auto mb-4" />
+          <img src="/images/logos/wfm-logo.jpg" alt="World Food Movement" width={240} className="rounded-xl mx-auto mb-4 w-60 h-auto" />
           <h1 className="text-2xl font-bold text-white">Create your account</h1>
           <p className="text-sm text-white/50 mt-2">
             Just a few details to get you started.

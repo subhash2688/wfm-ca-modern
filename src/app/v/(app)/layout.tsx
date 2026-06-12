@@ -93,8 +93,11 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <VolunteerContext.Provider value={{ volunteer, loading }}>
       <div className="min-h-screen bg-gray-50 flex flex-col">
         <header className="sticky top-0 z-40 bg-[#0A1118] px-4 py-3 flex items-center gap-3 shadow-sm">
-          <Image src="/images/logos/wfm-logo.jpg" alt="WFM" width={28} height={28} className="rounded-md" />
-          <span className="text-white font-bold text-sm tracking-tight">World Food Movement</span>
+          <Image src="/images/logos/wfm-logo.jpg" alt="WFM" width={44} height={44} className="rounded-lg" />
+          <div className="flex flex-col leading-tight">
+            <span className="text-white font-bold text-base tracking-tight">World Food Movement</span>
+            <span className="text-white/50 text-[11px] font-medium">Volunteer Portal</span>
+          </div>
         </header>
         <main className="flex-1 pb-20">{children}</main>
 
